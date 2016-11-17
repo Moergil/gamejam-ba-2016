@@ -37,8 +37,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000013107369534}
+  - 114: {fileID: 114000010329937550}
+  - 65: {fileID: 65000014292094156}
   m_Layer: 0
-  m_Name: TilesSegment2
+  m_Name: SegmentTiles2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -243,6 +245,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013278943972}
   m_Mesh: {fileID: 4300000, guid: 31d6e8058910f48b9a9c163ae64e4be1, type: 3}
+--- !u!65 &65000014292094156
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011827152460}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.1, z: 3}
+  m_Center: {x: 0, y: 0.03, z: 0}
 --- !u!95 &95000011660672694
 Animator:
   serializedVersion: 3
@@ -294,3 +308,15 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114000010329937550
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011827152460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dc09adf864a7440aa3af5a3a9be31c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  segmentLength: 1

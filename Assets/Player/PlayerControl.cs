@@ -11,12 +11,9 @@ public class PlayerControl : MonoBehaviour
 	CharacterController controller;
 	private Vector3 moveDirection = Vector3.zero;
 
-	private Vector3 startPosition;
-
 	// Use this for initialization
 	void Start()
 	{
-		startPosition = transform.position;
 		controller = GetComponent<CharacterController>();
 	}
 	
@@ -35,14 +32,10 @@ public class PlayerControl : MonoBehaviour
 
 		moveDirection += Gravity;
 		controller.Move(moveDirection * Time.deltaTime);
-
-		if (transform.position.x > 20) {
-			transform.position = startPosition;
-			moveDirection = Vector3.zero;
-		}
 	}
 
-	void OnControllerColliderHit(ControllerColliderHit hit) {
+	void OnControllerColliderHit(ControllerColliderHit hit)
+	{
 		Rigidbody body = hit.collider.attachedRigidbody;
 		if (body == null || body.isKinematic)
 			return;

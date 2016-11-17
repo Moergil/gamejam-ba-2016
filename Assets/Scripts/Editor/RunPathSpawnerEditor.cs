@@ -3,8 +3,8 @@ using UnityEditor;
 using System.Collections;
 using UnityEngine.UI;
 
-[CustomEditor(typeof(RunPathManager))]
-public class RunPathManagerEditor : Editor
+[CustomEditor(typeof(RunPathSpawner))]
+public class RunPathSpawnerEditor : Editor
 {
 
 	//SerializedProperty lookAtPoint;
@@ -23,13 +23,13 @@ public class RunPathManagerEditor : Editor
 
 		bool build = GUILayout.Button("Build");
 		if (build) {
-			RunPathManager runPathManager = (RunPathManager)target;
+			RunPathSpawner runPathManager = (RunPathSpawner)target;
 			runPathManager.EditorInstantiateAllSegmentsTest();
 		}
 
 		bool clear = GUILayout.Button("Clear");
 		if (clear) {
-			RunPathManager runPathManager = (RunPathManager)target;
+			RunPathSpawner runPathManager = (RunPathSpawner)target;
 			runPathManager.EditorClearAllSegments();
 		}
 	}

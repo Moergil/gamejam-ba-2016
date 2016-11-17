@@ -5,14 +5,14 @@ using System.Collections;
 public class CameraFollow : MonoBehaviour
 {
 	public Transform Target;
-	public Vector2 DistanceBounds = new Vector2(1, 10);
-	public Vector3 Offset = new Vector3(-0.2f, 6.96f, -4.53f);
+	public Vector3 Offset;
 
 	private Vector3 velocity = Vector3.zero;
 
 	// Use this for initialization
 	void Start()
 	{
+		Offset = transform.position - Target.position;
 		transform.position = normalizedTargetObjectPosition();
 	}
 	
