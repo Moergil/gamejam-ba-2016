@@ -11,6 +11,8 @@ public class RunPathSpawner : MonoBehaviour
 	public int[] associatedActionIds;
 	private int nextLevelSegmentIndex;
 
+	private GameObject[] buttonIndicators;
+
 	public Transform player;
 
 	public int activeDistance;
@@ -83,8 +85,10 @@ public class RunPathSpawner : MonoBehaviour
 
 				if (instantiatedSegment.interactive) {
 					interactiveSegments.Add(instantiatedSegment);
-					int action = associatedActionIds[nextLevelSegmentIndex];
-					actionIds.Add(action);
+					int actionId = associatedActionIds[nextLevelSegmentIndex];
+					actionIds.Add(actionId);
+
+					instantiatedSegment.SetupActionHint(actionId);
 				}
 
 				usedDistance += levelSegmentLenght;

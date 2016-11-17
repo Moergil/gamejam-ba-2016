@@ -11,7 +11,7 @@ public class LevelSegment : MonoBehaviour
 		TapRepeat
 	}
 
-    public int segmentLength = 1;
+	public int segmentLength = 1;
 
 	public bool interactive;
 
@@ -20,6 +20,8 @@ public class LevelSegment : MonoBehaviour
 
 	public ActionType actionType;
 
+	private ActionHint actionHint;
+
 	public float tapRepeatAdd;
 	public float tapRepeatDrainPerSec;
 	public float tapRepeatGauge;
@@ -27,6 +29,12 @@ public class LevelSegment : MonoBehaviour
 	private float holdStart = float.NaN;
 
 	public bool actionFinished;
+
+	public void SetupActionHint(int actionId)
+	{
+		actionHint.gameObject.SetActive(true);
+		actionHint.SetActionId(actionId);
+	}
 
 	void Update()
 	{
