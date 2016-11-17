@@ -5,8 +5,8 @@ using System.Collections;
 public class PlayerControl : MonoBehaviour
 {
 	public float Speed = 5;
-	public Vector3 JumpVector = new Vector3(0, 10, 0);
-	public Vector3 Gravity = new Vector3(0, -1, 0);
+	Vector3 JumpVector = new Vector3(0, 20, 0);
+	Vector3 Gravity = new Vector3(0, -1, 0);
 
 	CharacterController controller;
 	private Vector3 moveDirection = Vector3.zero;
@@ -24,7 +24,7 @@ public class PlayerControl : MonoBehaviour
 	void Update()
 	{
 		if (controller.isGrounded) {
-			moveDirection = new Vector3(1, 0, Input.GetAxis("Vertical"));
+			moveDirection = new Vector3(1, 0, Input.GetAxis("Horizontal"));
 			moveDirection = transform.TransformDirection(moveDirection);
 			moveDirection *= Speed;
 
@@ -40,5 +40,17 @@ public class PlayerControl : MonoBehaviour
 			transform.position = startPosition;
 			moveDirection = Vector3.zero;
 		}
+	}
+
+	void OnControllerColliderHit(ControllerColliderHit hit) {
+		Rigidbody body = hit.collider.attachedRigidbody;
+		if (body == null || body.isKinematic)
+			return;
+
+		if (hit.moveDirection.y < -0.3F)
+			return;
+
+		Vector3 pushDir = new Vector3(hit.moveDirection.x, 0, hit.moveDirection.z);
+		body.velocity = pushDir * 10;
 	}
 }
