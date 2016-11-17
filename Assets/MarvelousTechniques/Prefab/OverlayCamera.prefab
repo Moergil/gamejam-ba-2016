@@ -34,6 +34,7 @@ GameObject:
   - 114: {fileID: 11484458}
   - 114: {fileID: 11498462}
   - 114: {fileID: 11486636}
+  - 114: {fileID: 114000013343732192}
   m_Layer: 0
   m_Name: OverlayCamera
   m_TagString: MainCamera
@@ -47,10 +48,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 154654}
-  m_LocalRotation: {x: 0.23205002, y: -0.18930244, z: 0.046094466, w: 0.9529915}
-  m_LocalPosition: {x: 2.5, y: 3.4, z: -6}
+  m_LocalRotation: {x: 0.29425654, y: 0.15268096, z: -0.015050123, w: 0.94333196}
+  m_LocalPosition: {x: -2.41, y: 4.13, z: -4}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 34.030003, y: 19.402, z: 4.131}
   m_Children:
   - {fileID: 476976}
   m_Father: {fileID: 0}
@@ -61,9 +62,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 123598}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 19.706223, y: 26.26, z: 1}
+  m_LocalRotation: {x: -0.1941579, y: 0.9341395, z: 0.19969073, w: 0.22318113}
+  m_LocalPosition: {x: -0.0037336787, y: -0.0050571403, z: 0.009026896}
+  m_LocalScale: {x: 0.023625653, y: 0.012701617, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 436710}
@@ -76,19 +77,19 @@ Camera:
   m_GameObject: {fileID: 154654}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.41089967, g: 0.43668723, b: 0.6985294, a: 0.019607844}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.313311, g: 0.44852942, b: 0.44852942, a: 0.019607844}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
     y: 0
     width: 1
     height: 1
-  near clip plane: -21.9
+  near clip plane: 0.01
   far clip plane: 998.7
-  field of view: 22
-  orthographic: 1
-  orthographic size: 13.13
+  field of view: 60
+  orthographic: 0
+  orthographic size: 2.33
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -186,13 +187,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61d30c51d6e8f479e9a211b3aba23641, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bloomColor:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
-  threshold: 0.51
-  intensity: 1
+  bloomColor: {r: 1, g: 1, b: 1, a: 1}
+  threshold: 0.316
+  intensity: 0.69
   resolution: 1
   blurIterations: 2
   material: {fileID: 2100000, guid: 050512b117c564ce78f612046b53b2d1, type: 2}
@@ -202,16 +199,12 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 154654}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 967784d4a6f084aeaa60a61cc3b74912, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textColor:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
+  textColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &11498462
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -223,10 +216,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7d75a7a1e2fb401bb98f2bd9723a119, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blendMode: 5
-  blendIntensity: 0.525
-  vignetteIntensity: 0.08
-  vignetteMaxValue: 0.2
+  blendMode: 4
+  blendIntensity: 0.132
+  vignetteIntensity: 0.65
+  vignetteMaxValue: 0.381
   gradientTexture: {fileID: 2800000, guid: 7a41f26ecc09440019890b32b89dfe72, type: 3}
   material: {fileID: 2100000, guid: 22b440eb0cb3745a8ab862bf24878003, type: 2}
 --- !u!124 &12477974
@@ -251,3 +244,17 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 154654}
   m_IsPrefabParent: 1
+--- !u!114 &114000013343732192
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 154654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60a3e3dc491394f2a97ba612dbdc2773, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 0}
+  Offset: {x: -2.41, y: 4.13, z: -4.1}
+  Rotation: {x: 30.631, y: 54.883, z: 3.34}
