@@ -27,16 +27,15 @@ public class PlayerControl : MonoBehaviour
 				moveDirection = transform.TransformDirection(moveDirection);
 				moveDirection *= Speed;
 
-
-				if (Input.GetButton ("Jump")) {
+				if (Input.GetButtonDown ("Jump")) {
 					moveDirection += JumpVector;
 				}
+			}
 
-				if (Input.GetButton ("Duck")) {
-					transform.localScale = new Vector3 (1, 0.5f, 1);
-				} else {
-					transform.localScale = Vector3.one;
-				}
+			if (Input.GetButton ("Duck")) {
+				transform.localScale = new Vector3 (1, 0.5f, 1);
+			} else {
+				transform.localScale = Vector3.one;
 			}
 
 			moveDirection += Gravity;
