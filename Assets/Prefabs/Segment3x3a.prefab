@@ -243,7 +243,7 @@ GameObject:
   - 4: {fileID: 4000012080769720}
   - 114: {fileID: 114000010464807664}
   m_Layer: 0
-  m_Name: Segment3x3
+  m_Name: Segment3x3a
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
