@@ -8,7 +8,13 @@ public class TileBaseEditor : Editor
 {
     TileBase _myTarget;
     float initYCollSize;
-    bool isSet = false;
+    private string Name
+    {
+        get
+        {
+            return _myTarget.gameObject.name;
+        }
+    }
 
     void OnEnable ( )
     {
@@ -17,31 +23,33 @@ public class TileBaseEditor : Editor
         //  Save init Y size of collider
         var bc = _myTarget.GetComponent<Collider> ( ) as BoxCollider;
         initYCollSize = bc.size.y;
-
-        if ( !isSet )
-        {
-            // Set it up
-            SetCollider ( _myTarget.yScaleRatio );
-            isSet = true;
-        }
-    }
-
-    void OnDisable ( )
-    {
-        isSet = false;
     }
 
     public override void OnInspectorGUI ( )
     {
         base.OnInspectorGUI ( );
+        UpdateYPosition ( );
         SetCollider ( _myTarget.yScaleRatio );
+
     }
 
     private void SetCollider ( float yScaleRatio )
     {
+        if ( Name.Contains ( "Pillar" ) ) return;
+
         var boxColl = _myTarget.GetComponent<Collider> ( ) as BoxCollider;
         var boxCollSize = boxColl.size;
         boxCollSize.y = initYCollSize * yScaleRatio;
         boxColl.size = boxCollSize;
+    }
+
+    private void UpdateYPosition ( )
+    {
+        if ( Name.Contains ( "Pillar" ) )
+        {
+            var t = _myTarget.transform.position;
+            t.y = 0.06f;
+            _myTarget.transform.position = t;
+        }
     }
 }
