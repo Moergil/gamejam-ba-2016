@@ -4,8 +4,8 @@ using System.Collections;
 [RequireComponent(typeof(CharacterController))]
 public class PlayerControl : MonoBehaviour {
 	public float Speed = 5;
-	public float JumpSpeed = 13;
-	public float Gravity = 40;
+	public Vector3 JumpVector = new Vector3(0, 10, 0);
+	public Vector3 Gravity = new Vector3(0, -1, 0);
 
 	CharacterController controller;
 	private Vector3 moveDirection = Vector3.zero;
@@ -23,11 +23,11 @@ public class PlayerControl : MonoBehaviour {
 			moveDirection *= Speed;
 
 			if (Input.GetButton("Jump"))
-				moveDirection.y = JumpSpeed;
+				moveDirection += JumpVector;
 
 		}
 
-		moveDirection.y -= Gravity;
+		moveDirection += Gravity;
 		controller.Move(moveDirection * Time.deltaTime);
 
 		if (transform.position.x > 20) {
