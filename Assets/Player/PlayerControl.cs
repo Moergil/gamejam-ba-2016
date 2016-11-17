@@ -5,8 +5,8 @@ using System.Collections;
 public class PlayerControl : MonoBehaviour
 {
 	bool isAutoMoving = true;
-	float Speed = 5;
-	Vector3 JumpVector = new Vector3(0, 12, 0);
+	float Speed = 3;
+	Vector3 JumpVector = new Vector3(0, 6, 0);
 	Vector3 Gravity = new Vector3(0, -0.4f, 0);
 	CharacterController controller;
 
@@ -24,7 +24,7 @@ public class PlayerControl : MonoBehaviour
 	{
 		if (isAutoMoving) {
 			if (controller.isGrounded) {
-				moveDirection = new Vector3(1, 0, Input.GetAxis("Horizontal"));
+				moveDirection = new Vector3(1, 0, -Input.GetAxis("Horizontal"));
 				moveDirection = transform.TransformDirection(moveDirection);
 				moveDirection *= Speed;
 

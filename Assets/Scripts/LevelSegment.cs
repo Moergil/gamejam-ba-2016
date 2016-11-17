@@ -11,7 +11,7 @@ public class LevelSegment : MonoBehaviour
 		TapRepeat
 	}
 
-	public int segmentLength;
+    public int segmentLength = 1;
 
 	public bool interactive;
 
