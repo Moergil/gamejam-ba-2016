@@ -38,7 +38,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000013107369534}
   m_Layer: 0
-  m_Name: TilesSegment2
+  m_Name: SegmentTiles2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
