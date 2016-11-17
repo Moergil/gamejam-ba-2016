@@ -21,12 +21,17 @@ public class PlayerControl : MonoBehaviour {
 			moveDirection = new Vector3(1, 0, Input.GetAxis("Vertical"));
 			moveDirection = transform.TransformDirection(moveDirection);
 			moveDirection *= Speed;
+
 			if (Input.GetButton("Jump"))
 				moveDirection.y = JumpSpeed;
 
 		}
 
-		moveDirection.y -= Gravity * Time.deltaTime;
+		moveDirection.y -= Gravity;
 		controller.Move(moveDirection * Time.deltaTime);
+
+		if (transform.position.x > 20) {
+			transform.position = new Vector3 (0, transform.position.y, transform.position.z);
+		}
 	}
 }
