@@ -35,11 +35,6 @@ public class PlayerControl : MonoBehaviour
 
 		moveDirection += Gravity;
 		controller.Move(moveDirection * Time.deltaTime);
-
-		if (transform.position.x > 20) {
-			transform.position = startPosition;
-			moveDirection = Vector3.zero;
-		}
 	}
 
 	void OnControllerColliderHit(ControllerColliderHit hit) {
