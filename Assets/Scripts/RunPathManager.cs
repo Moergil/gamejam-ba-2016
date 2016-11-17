@@ -31,9 +31,16 @@ public class RunPathManager : MonoBehaviour
 	{
 		playerPosition = player.transform.position.x;
 
-		if (nextLevelSegmentIndex < levelSegmentsPrefabs.Length) {
-			PathBuilding();
-		}
+		PathBuilding();
+	}
+
+	public void Reset()
+	{
+		nextLevelSegmentIndex = 0;
+		activeDistance = 0;
+		runnedSegmentsDistance = 0;
+
+		EditorClearAllSegments();
 	}
 
 	public void PathBuilding()
@@ -58,22 +65,24 @@ public class RunPathManager : MonoBehaviour
 			Debug.Log("used " + usedDistance + ", active " + activeDistance);
 		}
 
-		while (usedDistance < playerPosition + targetDistanceOffset) {
-			LevelSegment prefab = levelSegmentsPrefabs[nextLevelSegmentIndex];
-			int levelSegmentLenght = prefab.segmentLength;
-			float xPosition = usedDistance + levelSegmentLenght / 2f;
-			Vector3 position = new Vector3(xPosition, 0, 0);
-			Quaternion rotation = Quaternion.identity;
-			Transform parent = transform;
-			LevelSegment instantiatedSegment = (LevelSegment)Instantiate(prefab, position, rotation, parent);
+		if (nextLevelSegmentIndex < levelSegmentsPrefabs.Length) {
+			while (usedDistance < playerPosition + targetDistanceOffset) {
+				LevelSegment prefab = levelSegmentsPrefabs[nextLevelSegmentIndex];
+				int levelSegmentLenght = prefab.segmentLength;
+				float xPosition = usedDistance + levelSegmentLenght / 2f;
+				Vector3 position = new Vector3(xPosition, 0, 0);
+				Quaternion rotation = Quaternion.identity;
+				Transform parent = transform;
+				LevelSegment instantiatedSegment = (LevelSegment)Instantiate(prefab, position, rotation, parent);
 
-			segments.Add(instantiatedSegment);
+				segments.Add(instantiatedSegment);
 
-			usedDistance += levelSegmentLenght;
+				usedDistance += levelSegmentLenght;
 
-			Debug.Log("Instantiated segment of index " + nextLevelSegmentIndex + ", posX " + position.x);
+				Debug.Log("Instantiated segment of index " + nextLevelSegmentIndex + ", posX " + position.x);
 
-			nextLevelSegmentIndex++;
+				nextLevelSegmentIndex++;
+			}
 		}
 
 
