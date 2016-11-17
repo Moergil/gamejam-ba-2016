@@ -4,6 +4,6 @@ using System.Collections;
 public class LevelSegment : MonoBehaviour
 {
 
-	public int segmentLength;
+    public int segmentLength = 1;
 
 }
