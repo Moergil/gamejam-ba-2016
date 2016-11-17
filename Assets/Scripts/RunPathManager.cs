@@ -108,7 +108,11 @@ public class RunPathManager : MonoBehaviour
 	{
 		foreach (Transform child in transform) {
 			LevelSegment segment = child.GetComponent<LevelSegment>();
-			Destroy(segment.gameObject);
+			if (Application.isPlaying) { 
+				Destroy(segment.gameObject);
+			} else {
+				DestroyImmediate(segment.gameObject);
+			}
 		}
 
 		segments.Clear();
