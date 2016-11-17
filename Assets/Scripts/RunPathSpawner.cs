@@ -8,6 +8,7 @@ public class RunPathSpawner : MonoBehaviour
 	public bool debug;
 
 	public LevelSegment[] levelSegmentsPrefabs;
+	public int[] associatedActionIds;
 	private int nextLevelSegmentIndex;
 
 	public Transform player;
@@ -20,6 +21,9 @@ public class RunPathSpawner : MonoBehaviour
 	private int runnedSegmentsDistance;
 
 	private List<LevelSegment> segments = new List<LevelSegment>();
+
+	private List<LevelSegment> interactiveSegments = new List<LevelSegment>();
+	private List<int> actionIds = new List<int>();
 
 	void Start()
 	{
@@ -66,7 +70,7 @@ public class RunPathSpawner : MonoBehaviour
 		}
 
 		if (nextLevelSegmentIndex < levelSegmentsPrefabs.Length) {
-			while (usedDistance < playerPosition + targetDistanceOffset) {
+			while (nextLevelSegmentIndex < levelSegmentsPrefabs.Length && usedDistance < playerPosition + targetDistanceOffset) {
 				LevelSegment prefab = levelSegmentsPrefabs[nextLevelSegmentIndex];
 				int levelSegmentLenght = prefab.segmentLength;
 				float xPosition = usedDistance + levelSegmentLenght / 2f;
@@ -77,6 +81,12 @@ public class RunPathSpawner : MonoBehaviour
 
 				segments.Add(instantiatedSegment);
 
+				if (instantiatedSegment.interactive) {
+					interactiveSegments.Add(instantiatedSegment);
+					int action = associatedActionIds[nextLevelSegmentIndex];
+					actionIds.Add(action);
+				}
+
 				usedDistance += levelSegmentLenght;
 
 				Debug.Log("Instantiated segment of index " + nextLevelSegmentIndex + ", posX " + position.x);
@@ -85,11 +95,28 @@ public class RunPathSpawner : MonoBehaviour
 			}
 		}
 
-
 		foreach (LevelSegment segment in pastSegments) {
 			segments.Remove(segment);
+
+			int index = interactiveSegments.IndexOf(segment);
+			if (index != -1) {
+				interactiveSegments.RemoveAt(index);
+				actionIds.RemoveAt(index);
+			}
 		}
 
+	}
+
+	public void OnAction(int actionId, bool positive)
+	{
+		for (int i = 0; i < interactiveSegments.Count; i++) {
+			LevelSegment levelSegment = interactiveSegments[i];
+			int levelSegmentActionId = actionIds[i];
+
+			if (levelSegmentActionId == actionId) {
+				levelSegment.OnAction(positive);
+			}
+		}
 	}
 
 	public void EditorInstantiateAllSegmentsTest()
