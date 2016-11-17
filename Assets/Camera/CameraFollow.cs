@@ -3,9 +3,9 @@ using System.Collections;
 
 //[ExecuteInEditMode]
 public class CameraFollow : MonoBehaviour {
-	public GameObject TargetObject;
+	public Transform Target;
 	public Vector2 DistanceBounds = new Vector2 (1, 10);
-	public float Scale = 0.1f;
+	public Vector3 Offset = new Vector3 (-0.2f, 6.96f, -4.53f);
 
 	// Use this for initialization
 	void Start () {
@@ -14,21 +14,12 @@ public class CameraFollow : MonoBehaviour {
 	
 	// Update is called once per frame
 	void LateUpdate () {
-		/*Vector3 distance = normalizedTargetObjectPosition () - transform.position;
-		if (distance.magnitude <= DistanceBounds.x) {
-			distance = Vector3.zero;
-		}
-		else if (distance.magnitude <= DistanceBounds.y) {
-			distance -= distance.normalized * (distance.magnitude - DistanceBounds.x);
-		}
-			
-		transform.position += distance;*/
 		Vector3 velocity = Vector3.zero;
 		transform.position = Vector3.SmoothDamp (transform.position, normalizedTargetObjectPosition (), ref velocity, 0.1f);
 	}
 
 	Vector3 normalizedTargetObjectPosition() {
-		return new Vector3 (TargetObject.transform.position.x, 7, -6);
+		return new Vector3 (Target.position.x, 0, 0) + Offset;
 	}
 
 	public static Vector3 Lerp(Vector3 a, Vector3 b, float t) {

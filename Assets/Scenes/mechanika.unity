@@ -505,7 +505,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000011287251394, guid: 67d49e14f1141495ca8512431df8a638, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4000011287251394, guid: 67d49e14f1141495ca8512431df8a638, type: 2}
       propertyPath: m_LocalPosition.y
@@ -542,12 +542,17 @@ Prefab:
     - target: {fileID: 136000011350898204, guid: 67d49e14f1141495ca8512431df8a638,
         type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 143000011961946314, guid: 67d49e14f1141495ca8512431df8a638,
         type: 2}
       propertyPath: m_Radius
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010434907584, guid: 67d49e14f1141495ca8512431df8a638,
+        type: 2}
+      propertyPath: JumpVector.y
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 67d49e14f1141495ca8512431df8a638, type: 2}
