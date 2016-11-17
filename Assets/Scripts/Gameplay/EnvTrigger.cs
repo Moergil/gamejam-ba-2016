@@ -11,6 +11,9 @@ public class EnvTrigger : MonoBehaviour
 
     private Collider _col;
 
+    [HideInInspector]
+    public Vector3 size;
+
     #region Mono
 
     void Awake ( )
@@ -41,10 +44,10 @@ public class EnvTrigger : MonoBehaviour
 
     #endregion
 
-    void OnDrawGizmos()
+    void OnDrawGizmos ( )
     {
         Gizmos.color = Color.yellow;
-        Gizmos.DrawWireCube ( transform.position, Vector3.one);
+        Gizmos.DrawWireCube ( transform.position, size );
     }
 }
 
