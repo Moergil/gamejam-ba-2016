@@ -23,7 +23,7 @@ GameObject:
   - 65: {fileID: 65000011377418788}
   - 23: {fileID: 23000010230319734}
   - 54: {fileID: 54000014278300726}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,8 +36,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000014159895720}
-  m_LocalRotation: {x: -0, y: -0.99724066, z: -0, w: 0.074236974}
-  m_LocalPosition: {x: 6.95, y: 0.3, z: 1.61}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 17.5, y: 0.23, z: 2.17}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_LocalEulerAnglesHint: {x: 0, y: -171.71101, z: 0}
   m_Children: []

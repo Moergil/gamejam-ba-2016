@@ -4,8 +4,8 @@ using System.Collections;
 [RequireComponent(typeof(CharacterController))]
 public class PlayerControl : MonoBehaviour {
 	public float Speed = 5;
-	public Vector3 JumpVector = new Vector3(0, 10, 0);
-	public Vector3 Gravity = new Vector3(0, -1, 0);
+	Vector3 JumpVector = new Vector3(0, 20, 0);
+	Vector3 Gravity = new Vector3(0, -1, 0);
 
 	CharacterController controller;
 	private Vector3 moveDirection = Vector3.zero;
@@ -33,5 +33,17 @@ public class PlayerControl : MonoBehaviour {
 		if (transform.position.x > 20) {
 			transform.position = new Vector3 (0, transform.position.y, transform.position.z);
 		}
+	}
+
+	void OnControllerColliderHit(ControllerColliderHit hit) {
+		Rigidbody body = hit.collider.attachedRigidbody;
+		if (body == null || body.isKinematic)
+			return;
+
+		if (hit.moveDirection.y < -0.3F)
+			return;
+
+		Vector3 pushDir = new Vector3(hit.moveDirection.x, 0, hit.moveDirection.z);
+		body.velocity = pushDir * 10;
 	}
 }
