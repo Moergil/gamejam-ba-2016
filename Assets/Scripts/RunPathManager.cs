@@ -14,6 +14,7 @@ public class RunPathManager : MonoBehaviour
 
 	public int activeDistance;
 	public int targetDistanceOffset;
+	public int pastDistanceOffset;
 
 	public float playerPosition;
 	private int runnedSegmentsDistance;
@@ -22,12 +23,14 @@ public class RunPathManager : MonoBehaviour
 
 	void Start()
 	{
-	
+		EditorClearAllSegments();
 	}
 	
 	// Update is called once per frame
 	void Update()
 	{
+		playerPosition = player.transform.position.x;
+
 		if (nextLevelSegmentIndex < levelSegmentsPrefabs.Length) {
 			PathBuilding();
 		}
@@ -42,10 +45,9 @@ public class RunPathManager : MonoBehaviour
 		foreach (LevelSegment segment in segments) {
 			int segmentLenght = segment.segmentLength;
 			usedDistance += segmentLenght;
-			int segmentPos = activeDistance + segmentLenght;
 
-			if (segmentPos < playerPosition) {
-				Debug.Log("Segment at posX " + segmentPos + " scheduled for remove.");
+			if (usedDistance + pastDistanceOffset < playerPosition) {
+				Debug.Log("Segment at posX " + usedDistance + " scheduled for remove.");
 				pastSegments.Add(segment);
 				activeDistance += segmentLenght;
 				Destroy(segment.gameObject);
@@ -104,9 +106,11 @@ public class RunPathManager : MonoBehaviour
 
 	public void EditorClearAllSegments()
 	{
-		foreach (LevelSegment segment in segments) {
-			DestroyImmediate(segment.gameObject);
+		foreach (Transform child in transform) {
+			LevelSegment segment = child.GetComponent<LevelSegment>();
+			Destroy(segment.gameObject);
 		}
+
 		segments.Clear();
 	}
 
