@@ -10,6 +10,7 @@ public class PlayerControl : MonoBehaviour
 	Vector3 Gravity = new Vector3(0, -0.4f, 0);
 	CharacterController controller;
 	Vector3 moveDirection = Vector3.zero;
+	bool ducked = false;
 
 	// Use this for initialization
 	void Start()
@@ -26,9 +27,16 @@ public class PlayerControl : MonoBehaviour
 				moveDirection = transform.TransformDirection(moveDirection);
 				moveDirection *= Speed;
 
-				if (Input.GetButton("Jump"))
-					moveDirection += JumpVector;
 
+				if (Input.GetButton ("Jump")) {
+					moveDirection += JumpVector;
+				}
+
+				if (Input.GetButton ("Duck")) {
+					transform.localScale = new Vector3 (1, 0.5f, 1);
+				} else {
+					transform.localScale = Vector3.one;
+				}
 			}
 
 			moveDirection += Gravity;

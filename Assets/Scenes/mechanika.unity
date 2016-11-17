@@ -4111,6 +4111,10 @@ Prefab:
       propertyPath: m_StepOffset
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 4000011287251394, guid: 67d49e14f1141495ca8512431df8a638, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 67d49e14f1141495ca8512431df8a638, type: 2}
   m_IsPrefabParent: 0
