@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 823dce1d6c47d4ef4a5e776978106ff4
-timeCreated: 1479391066
+guid: 31d6e8058910f48b9a9c163ae64e4be1
+timeCreated: 1479396988
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -9,8 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Tile-brick-1
-    4300002: Tile-brick-1a
+    4300000: Tile-brick-5a
     7400000: Take 001
     9500000: //RootNode
   materials:

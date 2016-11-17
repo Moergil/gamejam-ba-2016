@@ -106,8 +106,13 @@ public class RunPathManager : MonoBehaviour
 
 	public void EditorClearAllSegments()
 	{
+		List<LevelSegment> segmentsToDestroy = new List<LevelSegment>();
 		foreach (Transform child in transform) {
 			LevelSegment segment = child.GetComponent<LevelSegment>();
+			segmentsToDestroy.Add(segment);
+		}
+
+		foreach (LevelSegment segment in segmentsToDestroy) {
 			if (Application.isPlaying) { 
 				Destroy(segment.gameObject);
 			} else {
