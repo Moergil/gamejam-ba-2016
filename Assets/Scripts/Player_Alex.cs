@@ -113,11 +113,12 @@ public class Player_Alex : MonoBehaviour
 
 	#region Collisions
 
-	void OnControllerColliderHit(ControllerColliderHit hit)
+	void OnTriggerEnter(Collider collider)
 	{
-		if (hit.gameObject.tag == "Minca") {
+		GameObject colliderObject = collider.gameObject;
+		if (colliderObject.tag == "Minca") {
 			GameManager.Instance.AddCoin();
-			Destroy(hit.gameObject);
+			Destroy(colliderObject);
 			return;
 		}
 	}
