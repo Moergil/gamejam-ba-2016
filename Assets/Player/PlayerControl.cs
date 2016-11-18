@@ -11,7 +11,6 @@ public class PlayerControl : MonoBehaviour
 	Vector3 JumpVector = new Vector3(0, 4, 0);
 	Vector3 Gravity = new Vector3(0, -0.4f, 0);
 	CharacterController controller;
-	public int Mince = 0;
 
 	Vector3 moveDirection = Vector3.zero;
 
@@ -57,7 +56,7 @@ public class PlayerControl : MonoBehaviour
 	void OnControllerColliderHit(ControllerColliderHit hit)
 	{
 		if (hit.gameObject.tag == "Minca") {
-			Mince += 1;
+			GameManager.Instance.AddMinca ();
 			Destroy (hit.gameObject);
 			return;
 		}

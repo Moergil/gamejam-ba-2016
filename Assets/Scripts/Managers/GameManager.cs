@@ -4,6 +4,10 @@ using System.Collections;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
+	public int Mince {
+		get;
+		private set;
+	}
 
     private void Awake ( )
     {
@@ -12,4 +16,8 @@ public class GameManager : MonoBehaviour
         else if ( Instance != this )
             Destroy ( gameObject );
     }
+
+	public void AddMinca() {
+		Mince++;
+	}
 }
