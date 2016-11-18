@@ -4,10 +4,15 @@ using System.Collections;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
-	public int Mince {
-		get;
-		private set;
-	}
+
+    [SerializeField]
+    private CameraFollow _camFollow;
+
+    public int Mince
+    {
+        get;
+        private set;
+    }
 
     private void Awake ( )
     {
@@ -17,7 +22,20 @@ public class GameManager : MonoBehaviour
             Destroy ( gameObject );
     }
 
-	public void AddMinca() {
-		Mince++;
-	}
+    public void AddMinca ( )
+    {
+        Mince++;
+    }
+
+    public void StartGame ( )
+    {
+        //  Visual change
+        _camFollow.Blur ( E_FocusMode.Game );
+    }
+
+    public void GameOver ( )
+    {
+        //  Visual change
+        _camFollow.Blur ( E_FocusMode.Menu );
+    }
 }
