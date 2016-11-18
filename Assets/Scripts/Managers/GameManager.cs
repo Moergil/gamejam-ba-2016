@@ -4,75 +4,81 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance { get; private set; }
-	public GameObject MincaPrefab;
+	public static GameManager Instance { get; private set; }
 
     public static event System.Action OnGameStarted;
     public static event System.Action OnGameOver;
     public static event System.Action OnCoinCollected;
 
-    [Header ( "References" )]
+    public GameObject MincaPrefab;
+
+	[Header("References")]
+
+	[SerializeField]
+	private CameraFollow _camFollow;
+
+	[SerializeField]
+	private Text _scoreText;
+
+	public int Mince {
+		get;
+		private set;
+	}
+
+	[SerializeField]
+	private PlayerControl _player;
 
     [SerializeField]
-    private CameraFollow _camFollow;
+    private Player_Alex _playerAlex;
 
-    [SerializeField]
-    private Text _scoreText;
+    #region MonoBehaviour
 
-    public int Mince
-    {
-        get;
-        private set;
-    }
+    private void Awake()
+	{
+		if (Instance == null)
+			Instance = this;
+		else if (Instance != this)
+			Destroy(gameObject);
+	}
 
-    [SerializeField]
-    private Player_Alex _player;
+	private void Start()
+	{
+	}
 
-    #region Mono
-
-    private void Awake ( )
-    {
-        if ( Instance == null )
-            Instance = this;
-        else if ( Instance != this )
-            Destroy ( gameObject );
-    }
-
-    private void Start ( )
-    {
-    }
-
-    #endregion
-
-    #region API
+	#endregion
 
     public void AddCoin ( )
     {
         _scoreText.text = Mince++.ToString ( );
     }
 
-    public void StartGame ( )
-    {
-        //  Reset
-        Mince = 0;
+	#region API
 
-        //  Event
-        if ( OnGameStarted != null ) OnGameStarted ( );
 
-        //  Visual change
-        _camFollow.Blur ( E_FocusMode.Game );
+	public void StartGame()
+	{
+		//  Reset
+		Mince = 0;
+
+		//  Event
+		if (OnGameStarted != null)
+			OnGameStarted();
 
         //  Respawn
-        _player.Respawn ( );
-    }
+        _playerAlex.Respawn ( );
 
-    public void GameOver ( )
-    {
-        if ( OnGameOver != null ) OnGameOver ( );
+		//  Visual change
+		_camFollow.Blur(E_FocusMode.Game);
+	}
 
-        //  Visual change
-        _camFollow.Blur ( E_FocusMode.Menu );
-    }
+	public void GameOver()
+	{
+		if (OnGameOver != null)
+			OnGameOver();
 
-    #endregion
+		//  Visual change
+		_camFollow.Blur(E_FocusMode.Menu);
+	}
+
+	#endregion
 }

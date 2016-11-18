@@ -20,18 +20,6 @@ public class RunPathSpawnerEditor : Editor
 		//serializedObject.Update();
 		//EditorGUILayout.PropertyField(lookAtPoint);
 		//serializedObject.ApplyModifiedProperties();
-
-		bool build = GUILayout.Button("Build");
-		if (build) {
-			RunPathSpawner runPathManager = (RunPathSpawner)target;
-			runPathManager.EditorInstantiateAllSegmentsTest();
-		}
-
-		bool clear = GUILayout.Button("Clear");
-		if (clear) {
-			RunPathSpawner runPathManager = (RunPathSpawner)target;
-			runPathManager.EditorClearAllSegments();
-		}
 	}
 
 }

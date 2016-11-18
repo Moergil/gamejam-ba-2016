@@ -1661,14 +1661,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   segmentLength: 3
+  hintActivated: 0
   interactive: 0
   holdLengthMillis: 0
   tapRepeatTarget: 0
   actionType: 0
+  actionHint: {fileID: 0}
   tapRepeatAdd: 0
   tapRepeatDrainPerSec: 0
   tapRepeatGauge: 0
   actionFinished: 0
+  actionEvent:
+    inspectorListHeight: 83
+    persistentCalls:
+      calls: []
 --- !u!114 &114000010675388042
 MonoBehaviour:
   m_ObjectHideFlags: 1

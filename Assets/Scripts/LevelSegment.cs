@@ -20,6 +20,7 @@ public class LevelSegment : MonoBehaviour
 
 	public int segmentLength = 1;
 
+	public bool hintActivated;
 	public bool interactive;
 
 	public float holdLengthMillis;
@@ -41,8 +42,13 @@ public class LevelSegment : MonoBehaviour
 
 	public void SetupActionHint(int actionId)
 	{
-		actionHint.gameObject.SetActive(true);
 		actionHint.SetActionId(actionId);
+	}
+
+	public void ActivateHint()
+	{
+		hintActivated = true;
+		// TODO show hint
 	}
 
 	void Start()

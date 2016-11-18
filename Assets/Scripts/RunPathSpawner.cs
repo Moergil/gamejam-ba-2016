@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -6,9 +7,7 @@ public class RunPathSpawner : MonoBehaviour
 {
 	public bool debug;
 
-	public LevelSegment[] levelSegmentsPrefabs;
-	public int[] associatedActionIds;
-	private int nextLevelSegmentIndex;
+	public SegmentDef[] segmentDefs;
 
 	private GameObject[] buttonIndicators;
 
@@ -18,6 +17,8 @@ public class RunPathSpawner : MonoBehaviour
 	public int targetDistanceOffset;
 	public int pastDistanceOffset;
 
+	public int interactionDistance;
+
 	public float playerPosition;
 
 	private List<LevelSegment> segments = new List<LevelSegment>();
@@ -25,9 +26,13 @@ public class RunPathSpawner : MonoBehaviour
 	private List<LevelSegment> interactiveSegments = new List<LevelSegment>();
 	private List<int> actionIds = new List<int>();
 
+	public int generatorSeed;
+
 	void Start()
 	{
-		EditorClearAllSegments();
+		if (generatorSeed != 0) {
+			UnityEngine.Random.InitState(generatorSeed);
+		}
 	}
 	
 	// Update is called once per frame
@@ -60,13 +65,18 @@ public class RunPathSpawner : MonoBehaviour
 			Debug.Log("used " + usedDistance + ", active " + activeDistance);
 		}
 
-		if (nextLevelSegmentIndex < levelSegmentsPrefabs.Length) {
-			while (nextLevelSegmentIndex < levelSegmentsPrefabs.Length && usedDistance < playerPosition + targetDistanceOffset) {
-				LevelSegment prefab = levelSegmentsPrefabs[nextLevelSegmentIndex];
+		while (usedDistance < playerPosition + targetDistanceOffset) {
+			int index = UnityEngine.Random.Range(0, segmentDefs.Length);
+
+			SegmentDef segmentDef = segmentDefs[index];
+			foreach (SegmentActionStruct segmentActionStruct in segmentDef.segmentActionStructs) {
+				LevelSegment prefab = segmentActionStruct.levelSegmentPrefab;
 				int levelSegmentLenght = prefab.segmentLength;
 				float xPosition = usedDistance + levelSegmentLenght / 2f;
 				Vector3 position = new Vector3(xPosition, 0, 0);
-				Quaternion rotation = Quaternion.Euler(0, (nextLevelSegmentIndex%3) * 180, 0);
+				//float rotationY = (UnityEngine.Random.value >= 0.5f) ? 0 : 180;
+				float rotationY = 0;
+				Quaternion rotation = Quaternion.Euler(0, rotationY, 0);
 				Transform parent = transform;
 				LevelSegment instantiatedSegment = (LevelSegment)Instantiate(prefab, position, rotation, parent);
 
@@ -74,7 +84,7 @@ public class RunPathSpawner : MonoBehaviour
 
 				if (instantiatedSegment.interactive) {
 					interactiveSegments.Add(instantiatedSegment);
-					int actionId = associatedActionIds[nextLevelSegmentIndex];
+					int actionId = segmentActionStruct.associatedAction;
 					actionIds.Add(actionId);
 
 					instantiatedSegment.SetupActionHint(actionId);
@@ -82,9 +92,7 @@ public class RunPathSpawner : MonoBehaviour
 
 				usedDistance += levelSegmentLenght;
 
-				Debug.Log("Instantiated segment of index " + nextLevelSegmentIndex + ", posX " + position.x);
-
-				nextLevelSegmentIndex++;
+				Debug.Log("Instantiated segment of index " + index + ", posX " + position.x);
 			}
 		}
 
@@ -102,8 +110,23 @@ public class RunPathSpawner : MonoBehaviour
 
 	public void OnAction(int actionId, bool positive)
 	{
+		int distance = 0;
+
 		for (int i = 0; i < interactiveSegments.Count; i++) {
 			LevelSegment levelSegment = interactiveSegments[i];
+
+			float levelSegmentPosX = levelSegment.transform.position.x;
+			float distanceToLevelSegment = levelSegmentPosX - levelSegment.segmentLength / 2f;
+
+			if (playerPosition + interactionDistance < distanceToLevelSegment) {
+				break;
+			}
+
+			if (!levelSegment.hintActivated) {
+				levelSegment.ActivateHint();
+			}
+
+			distance += levelSegment.segmentLength;
 
 			if (levelSegment.IsActionFinished()) {
 				continue;
@@ -119,53 +142,17 @@ public class RunPathSpawner : MonoBehaviour
 		}
 	}
 
-	public void EditorInstantiateAllSegmentsTest()
+	[Serializable]
+	public class SegmentDef
 	{
-		EditorClearAllSegments();
+		public SegmentActionStruct[] segmentActionStructs;
 
-		int distance = 0;
-		int index = 0;
-		foreach (LevelSegment prefab in levelSegmentsPrefabs) {
-			float levelSegmentLenght = prefab.segmentLength;
-			float xPosition = distance + levelSegmentLenght / 2;
-			Vector3 position = new Vector3(xPosition, 0, 0);
-
-			Quaternion rotation = Quaternion.Euler(0, (index%3) * 180, 0);
-			Transform parent = transform;
-			LevelSegment instantiatedSegment = (LevelSegment)Instantiate(prefab, position, rotation, parent);
-
-			segments.Add(instantiatedSegment);
-
-			distance += (int)levelSegmentLenght;
-			index++;
-		}
 	}
 
-	public void EditorClearAllSegments()
+	[Serializable]
+	public class SegmentActionStruct
 	{
-		List<LevelSegment> segmentsToDestroy = new List<LevelSegment>();
-		foreach (Transform child in transform) {
-			LevelSegment segment = child.GetComponent<LevelSegment>();
-			segmentsToDestroy.Add(segment);
-		}
-
-		foreach (LevelSegment segment in segmentsToDestroy) {
-			if (Application.isPlaying) { 
-				Destroy(segment.gameObject);
-			} else {
-				DestroyImmediate(segment.gameObject);
-			}
-		}
-
-		segments.Clear();
-	}
-
-	private int CalcLength()
-	{
-		int totalLenght = 0;
-		foreach (LevelSegment levelSegment in levelSegmentsPrefabs) {
-			totalLenght += levelSegment.segmentLength;
-		}
-		return totalLenght;
+		public LevelSegment levelSegmentPrefab;
+		public int associatedAction;
 	}
 }
