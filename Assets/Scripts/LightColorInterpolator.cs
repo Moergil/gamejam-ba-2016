@@ -9,9 +9,9 @@ public class LightColorInterpolator : MonoBehaviour
     public Color[ ] colors;
     public bool startOnStart = true;
     public float duration = 0.5f;
+    public float delayAfterComplete = 0.1f;
     public Vector2 intensityRange = new Vector2 ( 0f, 1f );
     private bool _canEval = true;
-
     void Awake ( )
     {
         _light = GetComponent<Light> ( );
@@ -28,8 +28,8 @@ public class LightColorInterpolator : MonoBehaviour
 
         if ( _canEval )
         {
-            _light.DOIntensity ( Random.Range ( intensityRange.x, intensityRange.y ), duration );
-            _light.DOColor ( colors[ Random.Range ( 0, colors.Length - 1 ) ], duration ).OnComplete ( ( ) => StartAction ( ) );
+            _light.DOIntensity ( Random.Range ( intensityRange.x, intensityRange.y ), duration ).SetDelay(delayAfterComplete);
+            _light.DOColor ( colors[ Random.Range ( 0, colors.Length - 1 ) ], duration ).SetDelay(delayAfterComplete).OnComplete ( ( ) => StartAction ( ) );
         }
     }
 
