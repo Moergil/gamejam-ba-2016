@@ -1,140 +1,145 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public enum E_PlayerState { Running, Idle, Jumping, Dead }
+public enum E_PlayerState
+{
+	Running,
+	Idle,
+	Jumping,
+	Dead
+
+}
 
 public class Player_Alex : MonoBehaviour
 {
-    private Animator _animator;
-    private Rigidbody _rb;
-    CharacterController _controller;
+	private Animator _animator;
+	private Rigidbody _rb;
+	CharacterController _controller;
 
-    public float speed = 6.0F;
-    public float jumpSpeed = 8.0F;
-    Vector3 Gravity = new Vector3 ( 0, -0.4f, 0 );
+	public float speed = 6.0F;
+	public float jumpSpeed = 8.0F;
+	Vector3 Gravity = new Vector3(0, -0.4f, 0);
 
-    private Vector3 moveDirection = Vector3.zero;
-    public float ActualSpeed;
-    public float SpeedBonus = 0;
+	private Vector3 moveDirection = Vector3.zero;
+	public float ActualSpeed;
+	public float SpeedBonus = 0;
 
-    private int _idleHash, _runHash, _jumpHash;
+	private int _idleHash, _runHash, _jumpHash;
 
-    public E_PlayerState PlayerState { get; private set; }
+	public E_PlayerState PlayerState { get; private set; }
 
-    [SerializeField]
-    private Vector3 _jumpVector = new Vector3 ( 0f, 1f, 0f );
+	[SerializeField]
+	private Vector3 _jumpVector = new Vector3(0f, 1f, 0f);
 
-    [SerializeField]
-    private Vector3 _gravity = new Vector3 ( 0f, 9.8f, 0f );
+	[SerializeField]
+	private Vector3 _gravity = new Vector3(0f, 9.8f, 0f);
 
-    #region Mono
+	private float gravity = 9.8f;
 
-    void Awake ( )
-    {
-        _animator = GetComponentInChildren<Animator> ( );
-        _rb = GetComponent<Rigidbody> ( );
-        _controller = GetComponent<CharacterController> ( );
+	#region Mono
 
-        if ( _animator != null )
-        {
-            _idleHash = Animator.StringToHash ( "Idle" );
-            _runHash = Animator.StringToHash ( "Run" );
-            _jumpHash = Animator.StringToHash ( "Jump" );
-        }
+	void Awake()
+	{
+		_animator = GetComponentInChildren<Animator>();
+		_rb = GetComponent<Rigidbody>();
+		_controller = GetComponent<CharacterController>();
 
-        if ( _rb != null )
-            _rb.isKinematic = true;
+		if (_animator != null) {
+			_idleHash = Animator.StringToHash("Idle");
+			_runHash = Animator.StringToHash("Run");
+			_jumpHash = Animator.StringToHash("Jump");
+		}
 
-        GameManager.OnGameOver += GameManager_OnGameOver;
-        GameManager.OnGameStarted += GameManager_OnGameStarted;
-        GameManager.OnCoinCollected += GameManager_OnCoinCollected;
-    }
+		if (_rb != null)
+			_rb.isKinematic = true;
 
-    void Start ( )
-    {
-        //  Lets run on start
-        PlayerState = E_PlayerState.Running;
-    }
+		GameManager.OnGameOver += GameManager_OnGameOver;
+		GameManager.OnGameStarted += GameManager_OnGameStarted;
+		GameManager.OnCoinCollected += GameManager_OnCoinCollected;
+	}
 
-    void Update ( )
-    {
-        if ( PlayerState == E_PlayerState.Running )
-        {
+	void Start()
+	{
+		//  Lets run on start
+		PlayerState = E_PlayerState.Running;
+	}
 
-            moveDirection = Vector3.right * speed;
-            moveDirection += new Vector3 ( 1f, 0f, Input.GetAxis ( "Horizontal" ) );
+	void Update()
+	{
+		if (_controller.isGrounded) {
+			float steeringInput = -Input.GetAxis("Horizontal");
+			moveDirection = new Vector3(1, 0, steeringInput);
+			moveDirection *= speed;
+			Debug.DrawRay(transform.position, moveDirection, Color.red, 0, false);
+			if (Input.GetButton("Jump"))
+				moveDirection.y = jumpSpeed;
+            
+		}
 
-            if ( Input.GetButtonDown ( "Jump" ) )
-            {
-                moveDirection += _jumpVector;
-            }
-        }
+		moveDirection.y -= gravity * Time.deltaTime;
+		_controller.Move(moveDirection * Time.deltaTime);
+	}
 
-        moveDirection += Gravity;
-        _controller.Move ( moveDirection * Time.deltaTime );
-    }
+	#endregion
 
-    #endregion
+	#region API
 
-    #region API
+	public void Respawn()
+	{
+		PlayerState = E_PlayerState.Running;
+	}
 
-    public void Respawn ( )
-    {
-        PlayerState = E_PlayerState.Running;
-    }
+	public void Die()
+	{
+		PlayerState = E_PlayerState.Dead;
+	}
 
-    public void Die ( )
-    {
-        PlayerState = E_PlayerState.Dead;
-    }
+	public void Jump()
+	{
+		_animator.SetTrigger(_jumpHash);
+	}
 
-    public void Jump ( )
-    {
-        _animator.SetTrigger ( _jumpHash );
-    }
+	public void Run()
+	{
+		_animator.SetTrigger(_runHash);
+	}
 
-    public void Run ( )
-    {
-        _animator.SetTrigger ( _runHash );
-    }
+	public void Idle()
+	{
+		_animator.SetTrigger(_idleHash);
+	}
 
-    public void Idle ( )
-    {
-        _animator.SetTrigger ( _idleHash );
-    }
+	#endregion
 
-    #endregion
+	#region Collisions
 
-    #region Collisions
+	void OnControllerColliderHit(ControllerColliderHit hit)
+	{
+		if (hit.gameObject.tag == "Minca") {
+			GameManager.Instance.AddCoin();
+			Destroy(hit.gameObject);
+			return;
+		}
+	}
 
-    void OnControllerColliderHit ( ControllerColliderHit hit )
-    {
-        if ( hit.gameObject.tag == "Minca" )
-        {
-            GameManager.Instance.AddCoin ( );
-            Destroy ( hit.gameObject );
-            return;
-        }
-    }
+	#endregion
 
-    #endregion
+	#region Event handlers
 
-    #region Event handlers
+	private void GameManager_OnGameStarted()
+	{
+		Respawn();
+	}
 
-    private void GameManager_OnGameStarted ( )
-    {
-        Respawn ( );
-    }
+	private void GameManager_OnGameOver()
+	{
+		Die();
+	}
 
-    private void GameManager_OnGameOver ( )
-    {
-        Die ( );
-    }
+	private void GameManager_OnCoinCollected()
+	{
+		throw new System.NotImplementedException();
+	}
 
-    private void GameManager_OnCoinCollected ( )
-    {
-        throw new System.NotImplementedException ( );
-    }
-
-    #endregion
+	#endregion
 }
