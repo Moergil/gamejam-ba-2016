@@ -29,14 +29,6 @@ public class RunPathSpawner : MonoBehaviour
 	void Start()
 	{
 		EditorClearAllSegments();
-		List<LevelSegment> tmp = new List<LevelSegment> (levelSegmentsPrefabs);
-		tmp.AddRange (levelSegmentsPrefabs);
-		tmp.AddRange (levelSegmentsPrefabs);
-		tmp.AddRange (levelSegmentsPrefabs);
-		tmp.AddRange (levelSegmentsPrefabs);
-		tmp.AddRange (levelSegmentsPrefabs);
-		tmp.AddRange (levelSegmentsPrefabs);
-		levelSegmentsPrefabs = tmp.ToArray ();
 	}
 	
 	// Update is called once per frame

@@ -21,9 +21,8 @@ GameObject:
   - 4: {fileID: 4000012209955062}
   - 33: {fileID: 33000012383282878}
   - 23: {fileID: 23000012044558350}
-  - 95: {fileID: 95000011473121118}
-  - 65: {fileID: 65000010136857136}
   - 114: {fileID: 114000014171048926}
+  - 65: {fileID: 65000013515735552}
   m_Layer: 0
   m_Name: Wall-brick-1a
   m_TagString: Untagged
@@ -38,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012435083042}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: -2.3650603, y: 0.048937634, z: -4.225917}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -80,7 +79,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012435083042}
   m_Mesh: {fileID: 4300000, guid: d76715831f82140f1805b091ae8a361f, type: 3}
---- !u!65 &65000010136857136
+--- !u!65 &65000013515735552
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -90,25 +89,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.0000944, y: 0.039422765, z: 0.5216787}
-  m_Center: {x: 0.0012755394, y: 0.51440334, z: -0.027694575}
---- !u!95 &95000011473121118
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012435083042}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: d76715831f82140f1805b091ae8a361f, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
+  m_Size: {x: 0.9752133, y: 0.8449665, z: 0.47296774}
+  m_Center: {x: -0.0040197372, y: 0.5, z: -0.032277584}
 --- !u!114 &114000014171048926
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -122,4 +104,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _randomizeOnStart: 1
   _isFreePlaceable: 0
-  yScaleRatio: 0.6
+  yScaleRatio: 1

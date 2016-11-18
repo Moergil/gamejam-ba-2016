@@ -687,10 +687,15 @@ MonoBehaviour:
   holdLengthMillis: 0
   tapRepeatTarget: 0
   actionType: 0
+  actionHint: {fileID: 0}
   tapRepeatAdd: 0
   tapRepeatDrainPerSec: 0
   tapRepeatGauge: 0
   actionFinished: 0
+  actionEvent:
+    inspectorListHeight: 83
+    persistentCalls:
+      calls: []
 --- !u!114 &114000013756039226
 MonoBehaviour:
   m_ObjectHideFlags: 1
