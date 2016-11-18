@@ -60,8 +60,7 @@ public class Player_Alex : MonoBehaviour
 	void Update()
 	{
 		if (_controller.isGrounded) {
-			float steeringInput = -Input.GetAxis("Horizontal");
-			moveDirection = new Vector3(1, 0, steeringInput);
+			moveDirection = new Vector3(1, 0, 0);
 			moveDirection *= speed;
 			Debug.DrawRay(transform.position, moveDirection, Color.red, 0, false);
 			if (Input.GetButton("Jump"))
@@ -69,13 +68,11 @@ public class Player_Alex : MonoBehaviour
             
 		}
 
+		float steeringInput = -Input.GetAxis("Horizontal");
+		moveDirection.z = steeringInput;
+
 		moveDirection.y -= gravity * Time.deltaTime;
 		_controller.Move(moveDirection * Time.deltaTime);
-	}
-
-	public void ApplyForce(Vector3 force)
-	{
-		moveDirection += force;
 	}
 
 	#endregion
