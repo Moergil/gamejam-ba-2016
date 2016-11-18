@@ -4,61 +4,63 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance { get; private set; }
+	public static GameManager Instance { get; private set; }
+
 	public GameObject MincaPrefab;
 
 
-    [Header ( "References" )]
+	[Header("References")]
 
-    [SerializeField]
-    private CameraFollow _camFollow;
+	[SerializeField]
+	private CameraFollow _camFollow;
 
-    [SerializeField]
-    private Text _scoreText;
+	[SerializeField]
+	private Text _scoreText;
 
-    public int Mince
-    {
-        get;
-        private set;
-    }
+	public int Mince {
+		get;
+		private set;
+	}
 
-    #region Mono
+	#region Mono
 
-    private void Awake ( )
-    {
-        if ( Instance == null )
-            Instance = this;
-        else if ( Instance != this )
-            Destroy ( gameObject );
-    }
+	private void Awake()
+	{
+		if (Instance == null)
+			Instance = this;
+		else if (Instance != this)
+			Destroy(gameObject);
+	}
 
-    private void Start ( )
-    {
-    }
+	private void Start()
+	{
+	}
 
-    #endregion
+	#endregion
 
-    #region API
+	#region API
 
-    public void AddMinca ( )
-    {
-        _scoreText.text = Mince++.ToString ( );
-    }
+	public void AddMinca()
+	{
+		if (_scoreText != null) {
+			_scoreText.text = Mince++.ToString();
+		}
+	}
 
-    public void StartGame ( )
-    {
-        //  Reset
-        Mince = 0;
+	public void StartGame()
+	{
+		//  Reset
+		Mince = 0;
 
-        //  Visual change
-        _camFollow.Blur ( E_FocusMode.Game );
-    }
+		//  Visual change
+		_camFollow.Blur(E_FocusMode.Game);
+	}
 
-    public void GameOver ( )
-    {
-        //  Visual change
-        _camFollow.Blur ( E_FocusMode.Menu );
-    }
+	public void GameOver()
+	{
+		//  Visual change
+		_camFollow.Blur(E_FocusMode.Menu);
+	}
 
-    #endregion
+	#endregion
 }
