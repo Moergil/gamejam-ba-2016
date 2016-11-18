@@ -22,9 +22,11 @@ public class PositionChanger : MonoBehaviour
 		}
 	}
 
-	public void InitiatePositionChange()
+	public void InitiatePositionChange(float completeness)
 	{
-		move = true;
+		if (completeness == 1) {
+			move = true;
+		}
 	}
 
 }

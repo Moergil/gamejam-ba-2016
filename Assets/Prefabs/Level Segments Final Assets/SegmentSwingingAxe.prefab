@@ -339,6 +339,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1000012422901836
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000011628792882}
+  - 114: {fileID: 114000012030554738}
+  m_Layer: 0
+  m_Name: ActionHint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1000012456822932
 GameObject:
   m_ObjectHideFlags: 1
@@ -732,12 +748,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010991339896}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 3.2175407, y: 0.15334699, z: 1.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 4000011868313214}
   - {fileID: 4000010246680664}
+  - {fileID: 4000011628792882}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &4000011336832368
@@ -794,6 +811,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000010246680664}
   m_RootOrder: 0
+--- !u!4 &4000011628792882
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012422901836}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 4000010960122860}
+  m_RootOrder: 2
 --- !u!4 &4000011845089406
 Transform:
   m_ObjectHideFlags: 1
@@ -2191,8 +2221,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.970202, y: 1.3347635, z: 0.9976423}
-  m_Center: {x: 0.48510146, y: 0.16738176, z: 1.414332}
+  m_Size: {x: 1.9989238, y: 1.3347635, z: 0.9976423}
+  m_Center: {x: 0.010603666, y: 0.16738176, z: 1.4143319}
 --- !u!65 &65000010706893642
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -2251,8 +2281,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.970202, y: 1.3495674, z: 1.0544629}
-  m_Center: {x: 0.48510146, y: 0.1747837, z: -1.3040359}
+  m_Size: {x: 1.9443293, y: 1.3495674, z: 1.0544629}
+  m_Center: {x: -0.019171238, y: 0.1747837, z: -1.3040359}
 --- !u!65 &65000012140501860
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -2699,6 +2729,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Duration: 2
+  slowDownModifier: 1.2
 --- !u!114 &114000011605665638
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2727,6 +2758,18 @@ MonoBehaviour:
   _randomizeOnStart: 1
   _isFreePlaceable: 0
   yScaleRatio: 0.6
+--- !u!114 &114000012030554738
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012422901836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abbf9647f934447b4842387013adbdbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionId: 0
 --- !u!114 &114000012134695788
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2793,11 +2836,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   segmentLength: 2
   hintActivated: 0
-  interactive: 0
-  holdLengthMillis: 0
+  interactive: 1
+  holdLengthMillis: 1000
   tapRepeatTarget: 0
-  actionType: 0
-  actionHint: {fileID: 0}
+  actionType: 1
+  actionHint: {fileID: 114000012030554738}
   tapRepeatAdd: 0
   tapRepeatDrainPerSec: 0
   tapRepeatGauge: 0

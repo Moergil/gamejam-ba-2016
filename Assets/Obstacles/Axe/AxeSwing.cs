@@ -7,6 +7,8 @@ public class AxeSwing : MonoBehaviour
 	int direction = 1;
 	public float Duration = 2;
 
+	public float slowDownModifier;
+
 	void Update()
 	{
 		timer += Time.deltaTime / Duration;
@@ -16,5 +18,10 @@ public class AxeSwing : MonoBehaviour
 		}
 		float rotation = Mathfx.Hermite(-30, 30, timer);
 		transform.rotation = Quaternion.Euler(rotation * direction, 0, 0);
+	}
+
+	public void SlowDownAxe(float completeness)
+	{
+		Duration *= slowDownModifier;
 	}
 }

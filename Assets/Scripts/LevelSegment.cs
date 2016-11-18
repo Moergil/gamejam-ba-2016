@@ -6,7 +6,7 @@ using System.Collections.Generic;
 public class LevelSegment : MonoBehaviour
 {
 	[System.Serializable]
-	public class LevelSegmentActionEvent : AdvancedEvent<object>
+	public class LevelSegmentActionEvent : AdvancedEvent<float>
 	{
 
 	}
@@ -74,22 +74,32 @@ public class LevelSegment : MonoBehaviour
 		bool actionJustFinished = false;
 		if (!actionFinished) {
 			if (actionType == ActionType.Hold && !float.IsNaN(holdStart)) {
-				if (Time.realtimeSinceStartup - holdStart > holdLengthMillis) {
+				float holdElapsedTime = Time.realtimeSinceStartup - holdStart;
+
+				if (holdElapsedTime > holdLengthMillis) {
 					actionJustFinished = true;
+					actionEvent.Invoke(1);
+				} else {
+					float completionRatio = holdLengthMillis / holdElapsedTime;
+					completionRatio = Mathf.Clamp(completionRatio, 0, 1);
+					actionEvent.Invoke(completionRatio);
 				}
 			}
 
 			if (actionType == ActionType.TapRepeat) {
 				if (tapRepeatGauge >= tapRepeatTarget) {
 					actionJustFinished = true;
+					actionEvent.Invoke(1);
 				} else {
 					tapRepeatGauge -= tapRepeatDrainPerSec + Time.deltaTime;
+					float completionRatio = tapRepeatGauge / tapRepeatTarget;
+					completionRatio = Mathf.Clamp(completionRatio, 0, 1);
+					actionEvent.Invoke(completionRatio);
 				}
 			}
 		}
 
 		if (actionJustFinished) {
-			actionEvent.Invoke(null);
 			actionFinished = true;
 		}
 	}
@@ -103,7 +113,7 @@ public class LevelSegment : MonoBehaviour
 		switch (actionType) {
 		case ActionType.Tap:
 			if (positive) {
-				actionEvent.Invoke(null);
+				actionEvent.Invoke(1);
 				actionFinished = true;
 			}
 			break;

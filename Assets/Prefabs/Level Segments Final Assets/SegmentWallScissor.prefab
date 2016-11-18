@@ -3273,6 +3273,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   segmentLength: 4
+  hintActivated: 0
   interactive: 1
   holdLengthMillis: 0
   tapRepeatTarget: 0
@@ -3293,7 +3294,18 @@ MonoBehaviour:
         target: {fileID: 114000010720791204}
         memberName: InitiatePositionChange
         memberType: 8
-        arguments: []
+        arguments:
+        - typeName: System.Single, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+          supportedType: 4
+          objectArgument: {fileID: 0}
+          stringArgument: 
+          intArgument: 0
+          floatArgument: 0
+          boolArgument: 0
+          colorArgument: {r: 0, g: 0, b: 0, a: 0}
+          vector2Argument: {x: 0, y: 0}
+          vector3Argument: {x: 0, y: 0, z: 0}
+          enumArgument: 
         isDynamic: 0
         isCallEnabled: 1
       - genericMenuData:
@@ -3303,7 +3315,18 @@ MonoBehaviour:
         target: {fileID: 114000010897119722}
         memberName: InitiatePositionChange
         memberType: 8
-        arguments: []
+        arguments:
+        - typeName: System.Single, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+          supportedType: 4
+          objectArgument: {fileID: 0}
+          stringArgument: 
+          intArgument: 0
+          floatArgument: 0
+          boolArgument: 0
+          colorArgument: {r: 0, g: 0, b: 0, a: 0}
+          vector2Argument: {x: 0, y: 0}
+          vector3Argument: {x: 0, y: 0, z: 0}
+          enumArgument: 
         isDynamic: 0
         isCallEnabled: 1
 --- !u!114 &114000011095272890
