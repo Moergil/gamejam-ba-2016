@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.471
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.22860351, g: 0.2523383, b: 0.28106382, a: 0.471}
+  m_IndirectSpecularColor: {r: 0.22860351, g: 0.2523383, b: 0.28106385, a: 0.471}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -814,7 +814,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1000010674676916, guid: e0fe99515619ffb45a284b3c8c198c64, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e0fe99515619ffb45a284b3c8c198c64, type: 2}
@@ -891,31 +891,31 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000011286071118, guid: a3b2d41c539b91c4ea20e0537f1d8bf6, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -2.41
+      value: -1.51
       objectReference: {fileID: 0}
     - target: {fileID: 4000011286071118, guid: a3b2d41c539b91c4ea20e0537f1d8bf6, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 4.13
+      value: 3.22
       objectReference: {fileID: 0}
     - target: {fileID: 4000011286071118, guid: a3b2d41c539b91c4ea20e0537f1d8bf6, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -4
+      value: -2.63
       objectReference: {fileID: 0}
     - target: {fileID: 4000011286071118, guid: a3b2d41c539b91c4ea20e0537f1d8bf6, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0.29425654
+      value: 0.2536149
       objectReference: {fileID: 0}
     - target: {fileID: 4000011286071118, guid: a3b2d41c539b91c4ea20e0537f1d8bf6, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0.15268096
+      value: 0.46465927
       objectReference: {fileID: 0}
     - target: {fileID: 4000011286071118, guid: a3b2d41c539b91c4ea20e0537f1d8bf6, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0.015050123
+      value: -0.10772246
       objectReference: {fileID: 0}
     - target: {fileID: 4000011286071118, guid: a3b2d41c539b91c4ea20e0537f1d8bf6, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.94333196
+      value: 0.8415267
       objectReference: {fileID: 0}
     - target: {fileID: 4000011286071118, guid: a3b2d41c539b91c4ea20e0537f1d8bf6, type: 2}
       propertyPath: m_RootOrder
@@ -930,10 +930,10 @@ Prefab:
         type: 2}
       propertyPath: focus.transform
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 163636822}
     - target: {fileID: 4000011861286634, guid: a3b2d41c539b91c4ea20e0537f1d8bf6, type: 2}
       propertyPath: m_LocalScale.x
-      value: 19.955091
+      value: 19.34052
       objectReference: {fileID: 0}
     - target: {fileID: 1000013488649980, guid: a3b2d41c539b91c4ea20e0537f1d8bf6, type: 2}
       propertyPath: m_IsActive
@@ -944,6 +944,73 @@ Prefab:
       propertyPath: focusPoint
       value: 
       objectReference: {fileID: 971649122}
+    - target: {fileID: 4000011286071118, guid: a3b2d41c539b91c4ea20e0537f1d8bf6, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 31.787
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011286071118, guid: a3b2d41c539b91c4ea20e0537f1d8bf6, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 58.793003
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011286071118, guid: a3b2d41c539b91c4ea20e0537f1d8bf6, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 3.5630002
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011861286634, guid: a3b2d41c539b91c4ea20e0537f1d8bf6, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0.38769555
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011861286634, guid: a3b2d41c539b91c4ea20e0537f1d8bf6, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0.16606411
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011861286634, guid: a3b2d41c539b91c4ea20e0537f1d8bf6, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0.2877074
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011861286634, guid: a3b2d41c539b91c4ea20e0537f1d8bf6, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.8598485
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011861286634, guid: a3b2d41c539b91c4ea20e0537f1d8bf6, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 12.087825
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013838923672, guid: a3b2d41c539b91c4ea20e0537f1d8bf6,
+        type: 2}
+      propertyPath: Offset.x
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013838923672, guid: a3b2d41c539b91c4ea20e0537f1d8bf6,
+        type: 2}
+      propertyPath: Offset.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 20000011871368938, guid: a3b2d41c539b91c4ea20e0537f1d8bf6,
+        type: 2}
+      propertyPath: field of view
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013838923672, guid: a3b2d41c539b91c4ea20e0537f1d8bf6,
+        type: 2}
+      propertyPath: Offset.z
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012671782530, guid: a3b2d41c539b91c4ea20e0537f1d8bf6,
+        type: 2}
+      propertyPath: focus.focusPlane
+      value: 2.626666
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012671782530, guid: a3b2d41c539b91c4ea20e0537f1d8bf6,
+        type: 2}
+      propertyPath: focus.nearPlane
+      value: 2.576561
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012671782530, guid: a3b2d41c539b91c4ea20e0537f1d8bf6,
+        type: 2}
+      propertyPath: focus.farPlane
+      value: 2.6767712
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a3b2d41c539b91c4ea20e0537f1d8bf6, type: 2}
   m_IsPrefabParent: 0
@@ -1072,7 +1139,7 @@ MonoBehaviour:
   targetDistanceOffset: 40
   pastDistanceOffset: 10
   interactionDistance: 5
-  playerPosition: 0
+  playerPositionX: 0
   generatorSeed: 100
 --- !u!4 &1043716324
 Transform:
