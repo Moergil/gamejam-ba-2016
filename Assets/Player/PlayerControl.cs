@@ -6,12 +6,13 @@ public class PlayerControl : MonoBehaviour
 {
 	bool isAutoMoving = true;
 	public float Speed = 3;
-	Vector3 JumpVector = new Vector3(0, 6, 0);
+	public float ActualSpeed;
+	public float SpeedBonus = 0;
+	Vector3 JumpVector = new Vector3(0, 4, 0);
 	Vector3 Gravity = new Vector3(0, -0.4f, 0);
 	CharacterController controller;
 
 	Vector3 moveDirection = Vector3.zero;
-	bool ducked = false;
 
 	// Use this for initialization
 	void Start()
@@ -24,9 +25,16 @@ public class PlayerControl : MonoBehaviour
 	{
 		if (isAutoMoving) {
 			if (controller.isGrounded) {
+				ActualSpeed = Speed;
+				if (Input.GetAxis("Vertical") > 0) {
+					ActualSpeed += Input.GetAxis("Vertical") * (Speed / 6);
+				} else {
+					ActualSpeed += Input.GetAxis("Vertical") * (Speed / 2);
+				}
+
 				moveDirection = new Vector3(1, 0, -Input.GetAxis("Horizontal"));
 				moveDirection = transform.TransformDirection(moveDirection);
-				moveDirection *= Speed;
+				moveDirection *= ActualSpeed + SpeedBonus;
 
 				if (Input.GetButtonDown("Jump")) {
 					moveDirection += JumpVector;
@@ -39,18 +47,27 @@ public class PlayerControl : MonoBehaviour
 				transform.localScale = Vector3.one;
 			}
 		}
-
+		SpeedBonus += Time.deltaTime * 0.1f + SpeedBonus * Time.deltaTime * 0.1f;
+		SpeedBonus = Mathf.Clamp(SpeedBonus, 0, 10);
 		moveDirection += Gravity;
 		controller.Move(moveDirection * Time.deltaTime);
 	}
 
 	void OnControllerColliderHit(ControllerColliderHit hit)
 	{
-		Rigidbody body = hit.collider.attachedRigidbody;
-		if (body == null || body.isKinematic)
+		if (hit.gameObject.tag == "Minca") {
+			GameManager.Instance.AddMinca();
+			Destroy(hit.gameObject);
 			return;
+		}
 
 		if (hit.moveDirection.y < -0.3F)
+			return;
+		
+		SpeedBonus = SpeedBonus * 0.9f;
+
+		Rigidbody body = hit.collider.attachedRigidbody;
+		if (body == null || body.isKinematic)
 			return;
 
 		Vector3 pushDir = new Vector3(hit.moveDirection.x, 0, hit.moveDirection.z);
