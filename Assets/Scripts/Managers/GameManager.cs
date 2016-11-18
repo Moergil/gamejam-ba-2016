@@ -85,6 +85,9 @@ public class GameManager : MonoBehaviour
 		_camFollow.Blur(E_FocusMode.Menu);
         _gameOverText.enabled = true;
 
+        //  Dead
+        _playerAlex.Die ( );
+
         // TODO
         Application.LoadLevel(Application.loadedLevel);
 	}
