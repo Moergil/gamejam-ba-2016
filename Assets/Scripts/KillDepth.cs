@@ -3,7 +3,6 @@ using System.Collections;
 
 public class KillDepth : MonoBehaviour
 {
-	public LevelController levelController;
 	public Transform triggerObject;
 
 	public float depth;
@@ -11,7 +10,7 @@ public class KillDepth : MonoBehaviour
 	void Update()
 	{
 		if (triggerObject.position.y < depth) {
-			levelController.Restart();
+			GameObject.FindObjectOfType<GameManager>().GameOver();
 		}
 	}
 
