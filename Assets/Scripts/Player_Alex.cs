@@ -18,7 +18,6 @@ public class Player_Alex : MonoBehaviour
 
 	public float speed = 6.0F;
 	public float jumpSpeed = 8.0F;
-	Vector3 Gravity = new Vector3(0, -0.4f, 0);
 
 	private Vector3 moveDirection = Vector3.zero;
 	public float ActualSpeed;
@@ -27,12 +26,6 @@ public class Player_Alex : MonoBehaviour
 	private int _idleHash, _runHash, _jumpHash;
 
 	public E_PlayerState PlayerState { get; private set; }
-
-	[SerializeField]
-	private Vector3 _jumpVector = new Vector3(0f, 1f, 0f);
-
-	[SerializeField]
-	private Vector3 _gravity = new Vector3(0f, 9.8f, 0f);
 
 	private float gravity = 9.8f;
 
@@ -78,6 +71,11 @@ public class Player_Alex : MonoBehaviour
 
 		moveDirection.y -= gravity * Time.deltaTime;
 		_controller.Move(moveDirection * Time.deltaTime);
+	}
+
+	public void ApplyForce(Vector3 force)
+	{
+		moveDirection += force;
 	}
 
 	#endregion

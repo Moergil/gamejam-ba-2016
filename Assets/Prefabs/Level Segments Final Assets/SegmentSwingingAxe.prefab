@@ -2837,7 +2837,7 @@ MonoBehaviour:
   segmentLength: 2
   hintActivated: 0
   interactive: 1
-  holdLengthMillis: 1000
+  holdLength: 1
   tapRepeatTarget: 0
   actionType: 1
   actionHint: {fileID: 114000012030554738}

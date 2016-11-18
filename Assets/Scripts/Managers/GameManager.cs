@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -79,6 +80,9 @@ public class GameManager : MonoBehaviour
 
 		//  Visual change
 		_camFollow.Blur(E_FocusMode.Menu);
+
+		// TODO
+		Application.LoadLevel(Application.loadedLevel);
 	}
 
 	#endregion
