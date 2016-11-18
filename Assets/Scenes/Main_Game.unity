@@ -2103,7 +2103,7 @@ Transform:
   m_GameObject: {fileID: 122062209}
   m_LocalRotation: {x: 0.36460146, y: 0.21201602, z: -0.3902209, w: 0.8184391}
   m_LocalPosition: {x: -0.81, y: 9.88, z: -8.35}
-  m_LocalScale: {x: 27.197102, y: 14.966318, z: 1}
+  m_LocalScale: {x: 15.350649, y: 14.966318, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1894244244}
@@ -2477,7 +2477,7 @@ GameObject:
   - 114: {fileID: 509560963}
   - 114: {fileID: 509560962}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: GUI - Screen overlay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2758,8 +2758,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e02bafb0d6f4f3c4a90f1e4b43bd0ee9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MincaPrefab: {fileID: 0}
   _camFollow: {fileID: 1894244245}
-  _scoreText: {fileID: 0}
+  _scoreText: {fileID: 1698056589}
 --- !u!1 &792568459
 GameObject:
   m_ObjectHideFlags: 0
@@ -2919,6 +2920,11 @@ Prefab:
     - target: {fileID: 1000014181997360, guid: 1c87e06b7215f4549a6ee0914cbfcc78, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 65000010295682244, guid: 1c87e06b7215f4549a6ee0914cbfcc78,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 0.0010099307
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1c87e06b7215f4549a6ee0914cbfcc78, type: 2}
@@ -3164,6 +3170,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 986fa6edd3975a64db601fe53b054b18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1326484583
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1326484584}
+  m_Layer: 0
+  m_Name: Segmen_3x3_Wall
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1326484584
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1326484583}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.6622648, y: 2.6020265, z: -0.3469119}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 22
 --- !u!1 &1417042347
 GameObject:
   m_ObjectHideFlags: 0
@@ -3795,7 +3829,7 @@ MonoBehaviour:
   Target: {fileID: 1894244244}
   Offset: {x: -2.41, y: 4.13, z: -4.1}
   Rotation: {x: 30.631, y: 54.883, z: 3.34}
-  focusPoint: {fileID: 0}
+  focusPoint: {fileID: 1223296867}
 --- !u!114 &1894244247
 MonoBehaviour:
   m_ObjectHideFlags: 0
