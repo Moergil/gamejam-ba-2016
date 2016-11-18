@@ -3,150 +3,152 @@ using System.Collections;
 
 public enum E_PlayerState
 {
-	Running,
-	Idle,
-	Jumping,
-	Dead
+    Running,
+    Idle,
+    Jumping,
+    Dead
 
 }
 
 public class Player_Alex : MonoBehaviour
 {
-	private Animator _animator;
-	private Rigidbody _rb;
-	CharacterController _controller;
+    private Animator _animator;
+    private Rigidbody _rb;
+    CharacterController _controller;
 
-	public float speed = 6.0F;
-	public float jumpSpeed = 8.0F;
+    public float speed = 6.0F;
+    public float jumpSpeed = 8.0F;
 
-	private Vector3 moveDirection = Vector3.zero;
-	public float ActualSpeed;
-	public float SpeedBonus = 0;
+    private Vector3 moveDirection = Vector3.zero;
+    public float ActualSpeed;
+    public float SpeedBonus = 0;
 
     private int _idleHash, _runHash, _jumpHash, _deadHash;
 
-	public E_PlayerState PlayerState { get; private set; }
+    public E_PlayerState PlayerState { get; private set; }
 
-	private float gravity = 9.8f;
+    private float gravity = 9.8f;
 
-	#region Mono
+    #region Mono
 
-	void Awake()
-	{
-		_animator = GetComponentInChildren<Animator>();
-		_rb = GetComponent<Rigidbody>();
-		_controller = GetComponent<CharacterController>();
+    void Awake ( )
+    {
+        _animator = GetComponentInChildren<Animator> ( );
+        _rb = GetComponent<Rigidbody> ( );
+        _controller = GetComponent<CharacterController> ( );
 
-		if (_animator != null) {
-			_idleHash = Animator.StringToHash("Idle");
-			_runHash = Animator.StringToHash("Run");
-			_jumpHash = Animator.StringToHash("Jump");
-			_deadHash = Animator.StringToHash("Die");
+        if ( _animator != null )
+        {
+            _idleHash = Animator.StringToHash ( "Idle" );
+            _runHash = Animator.StringToHash ( "Run" );
+            _jumpHash = Animator.StringToHash ( "Jump" );
+            _deadHash = Animator.StringToHash ( "Die" );
         }
 
-		if (_rb != null)
-			_rb.isKinematic = true;
+        if ( _rb != null )
+            _rb.isKinematic = true;
 
-		GameManager.OnGameOver += GameManager_OnGameOver;
-		GameManager.OnGameStarted += GameManager_OnGameStarted;
-		GameManager.OnCoinCollected += GameManager_OnCoinCollected;
-	}
-
-	void Start()
-	{
-		//  Lets run on start
-		PlayerState = E_PlayerState.Running;
-	}
-
-	void Update()
-	{
-		if (_controller.isGrounded) {
-			float steeringInput = -Input.GetAxis("Horizontal");
-			moveDirection = new Vector3(1, 0, steeringInput);
-			moveDirection *= speed;
-			Debug.DrawRay(transform.position, moveDirection, Color.red, 0, false);
-			if (Input.GetButton("Jump"))
-            {
-                Jump ( );
-				moveDirection.y = jumpSpeed;
-            }
-            
-		}
-
-		moveDirection.y -= gravity * Time.deltaTime;
-		_controller.Move(moveDirection * Time.deltaTime);
-	}
-
-	public void ApplyForce(Vector3 force)
-	{
-		moveDirection += force;
-	}
-
-	#endregion
-
-	#region API
-
-	public void Respawn()
-	{
-		Run();
-	}
-
-	public void Die()
-	{
-        PlayerState = E_PlayerState.Dead;
-        _animator.SetTrigger(_deadHash);
+        GameManager.OnGameOver += GameManager_OnGameOver;
+        GameManager.OnGameStarted += GameManager_OnGameStarted;
+        GameManager.OnCoinCollected += GameManager_OnCoinCollected;
     }
 
-    public void Jump()
-	{
-		PlayerState = E_PlayerState.Jumping;
-        _animator.SetTrigger(_jumpHash);
-	}
+    void Start ( )
+    {
+        //  Lets run on start
+        PlayerState = E_PlayerState.Running;
+    }
 
-	public void Run()
-	{
-		PlayerState = E_PlayerState.Running;
-		_animator.SetTrigger(_runHash);
-	}
+    void Update ( )
+    {
+        if ( _controller.isGrounded )
+        {
+            float steeringInput = -Input.GetAxis ( "Horizontal" );
+            moveDirection = new Vector3 ( 1, 0, steeringInput );
+            moveDirection *= speed;
+            Debug.DrawRay ( transform.position, moveDirection, Color.red, 0, false );
+            if ( Input.GetButton ( "Jump" ) )
+            {
+                Jump ( );
+                moveDirection.y = jumpSpeed;
+            }
+        }
 
-	public void Idle()
-	{
-		PlayerState = E_PlayerState.Idle;
-        _animator.SetTrigger(_idleHash);
-	}
+        moveDirection.y -= gravity * Time.deltaTime;
+        _controller.Move ( moveDirection * Time.deltaTime );
+    }
 
-	#endregion
+    public void ApplyForce ( Vector3 force )
+    {
+        moveDirection += force;
+    }
 
-	#region Collisions
+    #endregion
 
-	void OnTriggerEnter(Collider collider)
-	{
-		GameObject colliderObject = collider.gameObject;
-		if (colliderObject.tag == "Minca") {
-			GameManager.Instance.AddCoin();
-			Destroy(colliderObject);
-			return;
-		}
-	}
+    #region API
 
-	#endregion
+    public void Respawn ( )
+    {
+        Run ( );
+    }
 
-	#region Event handlers
+    public void Die ( )
+    {
+        PlayerState = E_PlayerState.Dead;
+        _animator.SetTrigger ( _deadHash );
+    }
 
-	private void GameManager_OnGameStarted()
-	{
-		Respawn();
-	}
+    public void Jump ( )
+    {
+        PlayerState = E_PlayerState.Jumping;
+        _animator.SetTrigger ( _jumpHash );
+    }
 
-	private void GameManager_OnGameOver()
-	{
-		Die();
-	}
+    public void Run ( )
+    {
+        PlayerState = E_PlayerState.Running;
+        _animator.SetTrigger ( _runHash );
+    }
 
-	private void GameManager_OnCoinCollected()
-	{
-		throw new System.NotImplementedException();
-	}
+    public void Idle ( )
+    {
+        PlayerState = E_PlayerState.Idle;
+        _animator.SetTrigger ( _idleHash );
+    }
 
-	#endregion
+    #endregion
+
+    #region Collisions
+
+    void OnTriggerEnter ( Collider collider )
+    {
+        GameObject colliderObject = collider.gameObject;
+        if ( colliderObject.tag == "Minca" )
+        {
+            GameManager.Instance.AddCoin ( );
+            Destroy ( colliderObject );
+            return;
+        }
+    }
+
+    #endregion
+
+    #region Event handlers
+
+    private void GameManager_OnGameStarted ( )
+    {
+        Respawn ( );
+    }
+
+    private void GameManager_OnGameOver ( )
+    {
+        Die ( );
+    }
+
+    private void GameManager_OnCoinCollected ( )
+    {
+        throw new System.NotImplementedException ( );
+    }
+
+    #endregion
 }

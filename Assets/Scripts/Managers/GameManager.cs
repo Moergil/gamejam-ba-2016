@@ -24,6 +24,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private Text _gameOverText;
 
+    public Texture[] tilesTextures;
+
     public int Mince {
 		get;
 		private set;
