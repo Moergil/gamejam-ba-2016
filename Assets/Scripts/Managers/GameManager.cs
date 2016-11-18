@@ -6,11 +6,11 @@ public class GameManager : MonoBehaviour
 {
 	public static GameManager Instance { get; private set; }
 
-    public static event System.Action OnGameStarted;
-    public static event System.Action OnGameOver;
-    public static event System.Action OnCoinCollected;
+	public static event System.Action OnGameStarted;
+	public static event System.Action OnGameOver;
+	public static event System.Action OnCoinCollected;
 
-    public GameObject MincaPrefab;
+	public GameObject MincaPrefab;
 
 	[Header("References")]
 
@@ -28,12 +28,12 @@ public class GameManager : MonoBehaviour
 	[SerializeField]
 	private PlayerControl _player;
 
-    [SerializeField]
-    private Player_Alex _playerAlex;
+	[SerializeField]
+	private Player_Alex _playerAlex;
 
-    #region MonoBehaviour
+	#region MonoBehaviour
 
-    private void Awake()
+	private void Awake()
 	{
 		if (Instance == null)
 			Instance = this;
@@ -43,14 +43,15 @@ public class GameManager : MonoBehaviour
 
 	private void Start()
 	{
+		StartGame();
 	}
 
 	#endregion
 
-    public void AddCoin ( )
-    {
-        _scoreText.text = Mince++.ToString ( );
-    }
+	public void AddCoin()
+	{
+		_scoreText.text = Mince++.ToString();
+	}
 
 	#region API
 
@@ -64,8 +65,8 @@ public class GameManager : MonoBehaviour
 		if (OnGameStarted != null)
 			OnGameStarted();
 
-        //  Respawn
-        _playerAlex.Respawn ( );
+		//  Respawn
+		_playerAlex.Respawn();
 
 		//  Visual change
 		_camFollow.Blur(E_FocusMode.Game);

@@ -87,6 +87,7 @@ public class Player_Alex : MonoBehaviour
 	public void Respawn()
 	{
 		PlayerState = E_PlayerState.Running;
+		Run();
 	}
 
 	public void Die()

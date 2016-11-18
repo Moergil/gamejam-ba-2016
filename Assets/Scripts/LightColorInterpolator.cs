@@ -30,10 +30,10 @@ public class LightColorInterpolator : MonoBehaviour
 			return;
 
 		if (_canEval) {
-			_light.DOIntensity(Random.Range(intensityRange.x, intensityRange.y), duration).SetDelay(delayAfterComplete);
-			if (colors.Length != 0) {
+			if (colors.Length > 0)
 				_light.DOColor(colors[Random.Range(0, colors.Length - 1)], duration).SetDelay(delayAfterComplete).OnComplete(() => StartAction());
-			}
+
+			_light.DOIntensity(Random.Range(intensityRange.x, intensityRange.y), duration).SetDelay(delayAfterComplete);
 		}
 	}
 
