@@ -7,18 +7,21 @@ public class RunPathSpawner : MonoBehaviour
 {
 	public bool debug;
 
+	public SegmentDef initialSegment;
 	public SegmentDef[] segmentDefs;
 
 	private GameObject[] buttonIndicators;
 
 	public Transform player;
 
+	[HideInInspector]
 	public int activeDistance;
 	public int targetDistanceOffset;
 	public int pastDistanceOffset;
 
 	public int interactionDistance;
 
+	[HideInInspector]
 	public float playerPosition;
 
 	private List<LevelSegment> segments = new List<LevelSegment>();
@@ -66,9 +69,15 @@ public class RunPathSpawner : MonoBehaviour
 		}
 
 		while (usedDistance < playerPosition + targetDistanceOffset) {
-			int index = UnityEngine.Random.Range(0, segmentDefs.Length);
+			SegmentDef segmentDef;
 
-			SegmentDef segmentDef = segmentDefs[index];
+			if (segments.Count == 0) {
+				segmentDef = initialSegment;
+			} else {
+				int index = UnityEngine.Random.Range(0, segmentDefs.Length);
+				segmentDef = segmentDefs[index];
+			}
+
 			foreach (SegmentActionStruct segmentActionStruct in segmentDef.segmentActionStructs) {
 				LevelSegment prefab = segmentActionStruct.levelSegmentPrefab;
 				int levelSegmentLenght = prefab.segmentLength;
@@ -92,7 +101,7 @@ public class RunPathSpawner : MonoBehaviour
 
 				usedDistance += levelSegmentLenght;
 
-				Debug.Log("Instantiated segment of index " + index + ", posX " + position.x);
+				Debug.Log("Instantiated segment, posX " + position.x);
 			}
 		}
 
