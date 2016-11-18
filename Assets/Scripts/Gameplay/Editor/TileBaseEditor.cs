@@ -45,6 +45,8 @@ public class TileBaseEditor : Editor
 
     private void UpdateYPosition ( )
     {
+        if ( _myTarget._isFreePlaceable ) return;
+
         if ( Name.Contains ( "Pillar" ) )
         {
             var t = _myTarget.transform.position;

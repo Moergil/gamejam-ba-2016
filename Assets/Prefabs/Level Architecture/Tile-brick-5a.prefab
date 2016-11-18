@@ -157,7 +157,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.0018649, y: 0.012987791, z: 1.001787}
+  m_Size: {x: 1.0018649, y: 0.0077926745, z: 1.001787}
   m_Center: {x: 0.0001951158, y: 0.050107207, z: 0.00034812093}
 --- !u!95 &95000013330713024
 Animator:
@@ -188,4 +188,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _randomizeOnStart: 1
+  _isFreePlaceable: 0
   yScaleRatio: 0.6

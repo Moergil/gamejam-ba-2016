@@ -405,7 +405,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012564121498}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.4511262, z: 0.00006496906}
+  m_LocalPosition: {x: -0, y: 0, z: 0.00006496906}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -445,7 +445,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012344464348}
   m_LocalRotation: {x: -0, y: 0.7071057, z: -0, w: 0.7071079}
-  m_LocalPosition: {x: 1, y: 0.51112616, z: 1.000065}
+  m_LocalPosition: {x: 1, y: 0, z: 1.000065}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: 0}
   m_Children: []
@@ -458,7 +458,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010734588930}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1, y: 0.4511262, z: 0.00006496906}
+  m_LocalPosition: {x: -1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -472,7 +472,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010033603498}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1, y: 0.4511262, z: 1}
+  m_LocalPosition: {x: -1, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -486,7 +486,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010379996266}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: 0.4511262, z: -1}
+  m_LocalPosition: {x: 1, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -513,7 +513,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011663660800}
   m_LocalRotation: {x: 0.0042286436, y: 0.00000016672918, z: 0.007634959, w: 0.9999619}
-  m_LocalPosition: {x: -1, y: 0.51112616, z: -1}
+  m_LocalPosition: {x: -1, y: 0.06, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0.47900003, y: 0.004, z: 0.84900004}
   m_Children: []
@@ -526,7 +526,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013123159604}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0000076293945, y: -0.4511262, z: -0.00006496906}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -550,7 +550,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010316444034}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: 0.4511262, z: 1}
+  m_LocalPosition: {x: 1, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -564,7 +564,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013422197644}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.4511262, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -578,7 +578,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010461055394}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: 0.4511262, z: 0.00006496906}
+  m_LocalPosition: {x: 1, y: 0, z: 0.00006496906}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -644,7 +644,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013033403086}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1, y: 0.4511262, z: -1}
+  m_LocalPosition: {x: -1, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -684,7 +684,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011204709326}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.4511262, z: -1}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -1505,7 +1505,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.0015192, y: 0.0027234722, z: 1.0015815}
+  m_Size: {x: 1.0015192, y: 0.00035296206, z: 1.0015815}
   m_Center: {x: -0.000029295683, y: 0.04864453, z: -0.00036793947}
 --- !u!65 &65000014010891402
 BoxCollider:
@@ -1708,6 +1708,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _randomizeOnStart: 1
+  _isFreePlaceable: 0
   yScaleRatio: 0.6
 --- !u!114 &114000010355076304
 MonoBehaviour:
@@ -1721,6 +1722,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _randomizeOnStart: 1
+  _isFreePlaceable: 0
   yScaleRatio: 0.6
 --- !u!114 &114000011072107556
 MonoBehaviour:
@@ -1734,6 +1736,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _randomizeOnStart: 1
+  _isFreePlaceable: 0
   yScaleRatio: 0.6
 --- !u!114 &114000011076102460
 MonoBehaviour:
@@ -1747,6 +1750,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _randomizeOnStart: 1
+  _isFreePlaceable: 0
   yScaleRatio: 0.6
 --- !u!114 &114000011376105230
 MonoBehaviour:
@@ -1760,6 +1764,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _randomizeOnStart: 1
+  _isFreePlaceable: 0
   yScaleRatio: 0.6
 --- !u!114 &114000011426870010
 MonoBehaviour:
@@ -1773,6 +1778,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _randomizeOnStart: 1
+  _isFreePlaceable: 0
   yScaleRatio: 0.6
 --- !u!114 &114000011895308940
 MonoBehaviour:
@@ -1786,6 +1792,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _randomizeOnStart: 1
+  _isFreePlaceable: 0
   yScaleRatio: 0.6
 --- !u!114 &114000012316692390
 MonoBehaviour:
@@ -1799,6 +1806,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _randomizeOnStart: 1
+  _isFreePlaceable: 0
   yScaleRatio: 0.6
 --- !u!114 &114000012680775912
 MonoBehaviour:
@@ -1812,6 +1820,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _randomizeOnStart: 1
+  _isFreePlaceable: 0
   yScaleRatio: 0.6
 --- !u!114 &114000013261050694
 MonoBehaviour:
@@ -1825,6 +1834,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _randomizeOnStart: 1
+  _isFreePlaceable: 0
   yScaleRatio: 0.6
 --- !u!114 &114000013696491116
 MonoBehaviour:
@@ -1838,6 +1848,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _randomizeOnStart: 1
+  _isFreePlaceable: 0
   yScaleRatio: 0.6
 --- !u!114 &114000014226958312
 MonoBehaviour:
@@ -1850,4 +1861,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dc09adf864a7440aa3af5a3a9be31c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  segmentLength: 1
+  segmentLength: 3
+  interactive: 0
+  holdLengthMillis: 0
+  tapRepeatTarget: 0
+  actionType: 0
+  tapRepeatAdd: 0
+  tapRepeatDrainPerSec: 0
+  tapRepeatGauge: 0
+  actionFinished: 0

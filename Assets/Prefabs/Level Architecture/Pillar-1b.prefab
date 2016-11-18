@@ -103,4 +103,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _randomizeOnStart: 1
+  _isFreePlaceable: 0
   yScaleRatio: 0.6

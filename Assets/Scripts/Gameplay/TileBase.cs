@@ -6,6 +6,8 @@ public class TileBase : MonoBehaviour
     [SerializeField]
     private bool _randomizeOnStart = true;
 
+    public bool _isFreePlaceable = false;
+
     public float yScaleRatio = 0.6f;
 
     void Start ( )
