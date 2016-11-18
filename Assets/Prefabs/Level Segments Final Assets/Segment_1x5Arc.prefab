@@ -98,6 +98,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1000011876305768
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000013907403728}
+  m_Layer: 0
+  m_Name: Minca
+  m_TagString: Minca
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1000012089201358
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,7 +346,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000014181997360}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 18.356375, y: -9.0019455, z: 2.972979}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -343,6 +358,7 @@ Transform:
   - {fileID: 4000010871848122}
   - {fileID: 4000012659869814}
   - {fileID: 4000012649036030}
+  - {fileID: 4000013907403728}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &4000012607966632
@@ -451,6 +467,19 @@ Transform:
   - {fileID: 4000012607966632}
   m_Father: {fileID: 4000012061030376}
   m_RootOrder: 3
+--- !u!4 &4000013907403728
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011876305768}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 4000012061030376}
+  m_RootOrder: 8
 --- !u!4 &4000013923233108
 Transform:
   m_ObjectHideFlags: 1
