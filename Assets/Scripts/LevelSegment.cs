@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-using System;
+using System.Collections.Generic;
 
 public class LevelSegment : MonoBehaviour
 {
@@ -36,6 +36,17 @@ public class LevelSegment : MonoBehaviour
 		actionHint.SetActionId(actionId);
 	}
 
+	void Start() 
+	{
+		// Najdi mince
+		foreach(Transform child in transform){
+			if(child.gameObject.tag == "Minca"){
+				GameObject tmp = Instantiate (GameManager.Instance.MincaPrefab, Vector3.zero, Quaternion.identity, child) as GameObject;
+				tmp.transform.localPosition = new Vector3(Random.Range(-.5f, .5f), 0.4f, Random.Range(-.5f, .5f));
+			}
+		}
+	}
+
 	void Update()
 	{
 		if (!actionFinished) {
@@ -58,7 +69,7 @@ public class LevelSegment : MonoBehaviour
 	public void OnAction(bool positive)
 	{
 		if (actionFinished) {
-			throw new InvalidOperationException("Action already finished.");
+			throw new System.InvalidOperationException("Action already finished.");
 		}
 
 		switch (actionType) {

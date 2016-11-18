@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using System;
 
 public class RunPathSpawner : MonoBehaviour
 {
@@ -85,7 +84,7 @@ public class RunPathSpawner : MonoBehaviour
 				int levelSegmentLenght = prefab.segmentLength;
 				float xPosition = usedDistance + levelSegmentLenght / 2f;
 				Vector3 position = new Vector3(xPosition, 0, 0);
-				Quaternion rotation = Quaternion.identity;
+				Quaternion rotation = Quaternion.Euler(0, (nextLevelSegmentIndex%3) * 180, 0);
 				Transform parent = transform;
 				LevelSegment instantiatedSegment = (LevelSegment)Instantiate(prefab, position, rotation, parent);
 
@@ -136,19 +135,20 @@ public class RunPathSpawner : MonoBehaviour
 		EditorClearAllSegments();
 
 		int distance = 0;
-
+		int index = 0;
 		foreach (LevelSegment prefab in levelSegmentsPrefabs) {
 			float levelSegmentLenght = prefab.segmentLength;
 			float xPosition = distance + levelSegmentLenght / 2;
 			Vector3 position = new Vector3(xPosition, 0, 0);
 
-			Quaternion rotation = Quaternion.identity;
+			Quaternion rotation = Quaternion.Euler(0, (index%3) * 180, 0);
 			Transform parent = transform;
 			LevelSegment instantiatedSegment = (LevelSegment)Instantiate(prefab, position, rotation, parent);
 
 			segments.Add(instantiatedSegment);
 
 			distance += (int)levelSegmentLenght;
+			index++;
 		}
 	}
 

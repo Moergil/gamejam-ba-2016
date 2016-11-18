@@ -4,6 +4,7 @@ using System.Collections;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
+	public GameObject MincaPrefab;
 
     [SerializeField]
     private CameraFollow _camFollow;
