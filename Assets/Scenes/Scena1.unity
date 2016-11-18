@@ -1446,6 +1446,22 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 96249137}
   m_Mesh: {fileID: 4300000, guid: 475411e77335748ce996231e8dff0524, type: 3}
+--- !u!1 &99965704 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000011701082212, guid: 34af6c119643348308401f6f9deae275,
+    type: 2}
+  m_PrefabInternal: {fileID: 1420347808}
+--- !u!114 &99965705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 99965704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e02bafb0d6f4f3c4a90f1e4b43bd0ee9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &104679835
 GameObject:
   m_ObjectHideFlags: 0
@@ -3826,6 +3842,23 @@ Prefab:
     - target: {fileID: 1000010136235636, guid: 94ad2b271335d483c83c0f35c93cabf7, type: 2}
       propertyPath: m_TagString
       value: Minca
+      objectReference: {fileID: 0}
+    - target: {fileID: 33000010654193218, guid: 94ad2b271335d483c83c0f35c93cabf7,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: 331bc6a47272c4a098d53c9bfb3fe9fc, type: 3}
+    - target: {fileID: 4000010548796184, guid: 94ad2b271335d483c83c0f35c93cabf7, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010548796184, guid: 94ad2b271335d483c83c0f35c93cabf7, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010548796184, guid: 94ad2b271335d483c83c0f35c93cabf7, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 94ad2b271335d483c83c0f35c93cabf7, type: 2}
