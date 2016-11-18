@@ -354,6 +354,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000012954794848}
+  - 114: {fileID: 114000013530185304}
   m_Layer: 0
   m_Name: Segment_3x3_Wall
   m_TagString: Untagged
@@ -2459,6 +2460,26 @@ MonoBehaviour:
   _randomizeOnStart: 1
   _isFreePlaceable: 0
   yScaleRatio: 0.6
+--- !u!114 &114000013530185304
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012928638168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dc09adf864a7440aa3af5a3a9be31c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  segmentLength: 3
+  interactive: 0
+  holdLengthMillis: 0
+  tapRepeatTarget: 0
+  actionType: 0
+  tapRepeatAdd: 0
+  tapRepeatDrainPerSec: 0
+  tapRepeatGauge: 0
+  actionFinished: 0
 --- !u!114 &114000014083423444
 MonoBehaviour:
   m_ObjectHideFlags: 1
