@@ -22,7 +22,7 @@ public class RunPathSpawner : MonoBehaviour
 	public int interactionDistance;
 
 	[HideInInspector]
-	public float playerPosition;
+	public float playerPositionX;
 
 	private List<LevelSegment> segments = new List<LevelSegment>();
 
@@ -41,7 +41,7 @@ public class RunPathSpawner : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		playerPosition = player.transform.position.x;
+		playerPositionX = player.transform.position.x;
 
 		PathBuilding();
 	}
@@ -56,7 +56,7 @@ public class RunPathSpawner : MonoBehaviour
 			int segmentLenght = segment.segmentLength;
 			usedDistance += segmentLenght;
 
-			if (usedDistance + pastDistanceOffset < playerPosition) {
+			if (usedDistance + pastDistanceOffset < playerPositionX) {
 				Debug.Log("Segment at posX " + usedDistance + " scheduled for remove.");
 				pastSegments.Add(segment);
 				activeDistance += segmentLenght;
@@ -68,7 +68,7 @@ public class RunPathSpawner : MonoBehaviour
 			Debug.Log("used " + usedDistance + ", active " + activeDistance);
 		}
 
-		while (usedDistance < playerPosition + targetDistanceOffset) {
+		while (usedDistance < playerPositionX + targetDistanceOffset) {
 			SegmentDef segmentDef;
 
 			if (segments.Count == 0) {
@@ -127,7 +127,7 @@ public class RunPathSpawner : MonoBehaviour
 			float levelSegmentPosX = levelSegment.transform.position.x;
 			float distanceToLevelSegment = levelSegmentPosX - levelSegment.segmentLength / 2f;
 
-			if (playerPosition + interactionDistance < distanceToLevelSegment) {
+			if (playerPositionX + interactionDistance < distanceToLevelSegment) {
 				break;
 			}
 
@@ -138,6 +138,12 @@ public class RunPathSpawner : MonoBehaviour
 			distance += levelSegment.segmentLength;
 
 			if (levelSegment.IsActionFinished()) {
+				continue;
+			}
+
+			float lastSegmentPos = levelSegment.transform.position.x + levelSegment.segmentLength / 2f;
+
+			if (playerPositionX > lastSegmentPos) {
 				continue;
 			}
 

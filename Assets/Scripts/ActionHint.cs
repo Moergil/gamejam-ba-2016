@@ -16,7 +16,7 @@ public class ActionHint : MonoBehaviour
 		this.actionId = actionId;
 	}
 
-	public void runFlash()
+	public void runFlash(bool big)
 	{
 
 	}

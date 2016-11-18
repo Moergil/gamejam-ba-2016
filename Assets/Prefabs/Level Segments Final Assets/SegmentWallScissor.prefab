@@ -3289,8 +3289,8 @@ MonoBehaviour:
       calls:
       - genericMenuData:
           selectedComponent: 2
-          selectedMember: 10
-          isDynamic: 0
+          selectedMember: 0
+          isDynamic: 1
         target: {fileID: 114000010720791204}
         memberName: InitiatePositionChange
         memberType: 8
@@ -3306,12 +3306,12 @@ MonoBehaviour:
           vector2Argument: {x: 0, y: 0}
           vector3Argument: {x: 0, y: 0, z: 0}
           enumArgument: 
-        isDynamic: 0
+        isDynamic: 1
         isCallEnabled: 1
       - genericMenuData:
           selectedComponent: 2
-          selectedMember: 10
-          isDynamic: 0
+          selectedMember: 0
+          isDynamic: 1
         target: {fileID: 114000010897119722}
         memberName: InitiatePositionChange
         memberType: 8
@@ -3327,7 +3327,7 @@ MonoBehaviour:
           vector2Argument: {x: 0, y: 0}
           vector3Argument: {x: 0, y: 0, z: 0}
           enumArgument: 
-        isDynamic: 0
+        isDynamic: 1
         isCallEnabled: 1
 --- !u!114 &114000011095272890
 MonoBehaviour:

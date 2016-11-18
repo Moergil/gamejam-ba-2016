@@ -2848,7 +2848,28 @@ MonoBehaviour:
   actionEvent:
     inspectorListHeight: 83
     persistentCalls:
-      calls: []
+      calls:
+      - genericMenuData:
+          selectedComponent: 2
+          selectedMember: 2
+          isDynamic: 1
+        target: {fileID: 114000011358751842}
+        memberName: SlowDownAxe
+        memberType: 8
+        arguments:
+        - typeName: System.Single, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+          supportedType: 4
+          objectArgument: {fileID: 0}
+          stringArgument: 
+          intArgument: 0
+          floatArgument: 0
+          boolArgument: 0
+          colorArgument: {r: 0, g: 0, b: 0, a: 0}
+          vector2Argument: {x: 0, y: 0}
+          vector3Argument: {x: 0, y: 0, z: 0}
+          enumArgument: 
+        isDynamic: 1
+        isCallEnabled: 1
 --- !u!114 &114000013203054028
 MonoBehaviour:
   m_ObjectHideFlags: 1

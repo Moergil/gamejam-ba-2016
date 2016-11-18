@@ -23,7 +23,7 @@ public class LevelSegment : MonoBehaviour
 	public bool hintActivated;
 	public bool interactive;
 
-	public float holdLengthMillis;
+	public float holdLength;
 	public float tapRepeatTarget;
 
 	public ActionType actionType;
@@ -76,11 +76,11 @@ public class LevelSegment : MonoBehaviour
 			if (actionType == ActionType.Hold && !float.IsNaN(holdStart)) {
 				float holdElapsedTime = Time.realtimeSinceStartup - holdStart;
 
-				if (holdElapsedTime > holdLengthMillis) {
+				if (holdElapsedTime > holdLength) {
 					actionJustFinished = true;
 					actionEvent.Invoke(1);
 				} else {
-					float completionRatio = holdLengthMillis / holdElapsedTime;
+					float completionRatio = holdElapsedTime / holdLength;
 					completionRatio = Mathf.Clamp(completionRatio, 0, 1);
 					actionEvent.Invoke(completionRatio);
 				}
