@@ -23,7 +23,7 @@ public class Player_Alex : MonoBehaviour
 	public float ActualSpeed;
 	public float SpeedBonus = 0;
 
-    private int _idleHash, _runHash, _jumpHash, _deadHash;
+	private int _idleHash, _runHash, _jumpHash, _deadHash;
 
 	public E_PlayerState PlayerState { get; private set; }
 
@@ -42,7 +42,7 @@ public class Player_Alex : MonoBehaviour
 			_runHash = Animator.StringToHash("Run");
 			_jumpHash = Animator.StringToHash("Jump");
 			_deadHash = Animator.StringToHash("Die");
-        }
+		}
 
 		if (_rb != null)
 			_rb.isKinematic = true;
@@ -64,12 +64,10 @@ public class Player_Alex : MonoBehaviour
 			moveDirection = new Vector3(1, 0, 0);
 			moveDirection *= speed;
 			Debug.DrawRay(transform.position, moveDirection, Color.red, 0, false);
-			if (Input.GetButton("Jump"))
-            {
-                Jump ( );
+			if (Input.GetButton("Jump")) {
+				Jump();
 				moveDirection.y = jumpSpeed;
-            }
-            
+			}
 		}
 
 		float steeringInput = -Input.GetAxis("Horizontal");
@@ -90,14 +88,14 @@ public class Player_Alex : MonoBehaviour
 
 	public void Die()
 	{
-        PlayerState = E_PlayerState.Dead;
-        _animator.SetTrigger(_deadHash);
-    }
+		PlayerState = E_PlayerState.Dead;
+		_animator.SetTrigger(_deadHash);
+	}
 
-    public void Jump()
+	public void Jump()
 	{
 		PlayerState = E_PlayerState.Jumping;
-        _animator.SetTrigger(_jumpHash);
+		_animator.SetTrigger(_jumpHash);
 	}
 
 	public void Run()
@@ -109,7 +107,7 @@ public class Player_Alex : MonoBehaviour
 	public void Idle()
 	{
 		PlayerState = E_PlayerState.Idle;
-        _animator.SetTrigger(_idleHash);
+		_animator.SetTrigger(_idleHash);
 	}
 
 	#endregion
