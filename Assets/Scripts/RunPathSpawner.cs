@@ -20,7 +20,6 @@ public class RunPathSpawner : MonoBehaviour
 	public int pastDistanceOffset;
 
 	public float playerPosition;
-	private int runnedSegmentsDistance;
 
 	private List<LevelSegment> segments = new List<LevelSegment>();
 
@@ -38,15 +37,6 @@ public class RunPathSpawner : MonoBehaviour
 		playerPosition = player.transform.position.x;
 
 		PathBuilding();
-	}
-
-	public void Reset()
-	{
-		nextLevelSegmentIndex = 0;
-		activeDistance = 0;
-		runnedSegmentsDistance = 0;
-
-		EditorClearAllSegments();
 	}
 
 	public void PathBuilding()
@@ -115,10 +105,17 @@ public class RunPathSpawner : MonoBehaviour
 	{
 		for (int i = 0; i < interactiveSegments.Count; i++) {
 			LevelSegment levelSegment = interactiveSegments[i];
+
+			if (levelSegment.IsActionFinished()) {
+				continue;
+			}
+
 			int levelSegmentActionId = actionIds[i];
 
 			if (levelSegmentActionId == actionId) {
+				Debug.Log("Action " + actionId + ", (" + positive + ") for segment " + levelSegment.gameObject.name);
 				levelSegment.OnAction(positive);
+				break;
 			}
 		}
 	}

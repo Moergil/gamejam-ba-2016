@@ -5,7 +5,7 @@ using System.Collections;
 public class PlayerControl : MonoBehaviour
 {
 	bool isAutoMoving = true;
-	float Speed = 3;
+	public float Speed = 3;
 	Vector3 JumpVector = new Vector3(0, 6, 0);
 	Vector3 Gravity = new Vector3(0, -0.4f, 0);
 	CharacterController controller;
@@ -28,13 +28,13 @@ public class PlayerControl : MonoBehaviour
 				moveDirection = transform.TransformDirection(moveDirection);
 				moveDirection *= Speed;
 
-				if (Input.GetButtonDown ("Jump")) {
+				if (Input.GetButtonDown("Jump")) {
 					moveDirection += JumpVector;
 				}
 			}
 
-			if (Input.GetButton ("Duck")) {
-				transform.localScale = new Vector3 (1, 0.5f, 1);
+			if (Input.GetButton("Duck")) {
+				transform.localScale = new Vector3(1, 0.5f, 1);
 			} else {
 				transform.localScale = Vector3.one;
 			}

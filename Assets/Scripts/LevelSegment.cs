@@ -1,9 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using ByteSheep.Events;
 
 public class LevelSegment : MonoBehaviour
 {
+	[System.Serializable]
+	public class LevelSegmentActionEvent : AdvancedEvent<object>
+	{
+
+	}
+
 	public enum ActionType
 	{
 		Tap,
@@ -20,7 +27,7 @@ public class LevelSegment : MonoBehaviour
 
 	public ActionType actionType;
 
-	private ActionHint actionHint;
+	public ActionHint actionHint;
 
 	public float tapRepeatAdd;
 	public float tapRepeatDrainPerSec;
@@ -29,6 +36,8 @@ public class LevelSegment : MonoBehaviour
 	private float holdStart = float.NaN;
 
 	public bool actionFinished;
+
+	public LevelSegmentActionEvent actionEvent;
 
 	public void SetupActionHint(int actionId)
 	{
@@ -39,19 +48,32 @@ public class LevelSegment : MonoBehaviour
 	void Update()
 	{
 		if (!actionFinished) {
+			checkActionProgress();
+		}
+	}
+
+	private void checkActionProgress()
+	{
+		bool actionJustFinished = false;
+		if (!actionFinished) {
 			if (actionType == ActionType.Hold && !float.IsNaN(holdStart)) {
 				if (Time.realtimeSinceStartup - holdStart > holdLengthMillis) {
-					actionFinished = true;
+					actionJustFinished = true;
 				}
 			}
 
-			if (actionType == ActionType.Tap) {
+			if (actionType == ActionType.TapRepeat) {
 				if (tapRepeatGauge >= tapRepeatTarget) {
-					actionFinished = true;
+					actionJustFinished = true;
 				} else {
 					tapRepeatGauge -= tapRepeatDrainPerSec + Time.deltaTime;
 				}
 			}
+		}
+
+		if (actionJustFinished) {
+			actionEvent.Invoke(null);
+			actionFinished = true;
 		}
 	}
 
@@ -63,7 +85,10 @@ public class LevelSegment : MonoBehaviour
 
 		switch (actionType) {
 		case ActionType.Tap:
-			actionFinished = true;
+			if (positive) {
+				actionEvent.Invoke(null);
+				actionFinished = true;
+			}
 			break;
 		case ActionType.Hold:
 			if (positive) {
@@ -73,7 +98,9 @@ public class LevelSegment : MonoBehaviour
 			}
 			break;
 		case ActionType.TapRepeat:
-			tapRepeatGauge += tapRepeatAdd;
+			if (positive) {
+				tapRepeatGauge += tapRepeatAdd;
+			}
 			break;
 		}
 	}

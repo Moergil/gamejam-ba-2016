@@ -22,7 +22,7 @@ public class DeathTouch : ObstacleBase
 		}
 	}
 
-	public void Activate()
+	public override void Activate()
 	{
 		active = true;
 		targetPosition = transform.position;
