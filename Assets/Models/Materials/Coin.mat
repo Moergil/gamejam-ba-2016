@@ -6,13 +6,12 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: MincaMaterial
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_Name: Coin
+  m_Shader: {fileID: 4800000, guid: 2556a6a8a17ab4f6382506a645d45361, type: 3}
   m_ShaderKeywords: _ALPHAPREMULTIPLY_ON _EMISSION
   m_LightmapFlags: 1
-  m_CustomRenderQueue: 3000
-  stringTagMap:
-    RenderType: Transparent
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
   m_SavedProperties:
     serializedVersion: 2
     m_TexEnvs:
@@ -49,7 +48,7 @@ Material:
     - first:
         name: _MainTex
       second:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: af49781848fa349ab9d47bc0d32aeb28, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -84,17 +83,23 @@ Material:
         name: _DstBlend
       second: 10
     - first:
+        name: _Frequency
+      second: 1
+    - first:
         name: _GlossMapScale
       second: 1
     - first:
         name: _Glossiness
-      second: 0.68
+      second: 0.37
     - first:
         name: _GlossyReflections
       second: 1
     - first:
-        name: _Metallic
+        name: _Magnitude
       second: 1
+    - first:
+        name: _Metallic
+      second: 0
     - first:
         name: _Mode
       second: 3
@@ -111,18 +116,30 @@ Material:
         name: _SpecularHighlights
       second: 1
     - first:
+        name: _Speed
+      second: 1
+    - first:
         name: _SrcBlend
       second: 1
     - first:
         name: _UVSec
       second: 0
     - first:
+        name: _WaveFrequency
+      second: 2
+    - first:
+        name: _WaveLength
+      second: 2
+    - first:
+        name: _WaveMagnitude
+      second: 4
+    - first:
         name: _ZWrite
       second: 0
     m_Colors:
     - first:
         name: _Color
-      second: {r: 1, g: 0, b: 0, a: 0.653}
+      second: {r: 1, g: 1, b: 1, a: 1}
     - first:
         name: _EmissionColor
       second: {r: 0, g: 0, b: 0, a: 1}
