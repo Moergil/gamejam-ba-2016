@@ -258,7 +258,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011701082212}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 100, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -275,9 +275,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010581040642}
-  m_LocalRotation: {x: -0.19415297, y: 0.9341439, z: 0.19967012, w: 0.2231854}
+  m_LocalRotation: {x: -0.1941579, y: 0.9341395, z: 0.19969073, w: 0.22318113}
   m_LocalPosition: {x: -0.0037336787, y: -0.0050571403, z: 0.009026896}
-  m_LocalScale: {x: 0.02362389, y: 0.012700669, z: 1}
+  m_LocalScale: {x: 0.023625653, y: 0.012701617, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000012280476316}
@@ -634,7 +634,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e02bafb0d6f4f3c4a90f1e4b43bd0ee9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _camFollow: {fileID: 0}
+  MincaPrefab: {fileID: 1000010136235636, guid: 94ad2b271335d483c83c0f35c93cabf7,
+    type: 2}
+  _camFollow: {fileID: 114000011316990520}
+  _scoreText: {fileID: 0}
 --- !u!114 &114000013892553006
 MonoBehaviour:
   m_ObjectHideFlags: 1

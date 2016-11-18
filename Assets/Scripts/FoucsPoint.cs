@@ -6,6 +6,9 @@ public class FoucsPoint : MonoBehaviour
 {
     private Vector3 _startPos;
 
+    [SerializeField]
+    private Vector3 _offset = new Vector3 ( 0f, 100f, 0f );
+
     void Start ( )
     {
         _startPos = transform.position;
@@ -21,7 +24,7 @@ public class FoucsPoint : MonoBehaviour
                     transform.position = _startPos;
                     break;
                 case E_FocusMode.Menu:
-                    transform.position += Vector3.up * 100f;
+                    transform.position += _offset;
                     break;
             }
         }

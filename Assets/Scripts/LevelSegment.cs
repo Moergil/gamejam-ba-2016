@@ -51,7 +51,7 @@ public class LevelSegment : MonoBehaviour
 		foreach (Transform child in transform) {
 			if (child.gameObject.tag == "Minca") {
 				GameObject tmp = Instantiate(GameManager.Instance.MincaPrefab, Vector3.zero, Quaternion.identity, child) as GameObject;
-				tmp.transform.localPosition = new Vector3(Random.Range(-.5f, .5f), 0.4f, Random.Range(-.5f, .5f));
+				tmp.transform.localPosition = new Vector3(Random.Range(-.25f, .25f), 0.4f, Random.Range(-.25f, .25f));
 			}
 		}
 	}
