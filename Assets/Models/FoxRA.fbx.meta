@@ -1,0 +1,1761 @@
+fileFormatVersion: 2
+guid: a11b8d64c5a566e459585393aedcf6e8
+timeCreated: 1479484400
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Fox
+    100002: Fox__ACS_L.RevFoot_IK_Up_Vector
+    100004: Fox__ACS_R.RevFoot_IK_Up_Vector
+    100006: Fox__Base (Rigging)
+    100008: Fox__Base (Segment)
+    100010: Fox__Bind_Meshes (Folder)
+    100012: Fox__Bind_Skeleton (Folder)
+    100014: Fox__Char1_R.UpLeg_Roll_Rig (Folder)
+    100016: Fox__Chest (Bind)
+    100018: Fox__Chest (Edit)
+    100020: Fox__Chest (Guide)
+    100022: Fox__Chest_1_Driven
+    100024: Fox__Chest_1_Driven_Signle (Out)
+    100026: Fox__Chest_Ctrl (ChestSpace)
+    100028: Fox__Chest_FK (Ctrl)
+    100030: Fox__ControlRig (Folder)
+    100032: Fox__CurrentMarker_Ring_1
+    100034: Fox__CurrentMarker_Ring_2
+    100036: Fox__Custom_Rig (Folder)
+    100038: Fox__DeformRig (Folder)
+    100040: Fox__Extra_Meshes (Folder)
+    100042: Fox__gd_L.ArmRoll_ElbowProjectedToArmY_Agnle_Point_A
+    100044: Fox__gd_L.ArmRoll_MeasureAngle_Point_B
+    100046: Fox__gd_L.ArmRoll_RestOrientation_Locator
+    100048: Fox__gd_R.ArmRoll_ElbowProjectedToArmY_Agnle_Point_A
+    100050: Fox__gd_R.ArmRoll_MeasureAngle_Point_B
+    100052: Fox__gd_R.ArmRoll_RestOrientation_Locator
+    100054: Fox__Guide (Folder)
+    100056: Fox__Guide_Edit (Folder)
+    100058: Fox__Guide_Setup (Folder)
+    100060: Fox__Guide_Vis_Override (Folder)
+    100062: Fox__GuideSettings (Edit)
+    100064: Fox__Head (Bind)
+    100066: Fox__Head (Edit)
+    100068: Fox__Head (Guide)
+    100070: Fox__Head (Plug)
+    100072: Fox__Head (Rigging)
+    100074: Fox__Head (Segment)
+    100076: Fox__Head (Socket)
+    100078: Fox__Head_CH (Channel) (Ctrl)
+    100080: Fox__Head_CharSpaceOrientation_Override
+    100082: Fox__Head_CharSpaceRef (Guided)
+    100084: Fox__Head_Control (HeadRootSpace)
+    100086: Fox__Head_Controls (Folder)
+    100088: Fox__Head_FK (Ctrl)
+    100090: Fox__Head_FK_Control (HeadTargetedSpace)
+    100092: Fox__Head_FK_Driven
+    100094: Fox__Head_Guide_Setup (Folder)
+    100096: Fox__Head_Guided (CharSpace)
+    100098: Fox__Head_Guided (Folder)
+    100100: Fox__Head_Guided (PlugSpace)
+    100102: Fox__Head_NeckTwist_Driver_Target
+    100104: Fox__Head_NeckTwist_UpVector
+    100106: Fox__Head_Pointer
+    100108: Fox__Head_Rig (Folder)
+    100110: Fox__Head_Root
+    100112: Fox__Head_Root (Guided)
+    100114: Fox__Head_Secondary_FK (Ctrl)
+    100116: Fox__Head_Secondary_FK_Driven
+    100118: Fox__Head_Target (Ctrl)
+    100120: Fox__Head_Target (Guided)
+    100122: Fox__Head_Target_Control (CharSpace)
+    100124: Fox__Head_Targeted_Driven
+    100126: Fox__Head_TargetUpVec
+    100128: Fox__Head_Tip (Bind)
+    100130: Fox__Head_Tip (Edit)
+    100132: Fox__Head_Tip (Guided)
+    100134: Fox__Head_Tip (Out)
+    100136: Fox__HeadEff (Guide)
+    100138: Fox__HeadSpace (Socket)
+    100140: Fox__HeadTarget_LinkPointer
+    100142: Fox__HeadTargetCtrl (Guide)
+    100144: Fox__HeadWithNeck_Edit (Folder)
+    100146: Fox__Hips (Ctrl)
+    100148: Fox__Hips (Guided)
+    100150: Fox__Hips (Socket)
+    100152: Fox__Hips_CH (Channel) (Ctrl)
+    100154: Fox__Hips_Driven (Out)
+    100156: Fox__Hips_Point
+    100158: Fox__JointInfluences (Folder)
+    100160: Fox__L.Arm (Bind)
+    100162: Fox__L.Arm (Edit)
+    100164: Fox__L.Arm (Guide)
+    100166: Fox__L.Arm (Guided0
+    100168: Fox__L.Arm (Mirror)
+    100170: Fox__L.Arm (Rigging)
+    100172: Fox__L.Arm_Align (Edit)
+    100174: Fox__L.Arm_Alignment (SpaceLoc) (Folder)
+    100176: Fox__L.Arm_Blended
+    100178: Fox__L.Arm_Blended (Folder)
+    100180: Fox__L.Arm_CH (Channel) (Ctrl)
+    100182: Fox__L.Arm_Channel_Controls (ArmSpace)
+    100184: Fox__L.Arm_CharSpace_Override
+    100186: Fox__L.Arm_Controls (Folder)
+    100188: Fox__L.Arm_Edit (Folder)
+    100190: Fox__L.Arm_Edit_Mirror (Folder)
+    100192: Fox__L.Arm_FK (Ctrl)
+    100194: Fox__L.Arm_FK_Controls (SpaceLoc) (Folder)
+    100196: Fox__L.Arm_FK_Natural_Offset
+    100198: Fox__L.Arm_FK_Space_Offset (Ctrl)
+    100200: Fox__L.Arm_Guide_Setup (Folder)
+    100202: Fox__L.Arm_Guided (Folder)
+    100204: Fox__L.Arm_Guided (PlugSpace)
+    100206: Fox__L.Arm_Hand_IK_Controls (CharSpace)
+    100208: Fox__L.Arm_IK
+    100210: Fox__L.Arm_IK (Folder)
+    100212: Fox__L.Arm_IK_Controls_Guided (CharSpace)
+    100214: Fox__L.Arm_IK_Pole_Control (SpaceSetup)
+    100216: Fox__L.Arm_IK_Pole_Pointer_Elbow
+    100218: Fox__L.Arm_IK_Pole_Pointer_Shoulder_Pin
+    100220: Fox__L.Arm_IK_Roll (Ctrl)
+    100222: Fox__L.Arm_IK_Roll_Control (Folder)
+    100224: Fox__L.Arm_IKPole_ArmRootSpace (Guided)
+    100226: Fox__L.Arm_IKPole_Ctrl  (Guided)
+    100228: Fox__L.Arm_IKSolver
+    100230: Fox__L.Arm_Pole_UpVector
+    100232: Fox__L.Arm_PoleDir_IK
+    100234: Fox__L.Arm_Rig (Folder)
+    100236: Fox__L.Arm_Rig (PlugSpace)
+    100238: Fox__L.Arm_Roll (ArmSpace)
+    100240: Fox__L.Arm_Roll (Ctrl)
+    100242: Fox__L.Arm_Roll (Edit)
+    100244: Fox__L.Arm_Roll (Rigging)
+    100246: Fox__L.Arm_Roll_1 (Bind)
+    100248: Fox__L.Arm_Roll_2 (Bind)
+    100250: Fox__L.Arm_Roll_CH (Channel) (Ctrl)
+    100252: Fox__L.Arm_Roll_Controls (Folder)
+    100254: Fox__L.Arm_Roll_Guide_Setup (Folder)
+    100256: Fox__L.Arm_Roll_Guided (Folder)
+    100258: Fox__L.Arm_Roll_Guides (Folder)
+    100260: Fox__L.Arm_Roll_PoleVector (ArmRootSpace)
+    100262: Fox__L.Arm_Roll_Rig (Folder)
+    100264: Fox__L.Arm_RootInCharSpace
+    100266: Fox__L.Arm_SpineSpace (Plug)
+    100268: Fox__L.ArmPole_IK (Ctrl)
+    100270: Fox__L.ArmRoll_0_AutoDriven
+    100272: Fox__L.ArmRoll_0_ManualDriven
+    100274: Fox__L.ArmRoll_1_AutoDriven
+    100276: Fox__L.ArmRoll_1_Guided
+    100278: Fox__L.ArmRoll_1_Manual_Driven
+    100280: Fox__L.ArmRoll_2_AutoDriven
+    100282: Fox__L.ArmRoll_2_Guided
+    100284: Fox__L.ArmRoll_ArmRootSpace (Guided)
+    100286: Fox__L.ArmRoll_ArmSpace (Guided)
+    100288: Fox__L.ArmRoll_Driver
+    100290: Fox__L.ArmRoll_Joint (Guide)
+    100292: Fox__L.ArmRoll_Pole (Guided)
+    100294: Fox__L.ArmRoll_PoleDriver (Guide)
+    100296: Fox__L.ArmRoll_PoleDriver (Guided)
+    100298: Fox__L.ArmRoll_PoleDriver_UpVec
+    100300: Fox__L.ArmRoll_PoleVecDriver_Target
+    100302: Fox__L.ArmRoll_PoleVector
+    100304: Fox__L.ArmRoll_PoleVector (Guide)
+    100306: Fox__L.ArmRootInCharSpace (Guided)
+    100308: Fox__L.ElbowVec (Guide)
+    100310: Fox__L.ElbowVecSpaceSetup
+    100312: Fox__L.Foot (Bind)
+    100314: Fox__L.Foot (Edit)
+    100316: Fox__L.Foot (FootTipPvtSpace)
+    100318: Fox__L.Foot (Guided)
+    100320: Fox__L.Foot (Mirror)
+    100322: Fox__L.Foot1 (Guide)
+    100324: Fox__L.Foot2 (Guide)
+    100326: Fox__L.Foot2Dir_And_Bank (Guide)
+    100328: Fox__L.Foot_Ankle (Guided)
+    100330: Fox__L.Foot_Ball_Driven
+    100332: Fox__L.Foot_BankAndToes (Ctrl)
+    100334: Fox__L.Foot_BankCtrl_AnimRefPoint
+    100336: Fox__L.Foot_BankCtrl_AnimRefPoint (Guided)
+    100338: Fox__L.Foot_Blended (Out)
+    100340: Fox__L.Foot_FK (Ctrl)
+    100342: Fox__L.Foot_IK
+    100344: Fox__L.Foot_In_Foot_IK_Space (Guided)
+    100346: Fox__L.Foot_In_LegAssm (Guided)
+    100348: Fox__L.Foot_InBankPvt (Edit)
+    100350: Fox__L.Foot_InBankPvt (Guide)
+    100352: Fox__L.Foot_InBankPvt (Mirror)
+    100354: Fox__L.Foot_InnerBank (Guided)
+    100356: Fox__L.Foot_InnerBank_Driven
+    100358: Fox__L.Foot_OutBankPvt (Edit)
+    100360: Fox__L.Foot_OutBankPvt (Guide)
+    100362: Fox__L.Foot_OutBankPvt (Mirror)
+    100364: Fox__L.Foot_OuterBank (Guided)
+    100366: Fox__L.Foot_OuterBank_Driven
+    100368: Fox__L.Foot_Static_WRot_Locator (Out)
+    100370: Fox__L.Foot_Tip (Bind)
+    100372: Fox__L.Foot_Tip (Edit)
+    100374: Fox__L.Foot_Tip (Guided)
+    100376: Fox__L.Foot_Tip (Mirror)
+    100378: Fox__L.Foot_Tip_Blended (Out)
+    100380: Fox__L.Foot_Tip_FK
+    100382: Fox__L.Foot_Tip_IK_Goal
+    100384: Fox__L.Foot_Tip_IK_Goal (Guided)
+    100386: Fox__L.Foot_TipPvt (Ctrl)
+    100388: Fox__L.Foot_TipPvt (Edit)
+    100390: Fox__L.Foot_TipPvt (Guide)
+    100392: Fox__L.Foot_TipPvt (Guided)
+    100394: Fox__L.Foot_TipPvt (Mirror)
+    100396: Fox__L.Foot_ToeBase (Mirror)
+    100398: Fox__L.Foot_ToeBase_Blended (Out)
+    100400: Fox__L.Foot_ToeBase_Point
+    100402: Fox__L.Foot_Toes (Bind)
+    100404: Fox__L.Foot_Toes (Edit)
+    100406: Fox__L.Foot_Toes (Guided)
+    100408: Fox__L.Foot_Toes_FK (Ctrl)
+    100410: Fox__L.Foot_Toes_Point (Guided)
+    100412: Fox__L.Foot_ToesPvt
+    100414: Fox__L.Foot_ToesPvt (Guided)
+    100416: Fox__L.FootTip (Guide)
+    100418: Fox__L.ForeArm (Bind)
+    100420: Fox__L.ForeArm (Edit)
+    100422: Fox__L.ForeArm (Guide)
+    100424: Fox__L.ForeArm (Guided)
+    100426: Fox__L.ForeArm (Mirror)
+    100428: Fox__L.ForeArm_1_ManualDriven (Out)
+    100430: Fox__L.Forearm_Blended
+    100432: Fox__L.ForeArm_FK (Ctrl)
+    100434: Fox__L.ForeArm_IK
+    100436: Fox__L.ForeArm_Roll (Ctrl)
+    100438: Fox__L.Forearm_Roll (Edit)
+    100440: Fox__L.ForeArm_Roll (ForeArmSpace)
+    100442: Fox__L.ForeArm_Roll (Guide)
+    100444: Fox__L.ForeArm_Roll (Rigging)
+    100446: Fox__L.ForeArm_Roll_1 (Bind)
+    100448: Fox__L.ForeArm_Roll_1 (Guided0
+    100450: Fox__L.ForeArm_Roll_1_AutoDriven
+    100452: Fox__L.ForeArm_Roll_2 (Bind)
+    100454: Fox__L.ForeArm_Roll_2_AutoDriven
+    100456: Fox__L.ForeArm_Roll_2_ManualDriven (Out)
+    100458: Fox__L.ForeArm_Roll_CH (Channel) (Ctrl)
+    100460: Fox__L.ForeArm_Roll_Controls (Folder)
+    100462: Fox__L.ForeArm_Roll_Driver
+    100464: Fox__L.ForeArm_Roll_FArm (Guided)
+    100466: Fox__L.ForeArm_Roll_FArmOrienationOverride (Guided)
+    100468: Fox__L.ForeArm_Roll_Guide_Setup (Folder)
+    100470: Fox__L.ForeArm_Roll_Guided (Folder)
+    100472: Fox__L.ForeArm_Roll_Rig (Folder)
+    100474: Fox__L.ForeArm_Roll_Transfer (HandSpace)
+    100476: Fox__L.ForeArm_Roll_UpVec (Guide)
+    100478: Fox__L.ForeArm_Roll_UpVector
+    100480: Fox__L.ForeArmRoll_2 (Guided)
+    100482: Fox__L.Hand (Bind)
+    100484: Fox__L.Hand (Edit)
+    100486: Fox__L.Hand (Guide)
+    100488: Fox__L.Hand (Guided)
+    100490: Fox__L.Hand (Mirror)
+    100492: Fox__L.Hand_Align (Edit)
+    100494: Fox__L.Hand_Alignment (Folder)
+    100496: Fox__L.Hand_Blended (Out)
+    100498: Fox__L.Hand_CH (Channel) (Ctrl)
+    100500: Fox__L.Hand_Channel_Controls (HandSpace)
+    100502: Fox__L.Hand_End (Bind)
+    100504: Fox__L.Hand_End (Edit)
+    100506: Fox__L.Hand_End (Mirror)
+    100508: Fox__L.Hand_End_FK
+    100510: Fox__L.Hand_End_IK
+    100512: Fox__L.Hand_FK (Ctrl)
+    100514: Fox__L.Hand_IK
+    100516: Fox__L.Hand_IK (Ctrl)
+    100518: Fox__L.Hand_IK_Ctrl_Pos (Guided)
+    100520: Fox__L.Hand_IK_Ctrl_Rot
+    100522: Fox__L.Hand_IK_Space_Offset (Ctrl)
+    100524: Fox__L.Hand_IK_Space_Offset (Guided)
+    100526: Fox__L.Hand_Space_Offset_dirCnsTarget
+    100528: Fox__L.HandEnd (Guided)
+    100530: Fox__L.HandEnd_Blended (Out)
+    100532: Fox__L.HandTip (Guide)
+    100534: Fox__L.Heel (Ctrl)
+    100536: Fox__L.Heel (Guide)
+    100538: Fox__L.Heel (Guided)
+    100540: Fox__L.Heel_Pvt (Edit)
+    100542: Fox__L.Heel_Pvt (Mirror)
+    100544: Fox__L.KneeVec (Guide)
+    100546: Fox__L.KneeVecSpaceSetup
+    100548: Fox__L.Leg (Bind)
+    100550: Fox__L.Leg (Edit)
+    100552: Fox__L.Leg (Guided)
+    100554: Fox__L.Leg (HipsSpace)
+    100556: Fox__L.Leg (Mirror)
+    100558: Fox__L.Leg (Rigging)
+    100560: Fox__L.Leg_Align (Edit)
+    100562: Fox__L.Leg_Alignment (SpaceLoc) (Folder)
+    100564: Fox__L.Leg_AutoRoll_Driver
+    100566: Fox__L.Leg_BlendChain (Folder)
+    100568: Fox__L.Leg_Blended
+    100570: Fox__L.Leg_CH (Channel) (Ctrl)
+    100572: Fox__L.Leg_Channel_Controls (UpLegSpace)
+    100574: Fox__L.Leg_CharSpace_Override
+    100576: Fox__L.Leg_Controls (Folder)
+    100578: Fox__L.Leg_Controls_Guided (CharSpace)
+    100580: Fox__L.Leg_Edit (Folder)
+    100582: Fox__L.Leg_Edit_Mirror (Folder)
+    100584: Fox__L.Leg_FK (Ctrl)
+    100586: Fox__L.Leg_FK_Controls (SpaceLoc) (Folder)
+    100588: Fox__L.Leg_Guide_Setup (Folder)
+    100590: Fox__L.Leg_Guided (Folder)
+    100592: Fox__L.Leg_Guided (PlugSpace)
+    100594: Fox__L.Leg_HipsSpace (Plug)
+    100596: Fox__L.Leg_IK
+    100598: Fox__L.Leg_IK (Folder)
+    100600: Fox__L.Leg_IK_Goal
+    100602: Fox__L.Leg_IK_Pole (Ctrl)
+    100604: Fox__L.Leg_IK_Pole_Control (MixedSpace)
+    100606: Fox__L.Leg_IK_Pole_FootPin (Guided)
+    100608: Fox__L.Leg_IK_Pole_FootPin_Pointer
+    100610: Fox__L.Leg_IK_Pole_HipPin (Guided)
+    100612: Fox__L.Leg_IK_Pole_HipPin_Pointer
+    100614: Fox__L.Leg_IK_Pole_Knee_Pointer
+    100616: Fox__L.Leg_IK_Roll (Ctrl)
+    100618: Fox__L.Leg_IK_Roll_Control (Folder)
+    100620: Fox__L.Leg_IKSolver
+    100622: Fox__L.Leg_Pole (Guided)
+    100624: Fox__L.Leg_Rig (Folder)
+    100626: Fox__L.Leg_Roll (Edit)
+    100628: Fox__L.Leg_Roll_1 (Bind)
+    100630: Fox__L.Leg_Roll_1_AutoDriven
+    100632: Fox__L.Leg_Roll_1_ManualDriven (Out)
+    100634: Fox__L.Leg_Roll_CH (Channel) (Ctrl)
+    100636: Fox__L.Leg_Roll_Guide_Setup (Folder)
+    100638: Fox__L.Leg_Roll_Guides (Folder)
+    100640: Fox__L.Leg_Roll_UpVec_Driver
+    100642: Fox__L.Leg_Roll_UpVec_Driver_Target
+    100644: Fox__L.Leg_Roll_UpVector
+    100646: Fox__L.LegDir (Guided)
+    100648: Fox__L.LegDir_IK
+    100650: Fox__L.LegRoll (Ctrl)
+    100652: Fox__L.LegRoll (Guide)
+    100654: Fox__L.LegRoll (Guided)
+    100656: Fox__L.LegRoll (LegSpace)
+    100658: Fox__L.LegRoll (Rigging)
+    100660: Fox__L.LegRoll_Controls (Folder)
+    100662: Fox__L.LegRoll_Guided (Folder)
+    100664: Fox__L.LegRoll_LegSpace (Guided)
+    100666: Fox__L.LegRoll_Rig (Folder)
+    100668: Fox__L.LegRoll_Rot_Isolator
+    100670: Fox__L.LegRollPoleVector (Guide)
+    100672: Fox__L.LegRoot_CharSpaceRot (Guided)
+    100674: Fox__L.LegRoot_RestRotInWorldSpace
+    100676: Fox__L.Reverse_Foot_Controls (CharSpace)
+    100678: Fox__L.Reverse_Foot_Toes_Control (OuterBankSpace)
+    100680: Fox__L.ReverseFoot_Guided (Folder)
+    100682: Fox__L.RevFoot_IK
+    100684: Fox__L.RevFoot_IK (Guided)
+    100686: Fox__L.RevFoot_IK_dirCns_Driven
+    100688: Fox__L.RevFoot_IK_InvBank (Out)
+    100690: Fox__L.RevFoot_IK_Solver
+    100692: Fox__L.RevFoot_Steady_Ankle (Out)
+    100694: Fox__L.RevFoot_Tip_IK
+    100696: Fox__L.RevFoot_ToeBase_Driven (Out)
+    100698: Fox__L.RevFoot_ToeBase_IK
+    100700: Fox__L.RevFoot_ToeBase_IK_InvBank (Out)
+    100702: Fox__L.RevFoot_Toes (Ctrl)
+    100704: Fox__L.RevFoot_Toes_Ctrl (Guided)
+    100706: Fox__L.RevFoot_Toes_IK (Guided)
+    100708: Fox__L.RevFootIK (LegSpace) (Folder)
+    100710: Fox__L.Shin (Guide)
+    100712: Fox__L.Shoulder (Bind)
+    100714: Fox__L.Shoulder (Edit)
+    100716: Fox__L.Shoulder (Guide)
+    100718: Fox__L.Shoulder (Guided)
+    100720: Fox__L.Shoulder (Mirror)
+    100722: Fox__L.Shoulder_Aim (Ctrl)
+    100724: Fox__L.Shoulder_Controls (PlugSpace)
+    100726: Fox__L.Shoulder_DirCnsAndFKDriven
+    100728: Fox__L.Shoulder_FK (Ctrl)
+    100730: Fox__L.Shoulder_FK_Link
+    100732: Fox__L.Shoulder_Guided (PlugSpace)
+    100734: Fox__L.Shoulder_Tip (Guided)
+    100736: Fox__L.Shoulder_Tip_Point_Driven
+    100738: Fox__L.ShoulderCtrl (Guided)
+    100740: Fox__L.ShoulderCtrl_SpaceSetup
+    100742: Fox__L.ShoulderUpVec
+    100744: Fox__L.Thigh (Guide)
+    100746: Fox__L.UpLeg (Bind)
+    100748: Fox__L.UpLeg (Edit)
+    100750: Fox__L.UpLeg (Guided)
+    100752: Fox__L.UpLeg (Mirror)
+    100754: Fox__L.UpLeg_Blended
+    100756: Fox__L.UpLeg_Controls (Folder)
+    100758: Fox__L.UpLeg_FK (Ctrl)
+    100760: Fox__L.UpLeg_FK_Space_Offset (Ctrl)
+    100762: Fox__L.UpLeg_IK
+    100764: Fox__L.UpLeg_Roll  (UpLegSpace)
+    100766: Fox__L.UpLeg_Roll (Ctrl)
+    100768: Fox__L.UpLeg_Roll (Edit)
+    100770: Fox__L.UpLeg_Roll (Rigging)
+    100772: Fox__L.UpLeg_Roll_0_AutoDriven
+    100774: Fox__L.UpLeg_Roll_0_ManualDriven
+    100776: Fox__L.UpLeg_Roll_1 (Bind)
+    100778: Fox__L.UpLeg_Roll_1 (Guide)
+    100780: Fox__L.UpLeg_Roll_1 (Guided)
+    100782: Fox__L.UpLeg_Roll_1_AutoDriven
+    100784: Fox__L.UpLeg_Roll_1_Manual_Driven
+    100786: Fox__L.UpLeg_Roll_2 (Bind)
+    100788: Fox__L.UpLeg_Roll_2 (Guided)
+    100790: Fox__L.UpLeg_Roll_2_AutoDriven
+    100792: Fox__L.UpLeg_Roll_ArmRootSpace(Guided)
+    100794: Fox__L.UpLeg_Roll_ArmSpace (Guided)
+    100796: Fox__L.UpLeg_Roll_CH (Channel) (Ctrl)
+    100798: Fox__L.UpLeg_Roll_Driver
+    100800: Fox__L.UpLeg_Roll_Guide_Setup (Folder)
+    100802: Fox__L.UpLeg_Roll_Guided (Folder)
+    100804: Fox__L.UpLeg_Roll_KneeProjectedToHipY_AnglePoint_A (Guide)
+    100806: Fox__L.UpLeg_Roll_Measure_AnglePoint_B (Guide)
+    100808: Fox__L.UpLeg_Roll_Pole (Guided)
+    100810: Fox__L.UpLeg_Roll_PoleDriver
+    100812: Fox__L.UpLeg_Roll_PoleDriver (Guide)
+    100814: Fox__L.UpLeg_Roll_PoleDriver (Guided)
+    100816: Fox__L.UpLeg_Roll_PoleDriver_Target
+    100818: Fox__L.UpLeg_Roll_PoleDriver_UpVec
+    100820: Fox__L.UpLeg_Roll_PoleVec (Guide)
+    100822: Fox__L.UpLeg_Roll_PoleVector
+    100824: Fox__L.UpLeg_Roll_PoleVector (UpLegRootSpace)
+    100826: Fox__L.UpLeg_Roll_RestOrientator (Guide)
+    100828: Fox__L.UpLeg_Roll_Rig (Folder)
+    100830: Fox__LeftArm (Segment)
+    100832: Fox__LeftLeg (Segment)
+    100834: Fox__Lower_Spine_Ctrl (Folder)
+    100836: Fox__Lower_Spine_FK_Bend (Ctrl)
+    100838: Fox__Lower_Spine_Forward_Bend_Ctrl (SpineDirectionSpace)
+    100840: Fox__Lower_Spine_Reverse_Bend (Ctrl)
+    100842: Fox__Marker (Folder)
+    100844: Fox__Master (Ctrl)
+    100846: Fox__MasterCtrl (Proxy)
+    100848: Fox__Neck (Bind)
+    100850: Fox__Neck (Edit)
+    100852: Fox__Neck (Guide)
+    100854: Fox__Neck (Guided)
+    100856: Fox__Neck (Plug)
+    100858: Fox__Neck (Rigging)
+    100860: Fox__Neck (Socket)
+    100862: Fox__Neck_Aim (Ctrl)
+    100864: Fox__Neck_Aim_Control (PlugSpace) (HeadLocation)
+    100866: Fox__Neck_Aim_Ctrl_Shadow
+    100868: Fox__Neck_Aim_Transform_Proxy_Link
+    100870: Fox__Neck_AutoRoll_Driven (Out)
+    100872: Fox__Neck_AutoRoll_Driven_Target
+    100874: Fox__Neck_Base
+    100876: Fox__Neck_Control (Guided)
+    100878: Fox__Neck_Control (NeckAimSpace)
+    100880: Fox__Neck_Controls (Folder)
+    100882: Fox__Neck_Driven (Out)
+    100884: Fox__Neck_Driven_Without_Roll
+    100886: Fox__Neck_Driver_UpVector
+    100888: Fox__Neck_FK (Ctrl)
+    100890: Fox__Neck_Guided (Folder)
+    100892: Fox__Neck_Guided (PlugSpace)
+    100894: Fox__Neck_Hrch (PlugSpace)
+    100896: Fox__Neck_Link
+    100898: Fox__Neck_Rig (Folder)
+    100900: Fox__Neck_Roll_UpVector
+    100902: Fox__Neck_Tip (Guided)
+    100904: Fox__R.Arm (Bind)
+    100906: Fox__R.Arm (Edit)
+    100908: Fox__R.Arm (Guide)
+    100910: Fox__R.Arm (Guided0
+    100912: Fox__R.Arm (Rigging)
+    100914: Fox__R.Arm_Align (Edit)
+    100916: Fox__R.Arm_Alignment (SpaceLoc) (Folder)
+    100918: Fox__R.Arm_Blended
+    100920: Fox__R.Arm_Blended (Folder)
+    100922: Fox__R.Arm_CH (Channel) (Ctrl)
+    100924: Fox__R.Arm_Channel_Controls (ArmSpace)
+    100926: Fox__R.Arm_CharSpace_Override
+    100928: Fox__R.Arm_Controls (Folder)
+    100930: Fox__R.Arm_Edit (Folder)
+    100932: Fox__R.Arm_FK (Ctrl)
+    100934: Fox__R.Arm_FK (SpaceLoc) (Folder)
+    100936: Fox__R.Arm_FK_Natural_Offset
+    100938: Fox__R.Arm_FK_Space_Offset (Ctrl)
+    100940: Fox__R.Arm_Guide_Setup (Folder)
+    100942: Fox__R.Arm_Guided (Folder)
+    100944: Fox__R.Arm_Guided (PlugSpace)
+    100946: Fox__R.Arm_Hand_IK_Controls (CharSpace)
+    100948: Fox__R.Arm_IK
+    100950: Fox__R.Arm_IK (Folder)
+    100952: Fox__R.Arm_IK_Controls_Guided (CharSpace)
+    100954: Fox__R.Arm_IK_Pole (Ctrl)
+    100956: Fox__R.Arm_IK_Pole_Control (MixedSpace)
+    100958: Fox__R.Arm_IK_Pole_Pointer_Elbow
+    100960: Fox__R.Arm_IK_Pole_Pointer_Shoulder_Pin
+    100962: Fox__R.Arm_IK_Roll (Ctrl)
+    100964: Fox__R.Arm_IK_Roll_Control (Folder)
+    100966: Fox__R.Arm_IKPole_ArmRootSpace (Guided)
+    100968: Fox__R.Arm_IKPole_Ctrl  (Guided)
+    100970: Fox__R.Arm_IKSolver
+    100972: Fox__R.Arm_Pole_UpVector
+    100974: Fox__R.Arm_PoleDir_IK
+    100976: Fox__R.Arm_Rig (Folder)
+    100978: Fox__R.Arm_Rig (PlugSpace)
+    100980: Fox__R.Arm_Roll (ArmSpace)
+    100982: Fox__R.Arm_Roll (Ctrl)
+    100984: Fox__R.Arm_Roll (Edit)
+    100986: Fox__R.Arm_Roll (Rigging)
+    100988: Fox__R.Arm_Roll_1 (Bind)
+    100990: Fox__R.Arm_Roll_2 (Bind)
+    100992: Fox__R.Arm_Roll_CH (Channel) (Ctrl)
+    100994: Fox__R.Arm_Roll_Controls (Folder)
+    100996: Fox__R.Arm_Roll_Guide_Setup (Folder)
+    100998: Fox__R.Arm_Roll_Guided (Folder)
+    101000: Fox__R.Arm_Roll_Guides (Folder)
+    101002: Fox__R.Arm_Roll_PoleVector (ArmRootSpace)
+    101004: Fox__R.Arm_Roll_Rig (Folder)
+    101006: Fox__R.Arm_RootInCharSpace
+    101008: Fox__R.Arm_SpineSpace (Plug)
+    101010: Fox__R.ArmRoll_0_AutoDriven
+    101012: Fox__R.ArmRoll_0_ManualDriven
+    101014: Fox__R.ArmRoll_1_AutoDriven
+    101016: Fox__R.ArmRoll_1_Guided
+    101018: Fox__R.ArmRoll_1_Manual_Driven
+    101020: Fox__R.ArmRoll_2_AutoDriven
+    101022: Fox__R.ArmRoll_2_Guided
+    101024: Fox__R.ArmRoll_ArmRootSpace (Guided)
+    101026: Fox__R.ArmRoll_ArmSpace (Guided)
+    101028: Fox__R.ArmRoll_Driver
+    101030: Fox__R.ArmRoll_Pole (Guided)
+    101032: Fox__R.ArmRoll_PoleDriver (Guide)
+    101034: Fox__R.ArmRoll_PoleDriver (Guided)
+    101036: Fox__R.ArmRoll_PoleDriver_UpVec
+    101038: Fox__R.ArmRoll_PoleVecDriver_Target
+    101040: Fox__R.ArmRoll_PoleVector
+    101042: Fox__R.ArmRoll_PoleVector (Guide)
+    101044: Fox__R.ArmRootInCharSpace (Guided)
+    101046: Fox__R.ElbowVec (Guide)
+    101048: Fox__R.ElbowVecSpaceSetup
+    101050: Fox__R.Foot (Bind)
+    101052: Fox__R.Foot (Edit)
+    101054: Fox__R.Foot (FootTipPvtSpace)
+    101056: Fox__R.Foot (Guided)
+    101058: Fox__R.Foot1 (Guide)
+    101060: Fox__R.Foot2 (Guide)
+    101062: Fox__R.Foot2Dir_And_Bank (Guide)
+    101064: Fox__R.Foot_Ankle (Guided)
+    101066: Fox__R.Foot_Ball_Driven
+    101068: Fox__R.Foot_BankAndToes (Ctrl)
+    101070: Fox__R.Foot_BankCtrl_AnimRefPoint
+    101072: Fox__R.Foot_BankCtrl_AnimRefPoint (Guided)
+    101074: Fox__R.Foot_Blended (Out)
+    101076: Fox__R.Foot_FK (Ctrl)
+    101078: Fox__R.Foot_IK
+    101080: Fox__R.Foot_In_Foot_IK_Space (Guided)
+    101082: Fox__R.Foot_In_LegAssm (Guided)
+    101084: Fox__R.Foot_InBankPvt (Edit)
+    101086: Fox__R.Foot_InBankPvt (Guide)
+    101088: Fox__R.Foot_InnerBank (Guided)
+    101090: Fox__R.Foot_InnerBank_Driven
+    101092: Fox__R.Foot_OutBankPvt (Edit)
+    101094: Fox__R.Foot_OutBankPvt (Guide)
+    101096: Fox__R.Foot_OuterBank (Guided)
+    101098: Fox__R.Foot_OuterBank_Driven
+    101100: Fox__R.Foot_Rot_Isolator
+    101102: Fox__R.Foot_Static_WRot_Locator (Out)
+    101104: Fox__R.Foot_Tip (Bind)
+    101106: Fox__R.Foot_Tip (Edit)
+    101108: Fox__R.Foot_Tip (Guided)
+    101110: Fox__R.Foot_Tip_Blended (Out)
+    101112: Fox__R.Foot_Tip_FK
+    101114: Fox__R.Foot_Tip_IK_Goal
+    101116: Fox__R.Foot_Tip_IK_Goal (Guided)
+    101118: Fox__R.Foot_TipPvt (Ctrl)
+    101120: Fox__R.Foot_TipPvt (Edit)
+    101122: Fox__R.Foot_TipPvt (Guide)
+    101124: Fox__R.Foot_TipPvt (Guided)
+    101126: Fox__R.Foot_ToeBase_Blended (Out)
+    101128: Fox__R.Foot_ToeBase_Point
+    101130: Fox__R.Foot_Toes (Bind)
+    101132: Fox__R.Foot_Toes (Edit)
+    101134: Fox__R.Foot_Toes (Guided)
+    101136: Fox__R.Foot_Toes_FK (Ctrl)
+    101138: Fox__R.Foot_Toes_Point (Guided)
+    101140: Fox__R.Foot_ToesPvt
+    101142: Fox__R.Foot_ToesPvt (Guided)
+    101144: Fox__R.FootTip (Guide)
+    101146: Fox__R.ForeArm (Bind)
+    101148: Fox__R.ForeArm (Edit)
+    101150: Fox__R.ForeArm (Guide)
+    101152: Fox__R.ForeArm (Guided)
+    101154: Fox__R.ForeArm_1_ManualDriven (Out)
+    101156: Fox__R.Forearm_Blended
+    101158: Fox__R.ForeArm_FK (Ctrl)
+    101160: Fox__R.ForeArm_IK
+    101162: Fox__R.ForeArm_Roll (Ctrl)
+    101164: Fox__R.Forearm_Roll (Edit)
+    101166: Fox__R.ForeArm_Roll (ForeArmSpace)
+    101168: Fox__R.ForeArm_Roll (Guide)
+    101170: Fox__R.ForeArm_Roll (Rigging)
+    101172: Fox__R.ForeArm_Roll_1 (Bind)
+    101174: Fox__R.ForeArm_Roll_1 (Guided0
+    101176: Fox__R.ForeArm_Roll_1_AutoDriven
+    101178: Fox__R.ForeArm_Roll_2 (Bind)
+    101180: Fox__R.ForeArm_Roll_2_AutoDriven
+    101182: Fox__R.ForeArm_Roll_2_ManualDriven (Out)
+    101184: Fox__R.ForeArm_Roll_CH (Channel) (Ctrl)
+    101186: Fox__R.ForeArm_Roll_Controls (Folder)
+    101188: Fox__R.ForeArm_Roll_Driver
+    101190: Fox__R.ForeArm_Roll_FArm (Guided)
+    101192: Fox__R.ForeArm_Roll_FArmOrienationOverride (Guided)
+    101194: Fox__R.ForeArm_Roll_Guide_Setup (Folder)
+    101196: Fox__R.ForeArm_Roll_Guided (Folder)
+    101198: Fox__R.ForeArm_Roll_Rig (Folder)
+    101200: Fox__R.ForeArm_Roll_Transfer (HandSpace)
+    101202: Fox__R.ForeArm_Roll_UpVec (Guide)
+    101204: Fox__R.ForeArm_Roll_UpVector
+    101206: Fox__R.ForeArmRoll_2 (Guided)
+    101208: Fox__R.Hand (Bind)
+    101210: Fox__R.Hand (Edit)
+    101212: Fox__R.Hand (Guide)
+    101214: Fox__R.Hand (Guided)
+    101216: Fox__R.Hand_Align (Edit)
+    101218: Fox__R.Hand_Alignment (SpaceLoc) (Folder)
+    101220: Fox__R.Hand_Blended (Out)
+    101222: Fox__R.Hand_CH (Channel) (Ctrl)
+    101224: Fox__R.Hand_End (Bind)
+    101226: Fox__R.Hand_End (Edit)
+    101228: Fox__R.Hand_End_FK
+    101230: Fox__R.Hand_End_IK
+    101232: Fox__R.Hand_FK (Ctrl)
+    101234: Fox__R.Hand_IK
+    101236: Fox__R.Hand_IK (Ctrl)
+    101238: Fox__R.Hand_IK_Ctrl_Pos (Guided)
+    101240: Fox__R.Hand_IK_Ctrl_Rot (Guided)
+    101242: Fox__R.Hand_IK_Space_Offset (Ctrl)
+    101244: Fox__R.Hand_IK_Space_Offset (Guided)
+    101246: Fox__R.Hand_Sliders_Control (HandSpace)
+    101248: Fox__R.Hand_Space_Offset_dirCnsTarget
+    101250: Fox__R.HandEnd (Guided)
+    101252: Fox__R.HandEnd_Blended (Out)
+    101254: Fox__R.HandTip (Guide)
+    101256: Fox__R.Heel (Ctrl)
+    101258: Fox__R.Heel (Guide)
+    101260: Fox__R.Heel (Guided)
+    101262: Fox__R.Heel_Pvt (Edit)
+    101264: Fox__R.KneeVec (Guide)
+    101266: Fox__R.KneeVecSpaceSetup
+    101268: Fox__R.Leg (Bind)
+    101270: Fox__R.Leg (Edit)
+    101272: Fox__R.Leg (Guided)
+    101274: Fox__R.Leg (HipsSpace)
+    101276: Fox__R.Leg (Rigging)
+    101278: Fox__R.Leg_Align (Edit)
+    101280: Fox__R.Leg_Alignment (SpaceLoc) (Folder)
+    101282: Fox__R.Leg_AutoRoll_Driver
+    101284: Fox__R.Leg_BlendChain (Folder)
+    101286: Fox__R.Leg_Blended
+    101288: Fox__R.Leg_CH (Channel) (Ctrl)
+    101290: Fox__R.Leg_Channel_Controls (UpLegSpace)
+    101292: Fox__R.Leg_CharSpace_Override
+    101294: Fox__R.Leg_Controls (Folder)
+    101296: Fox__R.Leg_Controls_Guided (CharSpace)
+    101298: Fox__R.Leg_Edit (Folder)
+    101300: Fox__R.Leg_FK (Ctrl)
+    101302: Fox__R.Leg_FK_Controls (SpaceLoc) (Folder)
+    101304: Fox__R.Leg_Guide_Setup (Folder)
+    101306: Fox__R.Leg_Guided (Folder)
+    101308: Fox__R.Leg_Guided (PlugSpace)
+    101310: Fox__R.Leg_HipsSpace (Plug)
+    101312: Fox__R.Leg_IK
+    101314: Fox__R.Leg_IK (Folder)
+    101316: Fox__R.Leg_IK_Goal
+    101318: Fox__R.Leg_IK_Pole (Ctrl)
+    101320: Fox__R.Leg_IK_Pole_Control (MixedSpace)
+    101322: Fox__R.Leg_IK_Pole_FootPin (Guided)
+    101324: Fox__R.Leg_IK_Pole_FootPin_Pointer
+    101326: Fox__R.Leg_IK_Pole_HipPin (Guided)
+    101328: Fox__R.Leg_IK_Pole_HipPin_Pointer
+    101330: Fox__R.Leg_IK_Pole_Knee_Pointer
+    101332: Fox__R.Leg_IK_Roll (Ctrl)
+    101334: Fox__R.Leg_IK_Roll_Control (Folder)
+    101336: Fox__R.Leg_IKSolver
+    101338: Fox__R.Leg_KneePole_DisplayCtrlUpVec
+    101340: Fox__R.Leg_Pole (Guided)
+    101342: Fox__R.Leg_Rig (Folder)
+    101344: Fox__R.Leg_Roll (Edit)
+    101346: Fox__R.Leg_Roll_1 (Bind)
+    101348: Fox__R.Leg_Roll_1_AutoDriven
+    101350: Fox__R.Leg_Roll_1_ManualDriven (Out)
+    101352: Fox__R.Leg_Roll_CH (Channel) (Ctrl)
+    101354: Fox__R.Leg_Roll_Guide_Setup (Folder)
+    101356: Fox__R.Leg_Roll_Guides (Folder)
+    101358: Fox__R.Leg_Roll_UpVec_Driver
+    101360: Fox__R.Leg_Roll_UpVec_DriverTarget
+    101362: Fox__R.Leg_Roll_UpVector
+    101364: Fox__R.LegDir (Guided)
+    101366: Fox__R.LegDir_IK
+    101368: Fox__R.LegRoll (Ctrl)
+    101370: Fox__R.LegRoll (Guide)
+    101372: Fox__R.LegRoll (Guided)
+    101374: Fox__R.LegRoll (LegSpace)
+    101376: Fox__R.LegRoll (Rigging)
+    101378: Fox__R.LegRoll_Controls (Folder)
+    101380: Fox__R.LegRoll_Guided (Folder)
+    101382: Fox__R.LegRoll_LegSpace (Guided)
+    101384: Fox__R.LegRoll_Rig (Folder)
+    101386: Fox__R.LegRollPoleVector (Guide)
+    101388: Fox__R.LegRoot_CharSpaceRot (Guided)
+    101390: Fox__R.LegRoot_RestRotInWorldSpace
+    101392: Fox__R.Reverse_Foot_Controls (CharSpace)
+    101394: Fox__R.Reverse_Foot_Toes_Control (OuterBankSpace)
+    101396: Fox__R.ReverseFoot_Guided (Folder)
+    101398: Fox__R.RevFoot_IK
+    101400: Fox__R.RevFoot_IK (Guided)
+    101402: Fox__R.RevFoot_IK_dirCns_Driven
+    101404: Fox__R.RevFoot_IK_InvBank (Out)
+    101406: Fox__R.RevFoot_IK_Solver
+    101408: Fox__R.RevFoot_Steady_Ankle (Out)
+    101410: Fox__R.RevFoot_Tip_IK
+    101412: Fox__R.RevFoot_ToeBase_Driven (Out)
+    101414: Fox__R.RevFoot_ToeBase_IK
+    101416: Fox__R.RevFoot_ToeBase_IK_InvBank (Out)
+    101418: Fox__R.RevFoot_Toes (Ctrl)
+    101420: Fox__R.RevFoot_Toes_Ctrl (Guided)
+    101422: Fox__R.RevFoot_Toes_IK (Guided)
+    101424: Fox__R.RevFootIK (LegSpace) (Folder)
+    101426: Fox__R.Shin (Guide)
+    101428: Fox__R.Shoulder (Bind)
+    101430: Fox__R.Shoulder (Edit)
+    101432: Fox__R.Shoulder (Guide)
+    101434: Fox__R.Shoulder (Guided)
+    101436: Fox__R.Shoulder_Aim (Ctrl)
+    101438: Fox__R.Shoulder_AimCtrl_SpaceSetup
+    101440: Fox__R.Shoulder_Controls (PlugSpace)
+    101442: Fox__R.Shoulder_DirCnsAndFKDriven
+    101444: Fox__R.Shoulder_FK (Ctrl)
+    101446: Fox__R.Shoulder_FK_Link
+    101448: Fox__R.Shoulder_Guided (PlugSpace)
+    101450: Fox__R.Shoulder_Tip (Guided)
+    101452: Fox__R.Shoulder_Tip_Point_Driven
+    101454: Fox__R.Shoulder_UpVec
+    101456: Fox__R.ShoulderCtrl (Guided)
+    101458: Fox__R.Thigh (Guide)
+    101460: Fox__R.UpLeg (Bind)
+    101462: Fox__R.UpLeg (Edit)
+    101464: Fox__R.UpLeg (Guided)
+    101466: Fox__R.UpLeg_Blended
+    101468: Fox__R.UpLeg_Controls (Folder)
+    101470: Fox__R.UpLeg_FK (Ctrl)
+    101472: Fox__R.UpLeg_FK_Space_Offset (Ctrl)
+    101474: Fox__R.UpLeg_IK
+    101476: Fox__R.UpLeg_Roll  (UpLegSpace)
+    101478: Fox__R.UpLeg_Roll (Ctrl)
+    101480: Fox__R.UpLeg_Roll (Edit)
+    101482: Fox__R.UpLeg_Roll (Rigging)
+    101484: Fox__R.UpLeg_Roll_0_AutoDriven
+    101486: Fox__R.UpLeg_Roll_0_ManualDriven
+    101488: Fox__R.UpLeg_Roll_1 (Bind)
+    101490: Fox__R.UpLeg_Roll_1 (Guide)
+    101492: Fox__R.UpLeg_Roll_1 (Guided)
+    101494: Fox__R.UpLeg_Roll_1_AutoDriven
+    101496: Fox__R.UpLeg_Roll_1_Manual_Driven
+    101498: Fox__R.UpLeg_Roll_2 (Bind)
+    101500: Fox__R.UpLeg_Roll_2 (Guided)
+    101502: Fox__R.UpLeg_Roll_2_AutoDriven
+    101504: Fox__R.UpLeg_Roll_ArmRootSpace(Guided)
+    101506: Fox__R.UpLeg_Roll_ArmSpace (Guided)
+    101508: Fox__R.UpLeg_Roll_CH (Channel) (Ctrl)
+    101510: Fox__R.UpLeg_Roll_Driver
+    101512: Fox__R.UpLeg_Roll_Guide_Setup (Folder)
+    101514: Fox__R.UpLeg_Roll_Guided (Folder)
+    101516: Fox__R.UpLeg_Roll_KneeProjectedToHipX_AnglePoint_A (Guide)
+    101518: Fox__R.UpLeg_Roll_Measure_AnglePoint_B (Guide)
+    101520: Fox__R.UpLeg_Roll_Pole (Guided)
+    101522: Fox__R.UpLeg_Roll_PoleDriver
+    101524: Fox__R.UpLeg_Roll_PoleDriver (Guide)
+    101526: Fox__R.UpLeg_Roll_PoleDriver (Guided)
+    101528: Fox__R.UpLeg_Roll_PoleDriver_Target
+    101530: Fox__R.UpLeg_Roll_PoleDriver_UpVec
+    101532: Fox__R.UpLeg_Roll_PoleVec (Guide)
+    101534: Fox__R.UpLeg_Roll_PoleVector
+    101536: Fox__R.UpLeg_Roll_PoleVector (UpLegRootSpace)
+    101538: Fox__R.UpLeg_Roll_RestOrientator (Guide)
+    101540: Fox__R_ArmRoll_PoleVecDriver
+    101542: Fox__R_ArmRoll_PoleVecDriver_2
+    101544: Fox__RGK_Chest_1 (Guided)
+    101546: Fox__RGK_Head_NeckTwistUpVec_Driver
+    101548: Fox__RGK_Spine_1 (Guided)
+    101550: Fox__RGK_Spine_2 (Guided)
+    101552: Fox__RGK_Spine_3 (Guided)
+    101554: Fox__RGK_Spine_Tip (Guided)
+    101556: Fox__Rig (Folder)
+    101558: Fox__Rig_Settings (Ctrl)
+    101560: Fox__Rig_Settings_Location_Driver
+    101562: Fox__Rig_Settings_Location_RefPoint
+    101564: Fox__RightArm (Segment)
+    101566: Fox__RightLeg (Segment)
+    101568: Fox__Rigid_Meshes (Folder)
+    101570: Fox__Root (Bind)
+    101572: Fox__Root (Ctrl)
+    101574: Fox__Root (Edit)
+    101576: Fox__Root (Guide)
+    101578: Fox__Root (Guided)
+    101580: Fox__Root_Ctrl (CharSpace)
+    101582: Fox__SegmentMap (Folder)
+    101584: Fox__Spine_1 (Bind)
+    101586: Fox__Spine_1 (Edit)
+    101588: Fox__Spine_1 (Guide)
+    101590: Fox__Spine_12_Link
+    101592: Fox__Spine_1_Driven
+    101594: Fox__Spine_1_Driven_Single (Out)
+    101596: Fox__Spine_1_FK (Ctrl)
+    101598: Fox__Spine_1_FK_Ctrl (Spine1Space)
+    101600: Fox__Spine_1_RootOrient (Guided)
+    101602: Fox__Spine_2 (Bind)
+    101604: Fox__Spine_2 (Edit)
+    101606: Fox__Spine_2 (Guide)
+    101608: Fox__Spine_23 _Link
+    101610: Fox__Spine_2_Driven
+    101612: Fox__Spine_2_Driven_Single (Out)
+    101614: Fox__Spine_2_FK (Ctrl)
+    101616: Fox__Spine_2_FK_Ctrl (Spine2Space)
+    101618: Fox__Spine_3 (Bind)
+    101620: Fox__Spine_3 (Edit)
+    101622: Fox__Spine_3 (Guide)
+    101624: Fox__Spine_34_Link
+    101626: Fox__Spine_3_Driven
+    101628: Fox__Spine_3_Driven_Single (Out)
+    101630: Fox__Spine_3_FK (Ctrl)
+    101632: Fox__Spine_3_FK_Ctrl (Spine3Space)
+    101634: Fox__Spine_4End_Link
+    101636: Fox__Spine_Controls (Folder)
+    101638: Fox__Spine_Driven (Folder)
+    101640: Fox__Spine_End_Link
+    101642: Fox__Spine_Guided (CharSpace)
+    101644: Fox__Spine_Guided (Folder)
+    101646: Fox__Spine_Hud (Folder)
+    101648: Fox__Spine_LowRevBend_Driven
+    101650: Fox__Spine_Rig (Folder)
+    101652: Fox__Spine_Root_Driven (Out)
+    101654: Fox__Spine_Tip (Bind)
+    101656: Fox__Spine_Tip (Edit)
+    101658: Fox__Spine_Tip (Guide)
+    101660: Fox__Spine_Tip_Driven
+    101662: Fox__SpineDirection (Guided)
+    101664: Fox__SpineOrienator_Driven (SpineOrientOut)
+    101666: Fox__Torso (Rigging)
+    101668: Fox__Torso (Segment)
+    101670: Fox__Torso_CH (Channel) (Ctrl)
+    101672: Fox__Torso_ChanCtrl (UpSpineBendSpace)
+    101674: Fox__Torso_Controls (RootDrivenSpace)
+    101676: Fox__Torso_Edit (Folder)
+    101678: Fox__Torso_Guide_Setup (Folder)
+    101680: Fox__UpBend_Ctrl (Folder)
+    101682: Fox__Upper_Spine_Bend (Ctrl)
+    101684: //RootNode
+    400000: Fox
+    400002: Fox__ACS_L.RevFoot_IK_Up_Vector
+    400004: Fox__ACS_R.RevFoot_IK_Up_Vector
+    400006: Fox__Base (Rigging)
+    400008: Fox__Base (Segment)
+    400010: Fox__Bind_Meshes (Folder)
+    400012: Fox__Bind_Skeleton (Folder)
+    400014: Fox__Char1_R.UpLeg_Roll_Rig (Folder)
+    400016: Fox__Chest (Bind)
+    400018: Fox__Chest (Edit)
+    400020: Fox__Chest (Guide)
+    400022: Fox__Chest_1_Driven
+    400024: Fox__Chest_1_Driven_Signle (Out)
+    400026: Fox__Chest_Ctrl (ChestSpace)
+    400028: Fox__Chest_FK (Ctrl)
+    400030: Fox__ControlRig (Folder)
+    400032: Fox__CurrentMarker_Ring_1
+    400034: Fox__CurrentMarker_Ring_2
+    400036: Fox__Custom_Rig (Folder)
+    400038: Fox__DeformRig (Folder)
+    400040: Fox__Extra_Meshes (Folder)
+    400042: Fox__gd_L.ArmRoll_ElbowProjectedToArmY_Agnle_Point_A
+    400044: Fox__gd_L.ArmRoll_MeasureAngle_Point_B
+    400046: Fox__gd_L.ArmRoll_RestOrientation_Locator
+    400048: Fox__gd_R.ArmRoll_ElbowProjectedToArmY_Agnle_Point_A
+    400050: Fox__gd_R.ArmRoll_MeasureAngle_Point_B
+    400052: Fox__gd_R.ArmRoll_RestOrientation_Locator
+    400054: Fox__Guide (Folder)
+    400056: Fox__Guide_Edit (Folder)
+    400058: Fox__Guide_Setup (Folder)
+    400060: Fox__Guide_Vis_Override (Folder)
+    400062: Fox__GuideSettings (Edit)
+    400064: Fox__Head (Bind)
+    400066: Fox__Head (Edit)
+    400068: Fox__Head (Guide)
+    400070: Fox__Head (Plug)
+    400072: Fox__Head (Rigging)
+    400074: Fox__Head (Segment)
+    400076: Fox__Head (Socket)
+    400078: Fox__Head_CH (Channel) (Ctrl)
+    400080: Fox__Head_CharSpaceOrientation_Override
+    400082: Fox__Head_CharSpaceRef (Guided)
+    400084: Fox__Head_Control (HeadRootSpace)
+    400086: Fox__Head_Controls (Folder)
+    400088: Fox__Head_FK (Ctrl)
+    400090: Fox__Head_FK_Control (HeadTargetedSpace)
+    400092: Fox__Head_FK_Driven
+    400094: Fox__Head_Guide_Setup (Folder)
+    400096: Fox__Head_Guided (CharSpace)
+    400098: Fox__Head_Guided (Folder)
+    400100: Fox__Head_Guided (PlugSpace)
+    400102: Fox__Head_NeckTwist_Driver_Target
+    400104: Fox__Head_NeckTwist_UpVector
+    400106: Fox__Head_Pointer
+    400108: Fox__Head_Rig (Folder)
+    400110: Fox__Head_Root
+    400112: Fox__Head_Root (Guided)
+    400114: Fox__Head_Secondary_FK (Ctrl)
+    400116: Fox__Head_Secondary_FK_Driven
+    400118: Fox__Head_Target (Ctrl)
+    400120: Fox__Head_Target (Guided)
+    400122: Fox__Head_Target_Control (CharSpace)
+    400124: Fox__Head_Targeted_Driven
+    400126: Fox__Head_TargetUpVec
+    400128: Fox__Head_Tip (Bind)
+    400130: Fox__Head_Tip (Edit)
+    400132: Fox__Head_Tip (Guided)
+    400134: Fox__Head_Tip (Out)
+    400136: Fox__HeadEff (Guide)
+    400138: Fox__HeadSpace (Socket)
+    400140: Fox__HeadTarget_LinkPointer
+    400142: Fox__HeadTargetCtrl (Guide)
+    400144: Fox__HeadWithNeck_Edit (Folder)
+    400146: Fox__Hips (Ctrl)
+    400148: Fox__Hips (Guided)
+    400150: Fox__Hips (Socket)
+    400152: Fox__Hips_CH (Channel) (Ctrl)
+    400154: Fox__Hips_Driven (Out)
+    400156: Fox__Hips_Point
+    400158: Fox__JointInfluences (Folder)
+    400160: Fox__L.Arm (Bind)
+    400162: Fox__L.Arm (Edit)
+    400164: Fox__L.Arm (Guide)
+    400166: Fox__L.Arm (Guided0
+    400168: Fox__L.Arm (Mirror)
+    400170: Fox__L.Arm (Rigging)
+    400172: Fox__L.Arm_Align (Edit)
+    400174: Fox__L.Arm_Alignment (SpaceLoc) (Folder)
+    400176: Fox__L.Arm_Blended
+    400178: Fox__L.Arm_Blended (Folder)
+    400180: Fox__L.Arm_CH (Channel) (Ctrl)
+    400182: Fox__L.Arm_Channel_Controls (ArmSpace)
+    400184: Fox__L.Arm_CharSpace_Override
+    400186: Fox__L.Arm_Controls (Folder)
+    400188: Fox__L.Arm_Edit (Folder)
+    400190: Fox__L.Arm_Edit_Mirror (Folder)
+    400192: Fox__L.Arm_FK (Ctrl)
+    400194: Fox__L.Arm_FK_Controls (SpaceLoc) (Folder)
+    400196: Fox__L.Arm_FK_Natural_Offset
+    400198: Fox__L.Arm_FK_Space_Offset (Ctrl)
+    400200: Fox__L.Arm_Guide_Setup (Folder)
+    400202: Fox__L.Arm_Guided (Folder)
+    400204: Fox__L.Arm_Guided (PlugSpace)
+    400206: Fox__L.Arm_Hand_IK_Controls (CharSpace)
+    400208: Fox__L.Arm_IK
+    400210: Fox__L.Arm_IK (Folder)
+    400212: Fox__L.Arm_IK_Controls_Guided (CharSpace)
+    400214: Fox__L.Arm_IK_Pole_Control (SpaceSetup)
+    400216: Fox__L.Arm_IK_Pole_Pointer_Elbow
+    400218: Fox__L.Arm_IK_Pole_Pointer_Shoulder_Pin
+    400220: Fox__L.Arm_IK_Roll (Ctrl)
+    400222: Fox__L.Arm_IK_Roll_Control (Folder)
+    400224: Fox__L.Arm_IKPole_ArmRootSpace (Guided)
+    400226: Fox__L.Arm_IKPole_Ctrl  (Guided)
+    400228: Fox__L.Arm_IKSolver
+    400230: Fox__L.Arm_Pole_UpVector
+    400232: Fox__L.Arm_PoleDir_IK
+    400234: Fox__L.Arm_Rig (Folder)
+    400236: Fox__L.Arm_Rig (PlugSpace)
+    400238: Fox__L.Arm_Roll (ArmSpace)
+    400240: Fox__L.Arm_Roll (Ctrl)
+    400242: Fox__L.Arm_Roll (Edit)
+    400244: Fox__L.Arm_Roll (Rigging)
+    400246: Fox__L.Arm_Roll_1 (Bind)
+    400248: Fox__L.Arm_Roll_2 (Bind)
+    400250: Fox__L.Arm_Roll_CH (Channel) (Ctrl)
+    400252: Fox__L.Arm_Roll_Controls (Folder)
+    400254: Fox__L.Arm_Roll_Guide_Setup (Folder)
+    400256: Fox__L.Arm_Roll_Guided (Folder)
+    400258: Fox__L.Arm_Roll_Guides (Folder)
+    400260: Fox__L.Arm_Roll_PoleVector (ArmRootSpace)
+    400262: Fox__L.Arm_Roll_Rig (Folder)
+    400264: Fox__L.Arm_RootInCharSpace
+    400266: Fox__L.Arm_SpineSpace (Plug)
+    400268: Fox__L.ArmPole_IK (Ctrl)
+    400270: Fox__L.ArmRoll_0_AutoDriven
+    400272: Fox__L.ArmRoll_0_ManualDriven
+    400274: Fox__L.ArmRoll_1_AutoDriven
+    400276: Fox__L.ArmRoll_1_Guided
+    400278: Fox__L.ArmRoll_1_Manual_Driven
+    400280: Fox__L.ArmRoll_2_AutoDriven
+    400282: Fox__L.ArmRoll_2_Guided
+    400284: Fox__L.ArmRoll_ArmRootSpace (Guided)
+    400286: Fox__L.ArmRoll_ArmSpace (Guided)
+    400288: Fox__L.ArmRoll_Driver
+    400290: Fox__L.ArmRoll_Joint (Guide)
+    400292: Fox__L.ArmRoll_Pole (Guided)
+    400294: Fox__L.ArmRoll_PoleDriver (Guide)
+    400296: Fox__L.ArmRoll_PoleDriver (Guided)
+    400298: Fox__L.ArmRoll_PoleDriver_UpVec
+    400300: Fox__L.ArmRoll_PoleVecDriver_Target
+    400302: Fox__L.ArmRoll_PoleVector
+    400304: Fox__L.ArmRoll_PoleVector (Guide)
+    400306: Fox__L.ArmRootInCharSpace (Guided)
+    400308: Fox__L.ElbowVec (Guide)
+    400310: Fox__L.ElbowVecSpaceSetup
+    400312: Fox__L.Foot (Bind)
+    400314: Fox__L.Foot (Edit)
+    400316: Fox__L.Foot (FootTipPvtSpace)
+    400318: Fox__L.Foot (Guided)
+    400320: Fox__L.Foot (Mirror)
+    400322: Fox__L.Foot1 (Guide)
+    400324: Fox__L.Foot2 (Guide)
+    400326: Fox__L.Foot2Dir_And_Bank (Guide)
+    400328: Fox__L.Foot_Ankle (Guided)
+    400330: Fox__L.Foot_Ball_Driven
+    400332: Fox__L.Foot_BankAndToes (Ctrl)
+    400334: Fox__L.Foot_BankCtrl_AnimRefPoint
+    400336: Fox__L.Foot_BankCtrl_AnimRefPoint (Guided)
+    400338: Fox__L.Foot_Blended (Out)
+    400340: Fox__L.Foot_FK (Ctrl)
+    400342: Fox__L.Foot_IK
+    400344: Fox__L.Foot_In_Foot_IK_Space (Guided)
+    400346: Fox__L.Foot_In_LegAssm (Guided)
+    400348: Fox__L.Foot_InBankPvt (Edit)
+    400350: Fox__L.Foot_InBankPvt (Guide)
+    400352: Fox__L.Foot_InBankPvt (Mirror)
+    400354: Fox__L.Foot_InnerBank (Guided)
+    400356: Fox__L.Foot_InnerBank_Driven
+    400358: Fox__L.Foot_OutBankPvt (Edit)
+    400360: Fox__L.Foot_OutBankPvt (Guide)
+    400362: Fox__L.Foot_OutBankPvt (Mirror)
+    400364: Fox__L.Foot_OuterBank (Guided)
+    400366: Fox__L.Foot_OuterBank_Driven
+    400368: Fox__L.Foot_Static_WRot_Locator (Out)
+    400370: Fox__L.Foot_Tip (Bind)
+    400372: Fox__L.Foot_Tip (Edit)
+    400374: Fox__L.Foot_Tip (Guided)
+    400376: Fox__L.Foot_Tip (Mirror)
+    400378: Fox__L.Foot_Tip_Blended (Out)
+    400380: Fox__L.Foot_Tip_FK
+    400382: Fox__L.Foot_Tip_IK_Goal
+    400384: Fox__L.Foot_Tip_IK_Goal (Guided)
+    400386: Fox__L.Foot_TipPvt (Ctrl)
+    400388: Fox__L.Foot_TipPvt (Edit)
+    400390: Fox__L.Foot_TipPvt (Guide)
+    400392: Fox__L.Foot_TipPvt (Guided)
+    400394: Fox__L.Foot_TipPvt (Mirror)
+    400396: Fox__L.Foot_ToeBase (Mirror)
+    400398: Fox__L.Foot_ToeBase_Blended (Out)
+    400400: Fox__L.Foot_ToeBase_Point
+    400402: Fox__L.Foot_Toes (Bind)
+    400404: Fox__L.Foot_Toes (Edit)
+    400406: Fox__L.Foot_Toes (Guided)
+    400408: Fox__L.Foot_Toes_FK (Ctrl)
+    400410: Fox__L.Foot_Toes_Point (Guided)
+    400412: Fox__L.Foot_ToesPvt
+    400414: Fox__L.Foot_ToesPvt (Guided)
+    400416: Fox__L.FootTip (Guide)
+    400418: Fox__L.ForeArm (Bind)
+    400420: Fox__L.ForeArm (Edit)
+    400422: Fox__L.ForeArm (Guide)
+    400424: Fox__L.ForeArm (Guided)
+    400426: Fox__L.ForeArm (Mirror)
+    400428: Fox__L.ForeArm_1_ManualDriven (Out)
+    400430: Fox__L.Forearm_Blended
+    400432: Fox__L.ForeArm_FK (Ctrl)
+    400434: Fox__L.ForeArm_IK
+    400436: Fox__L.ForeArm_Roll (Ctrl)
+    400438: Fox__L.Forearm_Roll (Edit)
+    400440: Fox__L.ForeArm_Roll (ForeArmSpace)
+    400442: Fox__L.ForeArm_Roll (Guide)
+    400444: Fox__L.ForeArm_Roll (Rigging)
+    400446: Fox__L.ForeArm_Roll_1 (Bind)
+    400448: Fox__L.ForeArm_Roll_1 (Guided0
+    400450: Fox__L.ForeArm_Roll_1_AutoDriven
+    400452: Fox__L.ForeArm_Roll_2 (Bind)
+    400454: Fox__L.ForeArm_Roll_2_AutoDriven
+    400456: Fox__L.ForeArm_Roll_2_ManualDriven (Out)
+    400458: Fox__L.ForeArm_Roll_CH (Channel) (Ctrl)
+    400460: Fox__L.ForeArm_Roll_Controls (Folder)
+    400462: Fox__L.ForeArm_Roll_Driver
+    400464: Fox__L.ForeArm_Roll_FArm (Guided)
+    400466: Fox__L.ForeArm_Roll_FArmOrienationOverride (Guided)
+    400468: Fox__L.ForeArm_Roll_Guide_Setup (Folder)
+    400470: Fox__L.ForeArm_Roll_Guided (Folder)
+    400472: Fox__L.ForeArm_Roll_Rig (Folder)
+    400474: Fox__L.ForeArm_Roll_Transfer (HandSpace)
+    400476: Fox__L.ForeArm_Roll_UpVec (Guide)
+    400478: Fox__L.ForeArm_Roll_UpVector
+    400480: Fox__L.ForeArmRoll_2 (Guided)
+    400482: Fox__L.Hand (Bind)
+    400484: Fox__L.Hand (Edit)
+    400486: Fox__L.Hand (Guide)
+    400488: Fox__L.Hand (Guided)
+    400490: Fox__L.Hand (Mirror)
+    400492: Fox__L.Hand_Align (Edit)
+    400494: Fox__L.Hand_Alignment (Folder)
+    400496: Fox__L.Hand_Blended (Out)
+    400498: Fox__L.Hand_CH (Channel) (Ctrl)
+    400500: Fox__L.Hand_Channel_Controls (HandSpace)
+    400502: Fox__L.Hand_End (Bind)
+    400504: Fox__L.Hand_End (Edit)
+    400506: Fox__L.Hand_End (Mirror)
+    400508: Fox__L.Hand_End_FK
+    400510: Fox__L.Hand_End_IK
+    400512: Fox__L.Hand_FK (Ctrl)
+    400514: Fox__L.Hand_IK
+    400516: Fox__L.Hand_IK (Ctrl)
+    400518: Fox__L.Hand_IK_Ctrl_Pos (Guided)
+    400520: Fox__L.Hand_IK_Ctrl_Rot
+    400522: Fox__L.Hand_IK_Space_Offset (Ctrl)
+    400524: Fox__L.Hand_IK_Space_Offset (Guided)
+    400526: Fox__L.Hand_Space_Offset_dirCnsTarget
+    400528: Fox__L.HandEnd (Guided)
+    400530: Fox__L.HandEnd_Blended (Out)
+    400532: Fox__L.HandTip (Guide)
+    400534: Fox__L.Heel (Ctrl)
+    400536: Fox__L.Heel (Guide)
+    400538: Fox__L.Heel (Guided)
+    400540: Fox__L.Heel_Pvt (Edit)
+    400542: Fox__L.Heel_Pvt (Mirror)
+    400544: Fox__L.KneeVec (Guide)
+    400546: Fox__L.KneeVecSpaceSetup
+    400548: Fox__L.Leg (Bind)
+    400550: Fox__L.Leg (Edit)
+    400552: Fox__L.Leg (Guided)
+    400554: Fox__L.Leg (HipsSpace)
+    400556: Fox__L.Leg (Mirror)
+    400558: Fox__L.Leg (Rigging)
+    400560: Fox__L.Leg_Align (Edit)
+    400562: Fox__L.Leg_Alignment (SpaceLoc) (Folder)
+    400564: Fox__L.Leg_AutoRoll_Driver
+    400566: Fox__L.Leg_BlendChain (Folder)
+    400568: Fox__L.Leg_Blended
+    400570: Fox__L.Leg_CH (Channel) (Ctrl)
+    400572: Fox__L.Leg_Channel_Controls (UpLegSpace)
+    400574: Fox__L.Leg_CharSpace_Override
+    400576: Fox__L.Leg_Controls (Folder)
+    400578: Fox__L.Leg_Controls_Guided (CharSpace)
+    400580: Fox__L.Leg_Edit (Folder)
+    400582: Fox__L.Leg_Edit_Mirror (Folder)
+    400584: Fox__L.Leg_FK (Ctrl)
+    400586: Fox__L.Leg_FK_Controls (SpaceLoc) (Folder)
+    400588: Fox__L.Leg_Guide_Setup (Folder)
+    400590: Fox__L.Leg_Guided (Folder)
+    400592: Fox__L.Leg_Guided (PlugSpace)
+    400594: Fox__L.Leg_HipsSpace (Plug)
+    400596: Fox__L.Leg_IK
+    400598: Fox__L.Leg_IK (Folder)
+    400600: Fox__L.Leg_IK_Goal
+    400602: Fox__L.Leg_IK_Pole (Ctrl)
+    400604: Fox__L.Leg_IK_Pole_Control (MixedSpace)
+    400606: Fox__L.Leg_IK_Pole_FootPin (Guided)
+    400608: Fox__L.Leg_IK_Pole_FootPin_Pointer
+    400610: Fox__L.Leg_IK_Pole_HipPin (Guided)
+    400612: Fox__L.Leg_IK_Pole_HipPin_Pointer
+    400614: Fox__L.Leg_IK_Pole_Knee_Pointer
+    400616: Fox__L.Leg_IK_Roll (Ctrl)
+    400618: Fox__L.Leg_IK_Roll_Control (Folder)
+    400620: Fox__L.Leg_IKSolver
+    400622: Fox__L.Leg_Pole (Guided)
+    400624: Fox__L.Leg_Rig (Folder)
+    400626: Fox__L.Leg_Roll (Edit)
+    400628: Fox__L.Leg_Roll_1 (Bind)
+    400630: Fox__L.Leg_Roll_1_AutoDriven
+    400632: Fox__L.Leg_Roll_1_ManualDriven (Out)
+    400634: Fox__L.Leg_Roll_CH (Channel) (Ctrl)
+    400636: Fox__L.Leg_Roll_Guide_Setup (Folder)
+    400638: Fox__L.Leg_Roll_Guides (Folder)
+    400640: Fox__L.Leg_Roll_UpVec_Driver
+    400642: Fox__L.Leg_Roll_UpVec_Driver_Target
+    400644: Fox__L.Leg_Roll_UpVector
+    400646: Fox__L.LegDir (Guided)
+    400648: Fox__L.LegDir_IK
+    400650: Fox__L.LegRoll (Ctrl)
+    400652: Fox__L.LegRoll (Guide)
+    400654: Fox__L.LegRoll (Guided)
+    400656: Fox__L.LegRoll (LegSpace)
+    400658: Fox__L.LegRoll (Rigging)
+    400660: Fox__L.LegRoll_Controls (Folder)
+    400662: Fox__L.LegRoll_Guided (Folder)
+    400664: Fox__L.LegRoll_LegSpace (Guided)
+    400666: Fox__L.LegRoll_Rig (Folder)
+    400668: Fox__L.LegRoll_Rot_Isolator
+    400670: Fox__L.LegRollPoleVector (Guide)
+    400672: Fox__L.LegRoot_CharSpaceRot (Guided)
+    400674: Fox__L.LegRoot_RestRotInWorldSpace
+    400676: Fox__L.Reverse_Foot_Controls (CharSpace)
+    400678: Fox__L.Reverse_Foot_Toes_Control (OuterBankSpace)
+    400680: Fox__L.ReverseFoot_Guided (Folder)
+    400682: Fox__L.RevFoot_IK
+    400684: Fox__L.RevFoot_IK (Guided)
+    400686: Fox__L.RevFoot_IK_dirCns_Driven
+    400688: Fox__L.RevFoot_IK_InvBank (Out)
+    400690: Fox__L.RevFoot_IK_Solver
+    400692: Fox__L.RevFoot_Steady_Ankle (Out)
+    400694: Fox__L.RevFoot_Tip_IK
+    400696: Fox__L.RevFoot_ToeBase_Driven (Out)
+    400698: Fox__L.RevFoot_ToeBase_IK
+    400700: Fox__L.RevFoot_ToeBase_IK_InvBank (Out)
+    400702: Fox__L.RevFoot_Toes (Ctrl)
+    400704: Fox__L.RevFoot_Toes_Ctrl (Guided)
+    400706: Fox__L.RevFoot_Toes_IK (Guided)
+    400708: Fox__L.RevFootIK (LegSpace) (Folder)
+    400710: Fox__L.Shin (Guide)
+    400712: Fox__L.Shoulder (Bind)
+    400714: Fox__L.Shoulder (Edit)
+    400716: Fox__L.Shoulder (Guide)
+    400718: Fox__L.Shoulder (Guided)
+    400720: Fox__L.Shoulder (Mirror)
+    400722: Fox__L.Shoulder_Aim (Ctrl)
+    400724: Fox__L.Shoulder_Controls (PlugSpace)
+    400726: Fox__L.Shoulder_DirCnsAndFKDriven
+    400728: Fox__L.Shoulder_FK (Ctrl)
+    400730: Fox__L.Shoulder_FK_Link
+    400732: Fox__L.Shoulder_Guided (PlugSpace)
+    400734: Fox__L.Shoulder_Tip (Guided)
+    400736: Fox__L.Shoulder_Tip_Point_Driven
+    400738: Fox__L.ShoulderCtrl (Guided)
+    400740: Fox__L.ShoulderCtrl_SpaceSetup
+    400742: Fox__L.ShoulderUpVec
+    400744: Fox__L.Thigh (Guide)
+    400746: Fox__L.UpLeg (Bind)
+    400748: Fox__L.UpLeg (Edit)
+    400750: Fox__L.UpLeg (Guided)
+    400752: Fox__L.UpLeg (Mirror)
+    400754: Fox__L.UpLeg_Blended
+    400756: Fox__L.UpLeg_Controls (Folder)
+    400758: Fox__L.UpLeg_FK (Ctrl)
+    400760: Fox__L.UpLeg_FK_Space_Offset (Ctrl)
+    400762: Fox__L.UpLeg_IK
+    400764: Fox__L.UpLeg_Roll  (UpLegSpace)
+    400766: Fox__L.UpLeg_Roll (Ctrl)
+    400768: Fox__L.UpLeg_Roll (Edit)
+    400770: Fox__L.UpLeg_Roll (Rigging)
+    400772: Fox__L.UpLeg_Roll_0_AutoDriven
+    400774: Fox__L.UpLeg_Roll_0_ManualDriven
+    400776: Fox__L.UpLeg_Roll_1 (Bind)
+    400778: Fox__L.UpLeg_Roll_1 (Guide)
+    400780: Fox__L.UpLeg_Roll_1 (Guided)
+    400782: Fox__L.UpLeg_Roll_1_AutoDriven
+    400784: Fox__L.UpLeg_Roll_1_Manual_Driven
+    400786: Fox__L.UpLeg_Roll_2 (Bind)
+    400788: Fox__L.UpLeg_Roll_2 (Guided)
+    400790: Fox__L.UpLeg_Roll_2_AutoDriven
+    400792: Fox__L.UpLeg_Roll_ArmRootSpace(Guided)
+    400794: Fox__L.UpLeg_Roll_ArmSpace (Guided)
+    400796: Fox__L.UpLeg_Roll_CH (Channel) (Ctrl)
+    400798: Fox__L.UpLeg_Roll_Driver
+    400800: Fox__L.UpLeg_Roll_Guide_Setup (Folder)
+    400802: Fox__L.UpLeg_Roll_Guided (Folder)
+    400804: Fox__L.UpLeg_Roll_KneeProjectedToHipY_AnglePoint_A (Guide)
+    400806: Fox__L.UpLeg_Roll_Measure_AnglePoint_B (Guide)
+    400808: Fox__L.UpLeg_Roll_Pole (Guided)
+    400810: Fox__L.UpLeg_Roll_PoleDriver
+    400812: Fox__L.UpLeg_Roll_PoleDriver (Guide)
+    400814: Fox__L.UpLeg_Roll_PoleDriver (Guided)
+    400816: Fox__L.UpLeg_Roll_PoleDriver_Target
+    400818: Fox__L.UpLeg_Roll_PoleDriver_UpVec
+    400820: Fox__L.UpLeg_Roll_PoleVec (Guide)
+    400822: Fox__L.UpLeg_Roll_PoleVector
+    400824: Fox__L.UpLeg_Roll_PoleVector (UpLegRootSpace)
+    400826: Fox__L.UpLeg_Roll_RestOrientator (Guide)
+    400828: Fox__L.UpLeg_Roll_Rig (Folder)
+    400830: Fox__LeftArm (Segment)
+    400832: Fox__LeftLeg (Segment)
+    400834: Fox__Lower_Spine_Ctrl (Folder)
+    400836: Fox__Lower_Spine_FK_Bend (Ctrl)
+    400838: Fox__Lower_Spine_Forward_Bend_Ctrl (SpineDirectionSpace)
+    400840: Fox__Lower_Spine_Reverse_Bend (Ctrl)
+    400842: Fox__Marker (Folder)
+    400844: Fox__Master (Ctrl)
+    400846: Fox__MasterCtrl (Proxy)
+    400848: Fox__Neck (Bind)
+    400850: Fox__Neck (Edit)
+    400852: Fox__Neck (Guide)
+    400854: Fox__Neck (Guided)
+    400856: Fox__Neck (Plug)
+    400858: Fox__Neck (Rigging)
+    400860: Fox__Neck (Socket)
+    400862: Fox__Neck_Aim (Ctrl)
+    400864: Fox__Neck_Aim_Control (PlugSpace) (HeadLocation)
+    400866: Fox__Neck_Aim_Ctrl_Shadow
+    400868: Fox__Neck_Aim_Transform_Proxy_Link
+    400870: Fox__Neck_AutoRoll_Driven (Out)
+    400872: Fox__Neck_AutoRoll_Driven_Target
+    400874: Fox__Neck_Base
+    400876: Fox__Neck_Control (Guided)
+    400878: Fox__Neck_Control (NeckAimSpace)
+    400880: Fox__Neck_Controls (Folder)
+    400882: Fox__Neck_Driven (Out)
+    400884: Fox__Neck_Driven_Without_Roll
+    400886: Fox__Neck_Driver_UpVector
+    400888: Fox__Neck_FK (Ctrl)
+    400890: Fox__Neck_Guided (Folder)
+    400892: Fox__Neck_Guided (PlugSpace)
+    400894: Fox__Neck_Hrch (PlugSpace)
+    400896: Fox__Neck_Link
+    400898: Fox__Neck_Rig (Folder)
+    400900: Fox__Neck_Roll_UpVector
+    400902: Fox__Neck_Tip (Guided)
+    400904: Fox__R.Arm (Bind)
+    400906: Fox__R.Arm (Edit)
+    400908: Fox__R.Arm (Guide)
+    400910: Fox__R.Arm (Guided0
+    400912: Fox__R.Arm (Rigging)
+    400914: Fox__R.Arm_Align (Edit)
+    400916: Fox__R.Arm_Alignment (SpaceLoc) (Folder)
+    400918: Fox__R.Arm_Blended
+    400920: Fox__R.Arm_Blended (Folder)
+    400922: Fox__R.Arm_CH (Channel) (Ctrl)
+    400924: Fox__R.Arm_Channel_Controls (ArmSpace)
+    400926: Fox__R.Arm_CharSpace_Override
+    400928: Fox__R.Arm_Controls (Folder)
+    400930: Fox__R.Arm_Edit (Folder)
+    400932: Fox__R.Arm_FK (Ctrl)
+    400934: Fox__R.Arm_FK (SpaceLoc) (Folder)
+    400936: Fox__R.Arm_FK_Natural_Offset
+    400938: Fox__R.Arm_FK_Space_Offset (Ctrl)
+    400940: Fox__R.Arm_Guide_Setup (Folder)
+    400942: Fox__R.Arm_Guided (Folder)
+    400944: Fox__R.Arm_Guided (PlugSpace)
+    400946: Fox__R.Arm_Hand_IK_Controls (CharSpace)
+    400948: Fox__R.Arm_IK
+    400950: Fox__R.Arm_IK (Folder)
+    400952: Fox__R.Arm_IK_Controls_Guided (CharSpace)
+    400954: Fox__R.Arm_IK_Pole (Ctrl)
+    400956: Fox__R.Arm_IK_Pole_Control (MixedSpace)
+    400958: Fox__R.Arm_IK_Pole_Pointer_Elbow
+    400960: Fox__R.Arm_IK_Pole_Pointer_Shoulder_Pin
+    400962: Fox__R.Arm_IK_Roll (Ctrl)
+    400964: Fox__R.Arm_IK_Roll_Control (Folder)
+    400966: Fox__R.Arm_IKPole_ArmRootSpace (Guided)
+    400968: Fox__R.Arm_IKPole_Ctrl  (Guided)
+    400970: Fox__R.Arm_IKSolver
+    400972: Fox__R.Arm_Pole_UpVector
+    400974: Fox__R.Arm_PoleDir_IK
+    400976: Fox__R.Arm_Rig (Folder)
+    400978: Fox__R.Arm_Rig (PlugSpace)
+    400980: Fox__R.Arm_Roll (ArmSpace)
+    400982: Fox__R.Arm_Roll (Ctrl)
+    400984: Fox__R.Arm_Roll (Edit)
+    400986: Fox__R.Arm_Roll (Rigging)
+    400988: Fox__R.Arm_Roll_1 (Bind)
+    400990: Fox__R.Arm_Roll_2 (Bind)
+    400992: Fox__R.Arm_Roll_CH (Channel) (Ctrl)
+    400994: Fox__R.Arm_Roll_Controls (Folder)
+    400996: Fox__R.Arm_Roll_Guide_Setup (Folder)
+    400998: Fox__R.Arm_Roll_Guided (Folder)
+    401000: Fox__R.Arm_Roll_Guides (Folder)
+    401002: Fox__R.Arm_Roll_PoleVector (ArmRootSpace)
+    401004: Fox__R.Arm_Roll_Rig (Folder)
+    401006: Fox__R.Arm_RootInCharSpace
+    401008: Fox__R.Arm_SpineSpace (Plug)
+    401010: Fox__R.ArmRoll_0_AutoDriven
+    401012: Fox__R.ArmRoll_0_ManualDriven
+    401014: Fox__R.ArmRoll_1_AutoDriven
+    401016: Fox__R.ArmRoll_1_Guided
+    401018: Fox__R.ArmRoll_1_Manual_Driven
+    401020: Fox__R.ArmRoll_2_AutoDriven
+    401022: Fox__R.ArmRoll_2_Guided
+    401024: Fox__R.ArmRoll_ArmRootSpace (Guided)
+    401026: Fox__R.ArmRoll_ArmSpace (Guided)
+    401028: Fox__R.ArmRoll_Driver
+    401030: Fox__R.ArmRoll_Pole (Guided)
+    401032: Fox__R.ArmRoll_PoleDriver (Guide)
+    401034: Fox__R.ArmRoll_PoleDriver (Guided)
+    401036: Fox__R.ArmRoll_PoleDriver_UpVec
+    401038: Fox__R.ArmRoll_PoleVecDriver_Target
+    401040: Fox__R.ArmRoll_PoleVector
+    401042: Fox__R.ArmRoll_PoleVector (Guide)
+    401044: Fox__R.ArmRootInCharSpace (Guided)
+    401046: Fox__R.ElbowVec (Guide)
+    401048: Fox__R.ElbowVecSpaceSetup
+    401050: Fox__R.Foot (Bind)
+    401052: Fox__R.Foot (Edit)
+    401054: Fox__R.Foot (FootTipPvtSpace)
+    401056: Fox__R.Foot (Guided)
+    401058: Fox__R.Foot1 (Guide)
+    401060: Fox__R.Foot2 (Guide)
+    401062: Fox__R.Foot2Dir_And_Bank (Guide)
+    401064: Fox__R.Foot_Ankle (Guided)
+    401066: Fox__R.Foot_Ball_Driven
+    401068: Fox__R.Foot_BankAndToes (Ctrl)
+    401070: Fox__R.Foot_BankCtrl_AnimRefPoint
+    401072: Fox__R.Foot_BankCtrl_AnimRefPoint (Guided)
+    401074: Fox__R.Foot_Blended (Out)
+    401076: Fox__R.Foot_FK (Ctrl)
+    401078: Fox__R.Foot_IK
+    401080: Fox__R.Foot_In_Foot_IK_Space (Guided)
+    401082: Fox__R.Foot_In_LegAssm (Guided)
+    401084: Fox__R.Foot_InBankPvt (Edit)
+    401086: Fox__R.Foot_InBankPvt (Guide)
+    401088: Fox__R.Foot_InnerBank (Guided)
+    401090: Fox__R.Foot_InnerBank_Driven
+    401092: Fox__R.Foot_OutBankPvt (Edit)
+    401094: Fox__R.Foot_OutBankPvt (Guide)
+    401096: Fox__R.Foot_OuterBank (Guided)
+    401098: Fox__R.Foot_OuterBank_Driven
+    401100: Fox__R.Foot_Rot_Isolator
+    401102: Fox__R.Foot_Static_WRot_Locator (Out)
+    401104: Fox__R.Foot_Tip (Bind)
+    401106: Fox__R.Foot_Tip (Edit)
+    401108: Fox__R.Foot_Tip (Guided)
+    401110: Fox__R.Foot_Tip_Blended (Out)
+    401112: Fox__R.Foot_Tip_FK
+    401114: Fox__R.Foot_Tip_IK_Goal
+    401116: Fox__R.Foot_Tip_IK_Goal (Guided)
+    401118: Fox__R.Foot_TipPvt (Ctrl)
+    401120: Fox__R.Foot_TipPvt (Edit)
+    401122: Fox__R.Foot_TipPvt (Guide)
+    401124: Fox__R.Foot_TipPvt (Guided)
+    401126: Fox__R.Foot_ToeBase_Blended (Out)
+    401128: Fox__R.Foot_ToeBase_Point
+    401130: Fox__R.Foot_Toes (Bind)
+    401132: Fox__R.Foot_Toes (Edit)
+    401134: Fox__R.Foot_Toes (Guided)
+    401136: Fox__R.Foot_Toes_FK (Ctrl)
+    401138: Fox__R.Foot_Toes_Point (Guided)
+    401140: Fox__R.Foot_ToesPvt
+    401142: Fox__R.Foot_ToesPvt (Guided)
+    401144: Fox__R.FootTip (Guide)
+    401146: Fox__R.ForeArm (Bind)
+    401148: Fox__R.ForeArm (Edit)
+    401150: Fox__R.ForeArm (Guide)
+    401152: Fox__R.ForeArm (Guided)
+    401154: Fox__R.ForeArm_1_ManualDriven (Out)
+    401156: Fox__R.Forearm_Blended
+    401158: Fox__R.ForeArm_FK (Ctrl)
+    401160: Fox__R.ForeArm_IK
+    401162: Fox__R.ForeArm_Roll (Ctrl)
+    401164: Fox__R.Forearm_Roll (Edit)
+    401166: Fox__R.ForeArm_Roll (ForeArmSpace)
+    401168: Fox__R.ForeArm_Roll (Guide)
+    401170: Fox__R.ForeArm_Roll (Rigging)
+    401172: Fox__R.ForeArm_Roll_1 (Bind)
+    401174: Fox__R.ForeArm_Roll_1 (Guided0
+    401176: Fox__R.ForeArm_Roll_1_AutoDriven
+    401178: Fox__R.ForeArm_Roll_2 (Bind)
+    401180: Fox__R.ForeArm_Roll_2_AutoDriven
+    401182: Fox__R.ForeArm_Roll_2_ManualDriven (Out)
+    401184: Fox__R.ForeArm_Roll_CH (Channel) (Ctrl)
+    401186: Fox__R.ForeArm_Roll_Controls (Folder)
+    401188: Fox__R.ForeArm_Roll_Driver
+    401190: Fox__R.ForeArm_Roll_FArm (Guided)
+    401192: Fox__R.ForeArm_Roll_FArmOrienationOverride (Guided)
+    401194: Fox__R.ForeArm_Roll_Guide_Setup (Folder)
+    401196: Fox__R.ForeArm_Roll_Guided (Folder)
+    401198: Fox__R.ForeArm_Roll_Rig (Folder)
+    401200: Fox__R.ForeArm_Roll_Transfer (HandSpace)
+    401202: Fox__R.ForeArm_Roll_UpVec (Guide)
+    401204: Fox__R.ForeArm_Roll_UpVector
+    401206: Fox__R.ForeArmRoll_2 (Guided)
+    401208: Fox__R.Hand (Bind)
+    401210: Fox__R.Hand (Edit)
+    401212: Fox__R.Hand (Guide)
+    401214: Fox__R.Hand (Guided)
+    401216: Fox__R.Hand_Align (Edit)
+    401218: Fox__R.Hand_Alignment (SpaceLoc) (Folder)
+    401220: Fox__R.Hand_Blended (Out)
+    401222: Fox__R.Hand_CH (Channel) (Ctrl)
+    401224: Fox__R.Hand_End (Bind)
+    401226: Fox__R.Hand_End (Edit)
+    401228: Fox__R.Hand_End_FK
+    401230: Fox__R.Hand_End_IK
+    401232: Fox__R.Hand_FK (Ctrl)
+    401234: Fox__R.Hand_IK
+    401236: Fox__R.Hand_IK (Ctrl)
+    401238: Fox__R.Hand_IK_Ctrl_Pos (Guided)
+    401240: Fox__R.Hand_IK_Ctrl_Rot (Guided)
+    401242: Fox__R.Hand_IK_Space_Offset (Ctrl)
+    401244: Fox__R.Hand_IK_Space_Offset (Guided)
+    401246: Fox__R.Hand_Sliders_Control (HandSpace)
+    401248: Fox__R.Hand_Space_Offset_dirCnsTarget
+    401250: Fox__R.HandEnd (Guided)
+    401252: Fox__R.HandEnd_Blended (Out)
+    401254: Fox__R.HandTip (Guide)
+    401256: Fox__R.Heel (Ctrl)
+    401258: Fox__R.Heel (Guide)
+    401260: Fox__R.Heel (Guided)
+    401262: Fox__R.Heel_Pvt (Edit)
+    401264: Fox__R.KneeVec (Guide)
+    401266: Fox__R.KneeVecSpaceSetup
+    401268: Fox__R.Leg (Bind)
+    401270: Fox__R.Leg (Edit)
+    401272: Fox__R.Leg (Guided)
+    401274: Fox__R.Leg (HipsSpace)
+    401276: Fox__R.Leg (Rigging)
+    401278: Fox__R.Leg_Align (Edit)
+    401280: Fox__R.Leg_Alignment (SpaceLoc) (Folder)
+    401282: Fox__R.Leg_AutoRoll_Driver
+    401284: Fox__R.Leg_BlendChain (Folder)
+    401286: Fox__R.Leg_Blended
+    401288: Fox__R.Leg_CH (Channel) (Ctrl)
+    401290: Fox__R.Leg_Channel_Controls (UpLegSpace)
+    401292: Fox__R.Leg_CharSpace_Override
+    401294: Fox__R.Leg_Controls (Folder)
+    401296: Fox__R.Leg_Controls_Guided (CharSpace)
+    401298: Fox__R.Leg_Edit (Folder)
+    401300: Fox__R.Leg_FK (Ctrl)
+    401302: Fox__R.Leg_FK_Controls (SpaceLoc) (Folder)
+    401304: Fox__R.Leg_Guide_Setup (Folder)
+    401306: Fox__R.Leg_Guided (Folder)
+    401308: Fox__R.Leg_Guided (PlugSpace)
+    401310: Fox__R.Leg_HipsSpace (Plug)
+    401312: Fox__R.Leg_IK
+    401314: Fox__R.Leg_IK (Folder)
+    401316: Fox__R.Leg_IK_Goal
+    401318: Fox__R.Leg_IK_Pole (Ctrl)
+    401320: Fox__R.Leg_IK_Pole_Control (MixedSpace)
+    401322: Fox__R.Leg_IK_Pole_FootPin (Guided)
+    401324: Fox__R.Leg_IK_Pole_FootPin_Pointer
+    401326: Fox__R.Leg_IK_Pole_HipPin (Guided)
+    401328: Fox__R.Leg_IK_Pole_HipPin_Pointer
+    401330: Fox__R.Leg_IK_Pole_Knee_Pointer
+    401332: Fox__R.Leg_IK_Roll (Ctrl)
+    401334: Fox__R.Leg_IK_Roll_Control (Folder)
+    401336: Fox__R.Leg_IKSolver
+    401338: Fox__R.Leg_KneePole_DisplayCtrlUpVec
+    401340: Fox__R.Leg_Pole (Guided)
+    401342: Fox__R.Leg_Rig (Folder)
+    401344: Fox__R.Leg_Roll (Edit)
+    401346: Fox__R.Leg_Roll_1 (Bind)
+    401348: Fox__R.Leg_Roll_1_AutoDriven
+    401350: Fox__R.Leg_Roll_1_ManualDriven (Out)
+    401352: Fox__R.Leg_Roll_CH (Channel) (Ctrl)
+    401354: Fox__R.Leg_Roll_Guide_Setup (Folder)
+    401356: Fox__R.Leg_Roll_Guides (Folder)
+    401358: Fox__R.Leg_Roll_UpVec_Driver
+    401360: Fox__R.Leg_Roll_UpVec_DriverTarget
+    401362: Fox__R.Leg_Roll_UpVector
+    401364: Fox__R.LegDir (Guided)
+    401366: Fox__R.LegDir_IK
+    401368: Fox__R.LegRoll (Ctrl)
+    401370: Fox__R.LegRoll (Guide)
+    401372: Fox__R.LegRoll (Guided)
+    401374: Fox__R.LegRoll (LegSpace)
+    401376: Fox__R.LegRoll (Rigging)
+    401378: Fox__R.LegRoll_Controls (Folder)
+    401380: Fox__R.LegRoll_Guided (Folder)
+    401382: Fox__R.LegRoll_LegSpace (Guided)
+    401384: Fox__R.LegRoll_Rig (Folder)
+    401386: Fox__R.LegRollPoleVector (Guide)
+    401388: Fox__R.LegRoot_CharSpaceRot (Guided)
+    401390: Fox__R.LegRoot_RestRotInWorldSpace
+    401392: Fox__R.Reverse_Foot_Controls (CharSpace)
+    401394: Fox__R.Reverse_Foot_Toes_Control (OuterBankSpace)
+    401396: Fox__R.ReverseFoot_Guided (Folder)
+    401398: Fox__R.RevFoot_IK
+    401400: Fox__R.RevFoot_IK (Guided)
+    401402: Fox__R.RevFoot_IK_dirCns_Driven
+    401404: Fox__R.RevFoot_IK_InvBank (Out)
+    401406: Fox__R.RevFoot_IK_Solver
+    401408: Fox__R.RevFoot_Steady_Ankle (Out)
+    401410: Fox__R.RevFoot_Tip_IK
+    401412: Fox__R.RevFoot_ToeBase_Driven (Out)
+    401414: Fox__R.RevFoot_ToeBase_IK
+    401416: Fox__R.RevFoot_ToeBase_IK_InvBank (Out)
+    401418: Fox__R.RevFoot_Toes (Ctrl)
+    401420: Fox__R.RevFoot_Toes_Ctrl (Guided)
+    401422: Fox__R.RevFoot_Toes_IK (Guided)
+    401424: Fox__R.RevFootIK (LegSpace) (Folder)
+    401426: Fox__R.Shin (Guide)
+    401428: Fox__R.Shoulder (Bind)
+    401430: Fox__R.Shoulder (Edit)
+    401432: Fox__R.Shoulder (Guide)
+    401434: Fox__R.Shoulder (Guided)
+    401436: Fox__R.Shoulder_Aim (Ctrl)
+    401438: Fox__R.Shoulder_AimCtrl_SpaceSetup
+    401440: Fox__R.Shoulder_Controls (PlugSpace)
+    401442: Fox__R.Shoulder_DirCnsAndFKDriven
+    401444: Fox__R.Shoulder_FK (Ctrl)
+    401446: Fox__R.Shoulder_FK_Link
+    401448: Fox__R.Shoulder_Guided (PlugSpace)
+    401450: Fox__R.Shoulder_Tip (Guided)
+    401452: Fox__R.Shoulder_Tip_Point_Driven
+    401454: Fox__R.Shoulder_UpVec
+    401456: Fox__R.ShoulderCtrl (Guided)
+    401458: Fox__R.Thigh (Guide)
+    401460: Fox__R.UpLeg (Bind)
+    401462: Fox__R.UpLeg (Edit)
+    401464: Fox__R.UpLeg (Guided)
+    401466: Fox__R.UpLeg_Blended
+    401468: Fox__R.UpLeg_Controls (Folder)
+    401470: Fox__R.UpLeg_FK (Ctrl)
+    401472: Fox__R.UpLeg_FK_Space_Offset (Ctrl)
+    401474: Fox__R.UpLeg_IK
+    401476: Fox__R.UpLeg_Roll  (UpLegSpace)
+    401478: Fox__R.UpLeg_Roll (Ctrl)
+    401480: Fox__R.UpLeg_Roll (Edit)
+    401482: Fox__R.UpLeg_Roll (Rigging)
+    401484: Fox__R.UpLeg_Roll_0_AutoDriven
+    401486: Fox__R.UpLeg_Roll_0_ManualDriven
+    401488: Fox__R.UpLeg_Roll_1 (Bind)
+    401490: Fox__R.UpLeg_Roll_1 (Guide)
+    401492: Fox__R.UpLeg_Roll_1 (Guided)
+    401494: Fox__R.UpLeg_Roll_1_AutoDriven
+    401496: Fox__R.UpLeg_Roll_1_Manual_Driven
+    401498: Fox__R.UpLeg_Roll_2 (Bind)
+    401500: Fox__R.UpLeg_Roll_2 (Guided)
+    401502: Fox__R.UpLeg_Roll_2_AutoDriven
+    401504: Fox__R.UpLeg_Roll_ArmRootSpace(Guided)
+    401506: Fox__R.UpLeg_Roll_ArmSpace (Guided)
+    401508: Fox__R.UpLeg_Roll_CH (Channel) (Ctrl)
+    401510: Fox__R.UpLeg_Roll_Driver
+    401512: Fox__R.UpLeg_Roll_Guide_Setup (Folder)
+    401514: Fox__R.UpLeg_Roll_Guided (Folder)
+    401516: Fox__R.UpLeg_Roll_KneeProjectedToHipX_AnglePoint_A (Guide)
+    401518: Fox__R.UpLeg_Roll_Measure_AnglePoint_B (Guide)
+    401520: Fox__R.UpLeg_Roll_Pole (Guided)
+    401522: Fox__R.UpLeg_Roll_PoleDriver
+    401524: Fox__R.UpLeg_Roll_PoleDriver (Guide)
+    401526: Fox__R.UpLeg_Roll_PoleDriver (Guided)
+    401528: Fox__R.UpLeg_Roll_PoleDriver_Target
+    401530: Fox__R.UpLeg_Roll_PoleDriver_UpVec
+    401532: Fox__R.UpLeg_Roll_PoleVec (Guide)
+    401534: Fox__R.UpLeg_Roll_PoleVector
+    401536: Fox__R.UpLeg_Roll_PoleVector (UpLegRootSpace)
+    401538: Fox__R.UpLeg_Roll_RestOrientator (Guide)
+    401540: Fox__R_ArmRoll_PoleVecDriver
+    401542: Fox__R_ArmRoll_PoleVecDriver_2
+    401544: Fox__RGK_Chest_1 (Guided)
+    401546: Fox__RGK_Head_NeckTwistUpVec_Driver
+    401548: Fox__RGK_Spine_1 (Guided)
+    401550: Fox__RGK_Spine_2 (Guided)
+    401552: Fox__RGK_Spine_3 (Guided)
+    401554: Fox__RGK_Spine_Tip (Guided)
+    401556: Fox__Rig (Folder)
+    401558: Fox__Rig_Settings (Ctrl)
+    401560: Fox__Rig_Settings_Location_Driver
+    401562: Fox__Rig_Settings_Location_RefPoint
+    401564: Fox__RightArm (Segment)
+    401566: Fox__RightLeg (Segment)
+    401568: Fox__Rigid_Meshes (Folder)
+    401570: Fox__Root (Bind)
+    401572: Fox__Root (Ctrl)
+    401574: Fox__Root (Edit)
+    401576: Fox__Root (Guide)
+    401578: Fox__Root (Guided)
+    401580: Fox__Root_Ctrl (CharSpace)
+    401582: Fox__SegmentMap (Folder)
+    401584: Fox__Spine_1 (Bind)
+    401586: Fox__Spine_1 (Edit)
+    401588: Fox__Spine_1 (Guide)
+    401590: Fox__Spine_12_Link
+    401592: Fox__Spine_1_Driven
+    401594: Fox__Spine_1_Driven_Single (Out)
+    401596: Fox__Spine_1_FK (Ctrl)
+    401598: Fox__Spine_1_FK_Ctrl (Spine1Space)
+    401600: Fox__Spine_1_RootOrient (Guided)
+    401602: Fox__Spine_2 (Bind)
+    401604: Fox__Spine_2 (Edit)
+    401606: Fox__Spine_2 (Guide)
+    401608: Fox__Spine_23 _Link
+    401610: Fox__Spine_2_Driven
+    401612: Fox__Spine_2_Driven_Single (Out)
+    401614: Fox__Spine_2_FK (Ctrl)
+    401616: Fox__Spine_2_FK_Ctrl (Spine2Space)
+    401618: Fox__Spine_3 (Bind)
+    401620: Fox__Spine_3 (Edit)
+    401622: Fox__Spine_3 (Guide)
+    401624: Fox__Spine_34_Link
+    401626: Fox__Spine_3_Driven
+    401628: Fox__Spine_3_Driven_Single (Out)
+    401630: Fox__Spine_3_FK (Ctrl)
+    401632: Fox__Spine_3_FK_Ctrl (Spine3Space)
+    401634: Fox__Spine_4End_Link
+    401636: Fox__Spine_Controls (Folder)
+    401638: Fox__Spine_Driven (Folder)
+    401640: Fox__Spine_End_Link
+    401642: Fox__Spine_Guided (CharSpace)
+    401644: Fox__Spine_Guided (Folder)
+    401646: Fox__Spine_Hud (Folder)
+    401648: Fox__Spine_LowRevBend_Driven
+    401650: Fox__Spine_Rig (Folder)
+    401652: Fox__Spine_Root_Driven (Out)
+    401654: Fox__Spine_Tip (Bind)
+    401656: Fox__Spine_Tip (Edit)
+    401658: Fox__Spine_Tip (Guide)
+    401660: Fox__Spine_Tip_Driven
+    401662: Fox__SpineDirection (Guided)
+    401664: Fox__SpineOrienator_Driven (SpineOrientOut)
+    401666: Fox__Torso (Rigging)
+    401668: Fox__Torso (Segment)
+    401670: Fox__Torso_CH (Channel) (Ctrl)
+    401672: Fox__Torso_ChanCtrl (UpSpineBendSpace)
+    401674: Fox__Torso_Controls (RootDrivenSpace)
+    401676: Fox__Torso_Edit (Folder)
+    401678: Fox__Torso_Guide_Setup (Folder)
+    401680: Fox__UpBend_Ctrl (Folder)
+    401682: Fox__Upper_Spine_Bend (Ctrl)
+    401684: //RootNode
+    4300000: Fox
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Fox
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

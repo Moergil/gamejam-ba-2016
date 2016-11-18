@@ -66,7 +66,7 @@ public class PlayerControl : MonoBehaviour
     {
         if ( hit.gameObject.tag == "Minca" )
         {
-            GameManager.Instance.AddMinca ( );
+            GameManager.Instance.AddCoin ( );
             Destroy ( hit.gameObject );
             return;
         }

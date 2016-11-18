@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 
     public static event System.Action OnGameStarted;
     public static event System.Action OnGameOver;
+    public static event System.Action OnCoinCollected;
 
     [Header ( "References" )]
 
@@ -45,7 +46,7 @@ public class GameManager : MonoBehaviour
 
     #region API
 
-    public void AddMinca ( )
+    public void AddCoin ( )
     {
         _scoreText.text = Mince++.ToString ( );
     }
@@ -61,6 +62,7 @@ public class GameManager : MonoBehaviour
         //  Visual change
         _camFollow.Blur ( E_FocusMode.Game );
 
+        //  Respawn
         _player.Respawn ( );
     }
 
