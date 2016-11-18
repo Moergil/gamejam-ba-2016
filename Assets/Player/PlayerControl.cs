@@ -8,7 +8,7 @@ public class PlayerControl : MonoBehaviour
 	public float Speed = 3;
 	public float ActualSpeed;
 	public float SpeedBonus = 0;
-	Vector3 JumpVector = new Vector3(0, 4, 0);
+	Vector3 JumpVector = new Vector3(1, 5, 0);
 	Vector3 Gravity = new Vector3(0, -0.4f, 0);
 	CharacterController controller;
 
