@@ -21,13 +21,13 @@ public class GameManager : MonoBehaviour
 	[SerializeField]
 	private Text _scoreText;
 
-	public int Mince {
+    [SerializeField]
+    private Text _gameOverText;
+
+    public int Mince {
 		get;
 		private set;
 	}
-
-	[SerializeField]
-	private PlayerControl _player;
 
 	[SerializeField]
 	private Player_Alex _playerAlex;
@@ -51,7 +51,8 @@ public class GameManager : MonoBehaviour
 
 	public void AddCoin()
 	{
-		_scoreText.text = Mince++.ToString();
+        Mince++;
+        _scoreText.text = Mince.ToString();
 	}
 
 	#region API
@@ -71,6 +72,8 @@ public class GameManager : MonoBehaviour
 
 		//  Visual change
 		_camFollow.Blur(E_FocusMode.Game);
+        _gameOverText.enabled = false;
+        _scoreText.text = Mince.ToString ( );
 	}
 
 	public void GameOver()
@@ -80,9 +83,10 @@ public class GameManager : MonoBehaviour
 
 		//  Visual change
 		_camFollow.Blur(E_FocusMode.Menu);
+        _gameOverText.enabled = true;
 
-		// TODO
-		Application.LoadLevel(Application.loadedLevel);
+        // TODO
+        Application.LoadLevel(Application.loadedLevel);
 	}
 
 	#endregion

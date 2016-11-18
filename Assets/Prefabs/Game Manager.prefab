@@ -37,6 +37,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000010372986284}
   - 114: {fileID: 114000010758785494}
+  - 114: {fileID: 114000010244915012}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -71,6 +72,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000010372986284}
   m_RootOrder: 0
+--- !u!114 &114000010244915012
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012622016374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c576415476c54cc4890cde574c0e059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerObject: {fileID: 0}
+  depth: -5
 --- !u!114 &114000010568187406
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -100,9 +114,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e02bafb0d6f4f3c4a90f1e4b43bd0ee9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MincaPrefab: {fileID: 0}
+  MincaPrefab: {fileID: 1000010674676916, guid: e0fe99515619ffb45a284b3c8c198c64,
+    type: 2}
   _camFollow: {fileID: 0}
   _scoreText: {fileID: 0}
+  _gameOverText: {fileID: 0}
+  _player: {fileID: 0}
+  _playerAlex: {fileID: 0}
 --- !u!114 &114000011872985096
 MonoBehaviour:
   m_ObjectHideFlags: 1
