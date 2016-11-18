@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.471
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.22860351, g: 0.2523383, b: 0.28106382, a: 0.471}
+  m_IndirectSpecularColor: {r: 0.22860351, g: 0.2523383, b: 0.28106385, a: 0.471}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -379,7 +379,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &509560962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -709,15 +709,19 @@ Prefab:
       objectReference: {fileID: 1698056589}
     - target: {fileID: 114000010758785494, guid: 42de507070982644b858b623ef718db8,
         type: 2}
-      propertyPath: MincaPrefab
+      propertyPath: _gameOverText
       value: 
-      objectReference: {fileID: 1000010674676916, guid: e0fe99515619ffb45a284b3c8c198c64,
-        type: 2}
+      objectReference: {fileID: 1159241370}
     - target: {fileID: 114000010758785494, guid: 42de507070982644b858b623ef718db8,
         type: 2}
       propertyPath: _playerAlex
       value: 
       objectReference: {fileID: 163636819}
+    - target: {fileID: 114000010244915012, guid: 42de507070982644b858b623ef718db8,
+        type: 2}
+      propertyPath: triggerObject
+      value: 
+      objectReference: {fileID: 163636822}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 42de507070982644b858b623ef718db8, type: 2}
   m_IsPrefabParent: 0
@@ -771,34 +775,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e0fe99515619ffb45a284b3c8c198c64, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &733135770
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 733135771}
-  m_Layer: 0
-  m_Name: SegmentSlalomJump
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &733135771
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 733135770}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
 --- !u!1001 &744226577
 Prefab:
   m_ObjectHideFlags: 0
@@ -1160,23 +1136,13 @@ MonoBehaviour:
     - levelSegmentPrefab: {fileID: 114000013143670292, guid: edf53cd3b1248455fa5f5274dbe8da50,
         type: 2}
       associatedAction: 1
-  - segmentActionStructs:
-    - levelSegmentPrefab: {fileID: 114000013530185304, guid: 7facda82e86550648911b7fedc02d18f,
-        type: 2}
-      associatedAction: 0
-    - levelSegmentPrefab: {fileID: 114000012674048900, guid: aaea1bfa4d5864fd4bcf4c0ef36123e6,
-        type: 2}
-      associatedAction: 1
-    - levelSegmentPrefab: {fileID: 114000010464807664, guid: ae6061724d8d44893aea95d92cbb3069,
-        type: 2}
-      associatedAction: 1
   player: {fileID: 1231003701}
   activeDistance: 0
   targetDistanceOffset: 40
   pastDistanceOffset: 10
   interactionDistance: 5
   playerPositionX: 0
-  generatorSeed: 0
+  generatorSeed: 100
 --- !u!4 &1043716324
 Transform:
   m_ObjectHideFlags: 0
@@ -1436,24 +1402,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5c45e970d17981f4faefdc3f1de635be, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1336191270 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1000012622016374, guid: 42de507070982644b858b623ef718db8,
-    type: 2}
-  m_PrefabInternal: {fileID: 648203830}
---- !u!114 &1336191273
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1336191270}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c576415476c54cc4890cde574c0e059, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerObject: {fileID: 163636822}
-  depth: -5
 --- !u!1001 &1362830089
 Prefab:
   m_ObjectHideFlags: 0
