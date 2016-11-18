@@ -3,24 +3,37 @@ using System.Collections;
 
 public enum E_PlayerState { Running, Idle, Jumping, Dead }
 
-[RequireComponent ( typeof ( Rigidbody ) )]
 public class Player_Alex : MonoBehaviour
 {
     private Animator _animator;
     private Rigidbody _rb;
+    CharacterController _controller;
+
+    public float speed = 6.0F;
+    public float jumpSpeed = 8.0F;
+    Vector3 Gravity = new Vector3 ( 0, -0.4f, 0 );
+
+    private Vector3 moveDirection = Vector3.zero;
+    public float ActualSpeed;
+    public float SpeedBonus = 0;
 
     private int _idleHash, _runHash, _jumpHash;
 
     public E_PlayerState PlayerState { get; private set; }
 
-            Vector3 moveDirection;
+    [SerializeField]
+    private Vector3 _jumpVector = new Vector3 ( 0f, 1f, 0f );
+
+    [SerializeField]
+    private Vector3 _gravity = new Vector3 ( 0f, 9.8f, 0f );
 
     #region Mono
 
     void Awake ( )
     {
-        _animator = GetComponent<Animator> ( );
+        _animator = GetComponentInChildren<Animator> ( );
         _rb = GetComponent<Rigidbody> ( );
+        _controller = GetComponent<CharacterController> ( );
 
         if ( _animator != null )
         {
@@ -48,9 +61,17 @@ public class Player_Alex : MonoBehaviour
         if ( PlayerState == E_PlayerState.Running )
         {
 
-            moveDirection = new Vector3 ( 1, 0, -Input.GetAxis ( "Horizontal" ) );
-            moveDirection = transform.TransformDirection ( moveDirection );
+            moveDirection = Vector3.right * speed;
+            moveDirection += new Vector3 ( 1f, 0f, Input.GetAxis ( "Horizontal" ) );
+
+            if ( Input.GetButtonDown ( "Jump" ) )
+            {
+                moveDirection += _jumpVector;
+            }
         }
+
+        moveDirection += Gravity;
+        _controller.Move ( moveDirection * Time.deltaTime );
     }
 
     #endregion
@@ -86,12 +107,12 @@ public class Player_Alex : MonoBehaviour
 
     #region Collisions
 
-    void OnCollisionEnter ( Collider col )
+    void OnControllerColliderHit ( ControllerColliderHit hit )
     {
-        if ( col.tag == "Minca" )
+        if ( hit.gameObject.tag == "Minca" )
         {
             GameManager.Instance.AddCoin ( );
-            Destroy ( col.gameObject );
+            Destroy ( hit.gameObject );
             return;
         }
     }
