@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
 
 	public GameObject MincaPrefab;
 
+    public static event System.Action OnGameStarted;
+    public static event System.Action OnGameOver;
 
 	[Header("References")]
 
@@ -22,7 +24,8 @@ public class GameManager : MonoBehaviour
 		private set;
 	}
 
-	#region Mono
+    [SerializeField]
+    private PlayerControl _player;
 
 	private void Awake()
 	{
@@ -52,15 +55,20 @@ public class GameManager : MonoBehaviour
 		//  Reset
 		Mince = 0;
 
-		//  Visual change
-		_camFollow.Blur(E_FocusMode.Game);
+		//  Event
+        if ( OnGameStarted != null ) OnGameStarted ( );
+
+        //  Visual change
+        _camFollow.Blur ( E_FocusMode.Game );
 	}
 
-	public void GameOver()
-	{
-		//  Visual change
-		_camFollow.Blur(E_FocusMode.Menu);
-	}
+    public void GameOver ( )
+    {
+        if ( OnGameOver != null ) OnGameOver ( );
+
+        //  Visual change
+        _camFollow.Blur ( E_FocusMode.Menu );
+    }
 
 	#endregion
 }
