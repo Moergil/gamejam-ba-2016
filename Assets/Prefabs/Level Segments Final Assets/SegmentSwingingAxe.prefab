@@ -2729,7 +2729,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Duration: 2
-  slowDownModifier: 1.2
+  slowDownModifier: 1.05
 --- !u!114 &114000011605665638
 MonoBehaviour:
   m_ObjectHideFlags: 1

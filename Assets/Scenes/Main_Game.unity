@@ -771,6 +771,34 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e0fe99515619ffb45a284b3c8c198c64, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &733135770
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 733135771}
+  m_Layer: 0
+  m_Name: SegmentSlalomJump
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &733135771
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 733135770}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
 --- !u!1001 &744226577
 Prefab:
   m_ObjectHideFlags: 0
@@ -931,7 +959,7 @@ Prefab:
       objectReference: {fileID: 163636822}
     - target: {fileID: 4000011861286634, guid: a3b2d41c539b91c4ea20e0537f1d8bf6, type: 2}
       propertyPath: m_LocalScale.x
-      value: 16.1171
+      value: 19.34052
       objectReference: {fileID: 0}
     - target: {fileID: 1000013488649980, guid: a3b2d41c539b91c4ea20e0537f1d8bf6, type: 2}
       propertyPath: m_IsActive
@@ -1132,13 +1160,23 @@ MonoBehaviour:
     - levelSegmentPrefab: {fileID: 114000013143670292, guid: edf53cd3b1248455fa5f5274dbe8da50,
         type: 2}
       associatedAction: 1
+  - segmentActionStructs:
+    - levelSegmentPrefab: {fileID: 114000013530185304, guid: 7facda82e86550648911b7fedc02d18f,
+        type: 2}
+      associatedAction: 0
+    - levelSegmentPrefab: {fileID: 114000012674048900, guid: aaea1bfa4d5864fd4bcf4c0ef36123e6,
+        type: 2}
+      associatedAction: 1
+    - levelSegmentPrefab: {fileID: 114000010464807664, guid: ae6061724d8d44893aea95d92cbb3069,
+        type: 2}
+      associatedAction: 1
   player: {fileID: 1231003701}
   activeDistance: 0
   targetDistanceOffset: 40
   pastDistanceOffset: 10
   interactionDistance: 5
   playerPositionX: 0
-  generatorSeed: 100
+  generatorSeed: 0
 --- !u!4 &1043716324
 Transform:
   m_ObjectHideFlags: 0
