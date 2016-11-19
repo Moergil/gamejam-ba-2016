@@ -33,10 +33,12 @@ public class GameManager : MonoBehaviour
 
 	[SerializeField]
 	private Player_Alex _playerAlex;
+    
+    public Material tileMat;
 
-	#region MonoBehaviour
+    #region MonoBehaviour
 
-	private void Awake()
+    private void Awake()
 	{
 		if (Instance == null)
 			Instance = this;
