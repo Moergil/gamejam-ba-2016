@@ -11,5 +11,10 @@ public class MainManager : MonoBehaviour
 		SceneManager.LoadScene(levelNo);
 	}
 
+	public void QuitGame()
+	{
+		Application.Quit();
+	}
+
 	#endregion
 }
