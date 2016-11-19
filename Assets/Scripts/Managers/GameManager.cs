@@ -91,7 +91,7 @@ public class GameManager : MonoBehaviour
 		_playerAlex.Die();
 
 		// TODO
-		SceneManager.LoadScene(1);
+		SceneManager.LoadScene(0);
 	}
 
 	#endregion

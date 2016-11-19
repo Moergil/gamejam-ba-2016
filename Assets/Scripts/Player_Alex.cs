@@ -90,6 +90,10 @@ public class Player_Alex : MonoBehaviour
 	{
 		PlayerState = E_PlayerState.Dead;
 		_animator.SetTrigger(_deadHash);
+
+		GameManager.OnGameOver -= GameManager_OnGameOver;
+		GameManager.OnGameStarted -= GameManager_OnGameStarted;
+		GameManager.OnCoinCollected -= GameManager_OnCoinCollected;
 	}
 
 	public void Jump()
