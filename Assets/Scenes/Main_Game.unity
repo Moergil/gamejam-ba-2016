@@ -890,7 +890,7 @@ MonoBehaviour:
   pastDistanceOffset: 10
   interactionDistance: 5
   playerPositionX: 0
-  generatorSeed: 100
+  generatorSeed: 0
 --- !u!4 &1043716324
 Transform:
   m_ObjectHideFlags: 0

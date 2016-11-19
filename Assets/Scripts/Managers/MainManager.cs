@@ -4,21 +4,12 @@ using UnityEngine.SceneManagement;
 
 public class MainManager : MonoBehaviour
 {
-    #region Mono
+	#region API
 
-    private void Awake ( )
-    {
-        DontDestroyOnLoad ( gameObject );
-    }
+	public void LoadLevel(int levelNo)
+	{
+		SceneManager.LoadScene(levelNo);
+	}
 
-    #endregion
-
-    #region API
-
-    public void LoadLevel ( int levelNo )
-    {
-        SceneManager.LoadScene ( levelNo);
-    }
-
-    #endregion
+	#endregion
 }
